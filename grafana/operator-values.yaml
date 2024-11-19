@@ -1,0 +1,71 @@
+cluster:
+  name: "${cluster_name}"
+externalServices:
+  prometheus:
+    secret:
+      create: false
+      name: "${metrics_secret}"
+    basicAuth:
+      usernameKey: "${metrics_username_key}"
+      passwordKey: "${metrics_password_key}"
+  loki:
+    secret:
+      create: false
+      name: "${logs_secret}"
+    basicAuth:
+      usernameKey: "${logs_username_key}"
+      passwordKey: "${logs_password_key}"
+  tempo:
+    secret:
+      create: false
+      name: "${traces_secret}"
+    basicAuth:
+      usernameKey: "${traces_username_key}"
+      passwordKey: "${traces_password_key}"
+metrics:
+  enabled: true
+  alloy:
+    metricsTuning:
+      useIntegrationAllowList: true
+  cost:
+    enabled: true
+  kepler:
+    enabled: true
+  node-exporter:
+    enabled: true
+logs:
+  enabled: true
+  pod_logs:
+    enabled: true
+  cluster_events:
+    enabled: true
+traces:
+  enabled: true
+receivers:
+  grpc:
+    enabled: true
+  http:
+    enabled: true
+  zipkin:
+    enabled: true
+  grafanaCloudMetrics:
+    enabled: false
+opencost:
+  enabled: true
+  opencost:
+    exporter:
+      defaultClusterId: "${cluster_name}"
+    prometheus:
+      external:
+        url: "${metrics_host}"
+kube-state-metrics:
+  enabled: true
+prometheus-node-exporter:
+  enabled: true
+prometheus-operator-crds:
+  enabled: true
+kepler:
+  enabled: true
+alloy: {}
+alloy-events: {}
+alloy-logs: {}
