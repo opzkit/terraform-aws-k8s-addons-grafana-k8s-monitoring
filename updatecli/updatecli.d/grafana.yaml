@@ -1,0 +1,66 @@
+sources:
+  lastGrafanaHelmRelease:
+    kind: helmchart
+    spec:
+      url: 'https://grafana.github.io/helm-charts'
+      name: 'k8s-monitoring'
+targets:
+  grafana_chart:
+    name: bump chart version
+    kind: yaml
+    scmid: github
+    sourceid: lastGrafanaHelmRelease
+    spec:
+      file: 'grafana/kustomization.yaml'
+      key: '$.helmCharts[0].version'
+    transformers:
+    - addprefix: "'"
+    - addsuffix: "'"
+  module_version:
+    name: bump module version
+    kind: hcl
+    scmid: github
+    sourceid: lastGrafanaHelmRelease
+    spec:
+      file: 'locals.tf'
+      path: 'locals.version'
+    transformers:
+      - trimprefix: "v"
+  kubectl:
+    name: run kubectl when chart changed
+    kind: shell
+    scmid: github
+    dependson:
+    - grafana_chart
+    dependsonchange: true
+    disablesourceinput: true
+    spec:
+      command: "rm -rf grafana/charts && kubectl kustomize . -o k8s-monitoring.yaml.tftpl --enable-helm && git diff --shortstat k8s-monitoring.yaml.tftpl"
+      environments:
+      - name: PATH
+
+scms:
+  github:
+    kind: "github"
+    spec:
+      user: "argoyle"
+      email: "joakim@unbound.se"
+      owner: "opzkit"
+      repository: "terraform-aws-k8s-addons-grafana-k8s-monitoring"
+      token: '{{ requiredEnv "UPDATECLI_GITHUB_TOKEN" }}'
+      username: 'UpdateCLI'
+      branch: "main"
+      commitusingapi: true
+
+# Define action configurations if one needs to be created
+actions:
+  addon:
+    kind: "github/pullrequest"
+    scmid: "github"
+    spec:
+      automerge: true
+      mergemethod: squash
+      draft: false
+      labels:
+      - "dependencies"
+      title: "update Grafana K8s Monitoring version"
