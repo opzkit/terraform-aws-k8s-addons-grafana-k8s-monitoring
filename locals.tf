@@ -17,4 +17,12 @@ locals {
     traces_username_key  = var.traces_username_key
     traces_password_key  = var.traces_password_key
   })
+
+  secrets_yaml = templatefile("${path.module}/external-secrets.yaml.tftpl", {
+    external_secrets_keys     = var.external_secrets_keys
+    external_secret_store_ref = var.external_secret_store_ref
+    logs_secret               = var.logs_secret
+    metrics_secret            = var.metrics_secret
+    traces_secret             = var.traces_secret
+  })
 }

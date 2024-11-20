@@ -25,6 +25,11 @@ resource "aws_iam_role" "kubernetes_admin" {
 module "k8s_monitoring" {
   source       = "../../"
   cluster_name = local.name
+  external_secrets_keys = {
+    loki : "services/grafana/loki",
+    tempo : "services/grafana/tempo",
+    prometheus : "services/grafana/prometheus"
+  }
 }
 
 module "state_store" {
