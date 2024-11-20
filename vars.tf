@@ -75,3 +75,36 @@ variable "cluster_name" {
   description = "Name of the cluster"
 }
 
+variable "external_secret_store_ref" {
+  type = object({
+    kind : string
+    name : string
+  })
+  default = {
+    kind : "ClusterSecretStore"
+    name : "external-secrets"
+  }
+  description = "External secret store reference to use if external_secrets_keys are provided"
+}
+variable "external_secrets_keys" {
+  type = object({
+    loki : string,
+    tempo : string,
+    prometheus : string
+  })
+  default     = null
+  description = "External secrets keys for Loki, Prometheus and Tempo. If set external secrets will be created"
+  validation {
+    condition     = var.external_secrets_keys == null ? true : length(var.external_secrets_keys.loki) > 0
+    error_message = "Must supply values for loki"
+  }
+  validation {
+    condition     = var.external_secrets_keys == null ? true : length(var.external_secrets_keys.tempo) > 0
+    error_message = "Must supply values for tempo"
+  }
+  validation {
+    condition     = var.external_secrets_keys == null ? true : length(var.external_secrets_keys.prometheus) > 0
+    error_message = "Must supply values for prometheus"
+  }
+}
+
