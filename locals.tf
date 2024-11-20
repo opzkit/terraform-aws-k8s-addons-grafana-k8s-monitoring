@@ -1,6 +1,6 @@
 locals {
   # x-release-please-version
-  version = "0.0.0"
+  version = "1.6.8"
   yaml = templatefile("${path.module}/k8s-monitoring.yaml.tftpl", {
     cluster_name         = var.cluster_name
     logs_secret          = var.logs_secret
