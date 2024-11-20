@@ -53,4 +53,4 @@ actions:
       draft: false
       labels:
       - "dependencies"
-      title: "update Grafana K8s Monitoring version"
+      title: "chore(deps): update Grafana K8s Monitoring version"
