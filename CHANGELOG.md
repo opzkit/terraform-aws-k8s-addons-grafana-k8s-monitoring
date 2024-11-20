@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.0](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.1.1...v0.2.0) (2024-11-20)
+
+
+### Features
+
+* support external secret creation ([#24](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/24)) ([cf1d213](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/cf1d21328a2b19e8dc7c74414de8a8b159a85da1))
+
+
+### Miscellaneous Chores
+
+* **deps:** bump opzkit/k8s-network/aws from 0.0.9 to 0.0.10 in /examples/basic ([#26](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/26)) ([45d0c4b](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/45d0c4ba972054ba7b375150e5165cc0eac36402))
+* update dependabot to check all folders ([#22](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/22)) ([2a227b0](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/2a227b0bba1e0c07bd83f2fec5c80832ddf9e2e5))
+* update dependabot to check all folders ([#25](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/25)) ([062037c](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/062037c2d0b228630426e6957e2680291f75e6cb))
+
 ## [0.1.1](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.1.0...v0.1.1) (2024-11-20)
 
 
