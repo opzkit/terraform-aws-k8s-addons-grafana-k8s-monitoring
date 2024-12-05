@@ -65224,8 +65224,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.5.0
-    helm.sh/chart: alloy-0.10.0
+    app.kubernetes.io/version: v1.5.1
+    helm.sh/chart: alloy-0.10.1
   name: k8s-monitoring-alloy
   namespace: monitoring
 ---
@@ -65238,8 +65238,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-events
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.5.0
-    helm.sh/chart: alloy-events-0.10.0
+    app.kubernetes.io/version: v1.5.1
+    helm.sh/chart: alloy-events-0.10.1
   name: k8s-monitoring-alloy-events
   namespace: monitoring
 ---
@@ -65252,8 +65252,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.5.0
-    helm.sh/chart: alloy-logs-0.10.0
+    app.kubernetes.io/version: v1.5.1
+    helm.sh/chart: alloy-logs-0.10.1
   name: k8s-monitoring-alloy-logs
   namespace: monitoring
 ---
@@ -65324,8 +65324,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.5.0
-    helm.sh/chart: alloy-0.10.0
+    app.kubernetes.io/version: v1.5.1
+    helm.sh/chart: alloy-0.10.1
   name: k8s-monitoring-alloy
 rules:
 - apiGroups:
@@ -65428,8 +65428,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-events
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.5.0
-    helm.sh/chart: alloy-events-0.10.0
+    app.kubernetes.io/version: v1.5.1
+    helm.sh/chart: alloy-events-0.10.1
   name: k8s-monitoring-alloy-events
 rules:
 - apiGroups:
@@ -65532,8 +65532,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.5.0
-    helm.sh/chart: alloy-logs-0.10.0
+    app.kubernetes.io/version: v1.5.1
+    helm.sh/chart: alloy-logs-0.10.1
   name: k8s-monitoring-alloy-logs
 rules:
 - apiGroups:
@@ -65953,8 +65953,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.5.0
-    helm.sh/chart: alloy-0.10.0
+    app.kubernetes.io/version: v1.5.1
+    helm.sh/chart: alloy-0.10.1
   name: k8s-monitoring-alloy
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -65974,8 +65974,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-events
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.5.0
-    helm.sh/chart: alloy-events-0.10.0
+    app.kubernetes.io/version: v1.5.1
+    helm.sh/chart: alloy-events-0.10.1
   name: k8s-monitoring-alloy-events
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -65995,8 +65995,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.5.0
-    helm.sh/chart: alloy-logs-0.10.0
+    app.kubernetes.io/version: v1.5.1
+    helm.sh/chart: alloy-logs-0.10.1
   name: k8s-monitoring-alloy-logs
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -67042,7 +67042,7 @@ data:
   k8s-monitoring-build-info-metric.prom: |
     # HELP grafana_kubernetes_monitoring_build_info A metric to report the version of the Kubernetes Monitoring Helm chart as well as a summary of enabled features
     # TYPE grafana_kubernetes_monitoring_build_info gauge
-    grafana_kubernetes_monitoring_build_info{version="1.6.12", namespace="monitoring", metrics="enabled,alloy,autoDiscover,kube-state-metrics,node-exporter,kubelet,kubeletResource,cadvisor,cost,kepler", logs="enabled,events,pod_logs", traces="enabled", deployments="kube-state-metrics,prometheus-node-exporter,prometheus-operator-crds,opencost,kepler"} 1
+    grafana_kubernetes_monitoring_build_info{version="1.6.13", namespace="monitoring", metrics="enabled,alloy,autoDiscover,kube-state-metrics,node-exporter,kubelet,kubeletResource,cadvisor,cost,kepler", logs="enabled,events,pod_logs", traces="enabled", deployments="kube-state-metrics,prometheus-node-exporter,prometheus-operator-crds,opencost,kepler"} 1
 kind: ConfigMap
 metadata:
   name: k8s-monitoring-alloy
@@ -67284,8 +67284,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.5.0
-    helm.sh/chart: alloy-0.10.0
+    app.kubernetes.io/version: v1.5.1
+    helm.sh/chart: alloy-0.10.1
   name: k8s-monitoring-alloy
   namespace: monitoring
 spec:
@@ -67341,8 +67341,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.5.0
-    helm.sh/chart: alloy-0.10.0
+    app.kubernetes.io/version: v1.5.1
+    helm.sh/chart: alloy-0.10.1
   name: k8s-monitoring-alloy-cluster
   namespace: monitoring
 spec:
@@ -67399,8 +67399,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-events
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.5.0
-    helm.sh/chart: alloy-events-0.10.0
+    app.kubernetes.io/version: v1.5.1
+    helm.sh/chart: alloy-events-0.10.1
   name: k8s-monitoring-alloy-events
   namespace: monitoring
 spec:
@@ -67424,8 +67424,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.5.0
-    helm.sh/chart: alloy-logs-0.10.0
+    app.kubernetes.io/version: v1.5.1
+    helm.sh/chart: alloy-logs-0.10.1
   name: k8s-monitoring-alloy-logs
   namespace: monitoring
 spec:
@@ -67448,8 +67448,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.5.0
-    helm.sh/chart: alloy-0.10.0
+    app.kubernetes.io/version: v1.5.1
+    helm.sh/chart: alloy-0.10.1
   name: k8s-monitoring-grafana-agent
   namespace: monitoring
 spec:
@@ -67598,8 +67598,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-events
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.5.0
-    helm.sh/chart: alloy-events-0.10.0
+    app.kubernetes.io/version: v1.5.1
+    helm.sh/chart: alloy-events-0.10.1
   name: k8s-monitoring-alloy-events
   namespace: monitoring
 spec:
@@ -67633,7 +67633,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: spec.nodeName
-        image: docker.io/grafana/alloy:v1.5.0
+        image: docker.io/grafana/alloy:v1.5.1
         imagePullPolicy: IfNotPresent
         name: alloy
         ports:
@@ -67904,8 +67904,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.5.0
-    helm.sh/chart: alloy-0.10.0
+    app.kubernetes.io/version: v1.5.1
+    helm.sh/chart: alloy-0.10.1
   name: k8s-monitoring-alloy
   namespace: monitoring
 spec:
@@ -67935,7 +67935,7 @@ spec:
         - --server.http.ui-path-prefix=/
         - --cluster.enabled=true
         - --cluster.join-addresses=k8s-monitoring-alloy-cluster
-        - --cluster.name="alloy"
+        - --cluster.name=alloy
         - --stability.level=generally-available
         env:
         - name: ALLOY_DEPLOY_MODE
@@ -67944,7 +67944,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: spec.nodeName
-        image: docker.io/grafana/alloy:v1.5.0
+        image: docker.io/grafana/alloy:v1.5.1
         imagePullPolicy: IfNotPresent
         name: alloy
         ports:
@@ -68022,8 +68022,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.5.0
-    helm.sh/chart: alloy-logs-0.10.0
+    app.kubernetes.io/version: v1.5.1
+    helm.sh/chart: alloy-logs-0.10.1
   name: k8s-monitoring-alloy-logs
   namespace: monitoring
 spec:
@@ -68056,7 +68056,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: spec.nodeName
-        image: docker.io/grafana/alloy:v1.5.0
+        image: docker.io/grafana/alloy:v1.5.1
         imagePullPolicy: IfNotPresent
         name: alloy
         ports:
