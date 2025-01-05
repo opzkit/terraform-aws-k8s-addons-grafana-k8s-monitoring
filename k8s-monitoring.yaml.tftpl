@@ -65945,7 +65945,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.14.0
-    helm.sh/chart: kube-state-metrics-5.27.0
+    helm.sh/chart: kube-state-metrics-5.28.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -65960,7 +65960,7 @@ metadata:
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
     app.kubernetes.io/version: 1.113.0
-    helm.sh/chart: opencost-1.42.3
+    helm.sh/chart: opencost-1.43.0
   name: k8s-monitoring-opencost
   namespace: monitoring
 ---
@@ -65975,7 +65975,7 @@ metadata:
     app.kubernetes.io/name: prometheus-node-exporter
     app.kubernetes.io/part-of: prometheus-node-exporter
     app.kubernetes.io/version: 1.8.2
-    helm.sh/chart: prometheus-node-exporter-4.43.0
+    helm.sh/chart: prometheus-node-exporter-4.43.1
     release: k8s-monitoring
   name: k8s-monitoring-prometheus-node-exporter
   namespace: monitoring
@@ -66319,7 +66319,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.14.0
-    helm.sh/chart: kube-state-metrics-5.27.0
+    helm.sh/chart: kube-state-metrics-5.28.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
 rules:
@@ -66533,7 +66533,7 @@ metadata:
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
     app.kubernetes.io/version: 1.113.0
-    helm.sh/chart: opencost-1.42.3
+    helm.sh/chart: opencost-1.43.0
   name: k8s-monitoring-opencost
 rules:
 - apiGroups:
@@ -66695,7 +66695,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.14.0
-    helm.sh/chart: kube-state-metrics-5.27.0
+    helm.sh/chart: kube-state-metrics-5.28.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
 roleRef:
@@ -66716,7 +66716,7 @@ metadata:
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
     app.kubernetes.io/version: 1.113.0
-    helm.sh/chart: opencost-1.42.3
+    helm.sh/chart: opencost-1.43.0
   name: k8s-monitoring-opencost
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -67382,7 +67382,7 @@ data:
       max_cache_size = 100000
       rule {
         source_labels = ["__name__"]
-        regex = "up|kube_daemonset.*|kube_deployment_metadata_generation|kube_deployment_spec_replicas|kube_deployment_status_condition|kube_deployment_status_observed_generation|kube_deployment_status_replicas_available|kube_deployment_status_replicas_updated|kube_horizontalpodautoscaler_spec_max_replicas|kube_horizontalpodautoscaler_spec_min_replicas|kube_horizontalpodautoscaler_status_current_replicas|kube_horizontalpodautoscaler_status_desired_replicas|kube_job.*|kube_namespace_status_phase|kube_node.*|kube_persistentvolume_status_phase|kube_persistentvolumeclaim_access_mode|kube_persistentvolumeclaim_labels|kube_persistentvolumeclaim_resource_requests_storage_bytes|kube_pod_container_info|kube_pod_container_resource_limits|kube_pod_container_resource_requests|kube_pod_container_status_last_terminated_reason|kube_pod_container_status_restarts_total|kube_pod_container_status_waiting_reason|kube_pod_info|kube_pod_owner|kube_pod_start_time|kube_pod_status_phase|kube_pod_status_reason|kube_replicaset.*|kube_resourcequota|kube_statefulset.*"
+        regex = "up|kube_daemonset.*|kube_deployment_metadata_generation|kube_deployment_spec_replicas|kube_deployment_status_condition|kube_deployment_status_observed_generation|kube_deployment_status_replicas_available|kube_deployment_status_replicas_updated|kube_horizontalpodautoscaler_spec_max_replicas|kube_horizontalpodautoscaler_spec_min_replicas|kube_horizontalpodautoscaler_status_current_replicas|kube_horizontalpodautoscaler_status_desired_replicas|kube_job.*|kube_namespace_status_phase|kube_node.*|kube_persistentvolume_status_phase|kube_persistentvolumeclaim_access_mode|kube_persistentvolumeclaim_info|kube_persistentvolumeclaim_labels|kube_persistentvolumeclaim_resource_requests_storage_bytes|kube_persistentvolumeclaim_status_phase|kube_pod_container_info|kube_pod_container_resource_limits|kube_pod_container_resource_requests|kube_pod_container_status_last_terminated_reason|kube_pod_container_status_restarts_total|kube_pod_container_status_waiting_reason|kube_pod_info|kube_pod_owner|kube_pod_spec_volumes_persistentvolumeclaims_info|kube_pod_start_time|kube_pod_status_phase|kube_pod_status_reason|kube_replicaset.*|kube_resourcequota|kube_statefulset.*"
         action = "keep"
       }
       forward_to = [prometheus.relabel.metrics_service.receiver]
@@ -67692,7 +67692,7 @@ data:
   k8s-monitoring-build-info-metric.prom: |
     # HELP grafana_kubernetes_monitoring_build_info A metric to report the version of the Kubernetes Monitoring Helm chart as well as a summary of enabled features
     # TYPE grafana_kubernetes_monitoring_build_info gauge
-    grafana_kubernetes_monitoring_build_info{version="1.6.16", namespace="monitoring", metrics="enabled,alloy,autoDiscover,kube-state-metrics,node-exporter,kubelet,kubeletResource,cadvisor,cost,kepler", logs="enabled,events,pod_logs", traces="enabled", deployments="kube-state-metrics,prometheus-node-exporter,prometheus-operator-crds,opencost,kepler"} 1
+    grafana_kubernetes_monitoring_build_info{version="1.6.17", namespace="monitoring", metrics="enabled,alloy,autoDiscover,kube-state-metrics,node-exporter,kubelet,kubeletResource,cadvisor,cost,kepler", logs="enabled,events,pod_logs", traces="enabled", deployments="kube-state-metrics,prometheus-node-exporter,prometheus-operator-crds,opencost,kepler"} 1
 kind: ConfigMap
 metadata:
   name: k8s-monitoring-alloy
@@ -68178,7 +68178,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.14.0
-    helm.sh/chart: kube-state-metrics-5.27.0
+    helm.sh/chart: kube-state-metrics-5.28.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -68202,7 +68202,7 @@ metadata:
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
     app.kubernetes.io/version: 1.113.0
-    helm.sh/chart: opencost-1.42.3
+    helm.sh/chart: opencost-1.43.0
   name: k8s-monitoring-opencost
   namespace: monitoring
 spec:
@@ -68225,7 +68225,7 @@ metadata:
     app.kubernetes.io/name: prometheus-node-exporter
     app.kubernetes.io/part-of: prometheus-node-exporter
     app.kubernetes.io/version: 1.8.2
-    helm.sh/chart: prometheus-node-exporter-4.43.0
+    helm.sh/chart: prometheus-node-exporter-4.43.1
     release: k8s-monitoring
   name: k8s-monitoring-prometheus-node-exporter
   namespace: monitoring
@@ -68339,7 +68339,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.14.0
-    helm.sh/chart: kube-state-metrics-5.27.0
+    helm.sh/chart: kube-state-metrics-5.28.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -68361,7 +68361,7 @@ spec:
         app.kubernetes.io/name: kube-state-metrics
         app.kubernetes.io/part-of: kube-state-metrics
         app.kubernetes.io/version: 2.14.0
-        helm.sh/chart: kube-state-metrics-5.27.0
+        helm.sh/chart: kube-state-metrics-5.28.0
         release: k8s-monitoring
     spec:
       automountServiceAccountToken: true
@@ -68434,7 +68434,7 @@ metadata:
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
     app.kubernetes.io/version: 1.113.0
-    helm.sh/chart: opencost-1.42.3
+    helm.sh/chart: opencost-1.43.0
   name: k8s-monitoring-opencost
   namespace: monitoring
 spec:
@@ -68886,7 +68886,7 @@ metadata:
     app.kubernetes.io/name: prometheus-node-exporter
     app.kubernetes.io/part-of: prometheus-node-exporter
     app.kubernetes.io/version: 1.8.2
-    helm.sh/chart: prometheus-node-exporter-4.43.0
+    helm.sh/chart: prometheus-node-exporter-4.43.1
     release: k8s-monitoring
   name: k8s-monitoring-prometheus-node-exporter
   namespace: monitoring
@@ -68908,7 +68908,7 @@ spec:
         app.kubernetes.io/name: prometheus-node-exporter
         app.kubernetes.io/part-of: prometheus-node-exporter
         app.kubernetes.io/version: 1.8.2
-        helm.sh/chart: prometheus-node-exporter-4.43.0
+        helm.sh/chart: prometheus-node-exporter-4.43.1
         release: k8s-monitoring
     spec:
       affinity:
