@@ -6,42 +6,6 @@ resources:
 
 patches:
   - patch: |-
-      $patch: delete
-      apiVersion: v1
-      kind: Pod
-      metadata:
-        name: validate-k8s-monitoring
-        namespace: monitoring
-  - patch: |-
-      $patch: delete
-      apiVersion: v1
-      kind: ConfigMap
-      metadata:
-        name: test-k8s-monitoring
-        namespace: monitoring
-  - patch: |-
-      $patch: delete
-      apiVersion: v1
-      kind: ConfigMap
-      metadata:
-        name: validate-k8s-monitoring
-        namespace: monitoring
-  - patch: |-
-      $patch: delete
-      apiVersion: batch/v1
-      kind: Job
-      metadata:
-        name: test-k8s-monitoring
-        namespace: monitoring
-  - patch: |-
-      $patch: delete
-      apiVersion: v1
-      kind: Pod
-      metadata:
-        name: analyze-k8s-monitoring
-        namespace: monitoring
-
-  - patch: |-
       - op: add
         path: "/spec/template/spec/containers/0/resources"
         value:
@@ -50,7 +14,7 @@ patches:
             memory: "200m"
     target:
       kind: StatefulSet
-      name: k8s-monitoring-alloy
+      name: k8s-monitoring-alloy-metrics
 
   - patch: |-
       - op: add
@@ -61,7 +25,7 @@ patches:
             memory: "200m"
     target:
       kind: Deployment
-      name: k8s-monitoring-alloy-events
+      name: k8s-monitoring-alloy-singleton
 
   - patch: |-
       - op: add
@@ -83,6 +47,17 @@ patches:
             memory: "200m"
     target:
       kind: DaemonSet
+      name: k8s-monitoring-alloy-receiver
+
+  - patch: |-
+      - op: add
+        path: "/spec/template/spec/containers/0/resources"
+        value:
+          requests:
+            cpu: "100m"
+            memory: "200m"
+    target:
+      kind: DaemonSet
       name: k8s-monitoring-kepler
 
   - patch: |-
@@ -94,7 +69,7 @@ patches:
             memory: "200m"
     target:
       kind: DaemonSet
-      name: k8s-monitoring-prometheus-node-exporter
+      name: k8s-monitoring-node-exporter
 
   - patch: |-
       - op: add
@@ -106,34 +81,3 @@ patches:
     target:
       kind: Deployment
       name: k8s-monitoring-kube-state-metrics
-
-  - patch: |-
-      apiVersion: apps/v1
-      kind: Deployment
-      metadata:
-        name: k8s-monitoring-opencost
-      spec:
-        template:
-          spec:
-            containers:
-              - name: k8s-monitoring-opencost
-                env:
-                  - name: DB_BASIC_AUTH_USERNAME
-                    valueFrom:
-                      secretKeyRef:
-                        key: ${metrics_username_key}
-                        name: ${metrics_secret}
-                  - name: DB_BASIC_AUTH_PW
-                    valueFrom:
-                      secretKeyRef:
-                        key: ${metrics_password_key}
-                        name: ${metrics_secret}
-                  - name: PROMETHEUS_SERVER_ENDPOINT
-                    value: null
-                    valueFrom:
-                      secretKeyRef:
-                        key: ${metrics_hostname_key}_prom
-                        name: ${metrics_secret}
-    target:
-      kind: Deployment
-      name: k8s-monitoring-opencost

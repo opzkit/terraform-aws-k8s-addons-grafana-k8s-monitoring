@@ -1,7 +1,3 @@
-provider "kops" {
-  state_store = "s3://state-store"
-}
-
 provider "aws" {
   skip_requesting_account_id  = true
   skip_credentials_validation = true
@@ -13,14 +9,10 @@ provider "aws" {
 
 terraform {
   required_providers {
-    kops = {
-      source  = "terraform-kops/kops"
-      version = "~> 1.30.0"
-    }
-
     aws = {
       source  = "hashicorp/aws"
       version = "~> 5.0"
     }
   }
+  required_version = ">= 1.3.0"
 }
