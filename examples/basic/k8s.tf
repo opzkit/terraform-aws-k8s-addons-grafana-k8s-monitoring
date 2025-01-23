@@ -34,7 +34,7 @@ module "k8s_monitoring" {
 
 module "state_store" {
   source           = "opzkit/kops-state-store/aws"
-  version          = "0.5.0"
+  version          = "0.5.1"
   state_store_name = "some-kops-storage-s3-bucket"
 }
 
