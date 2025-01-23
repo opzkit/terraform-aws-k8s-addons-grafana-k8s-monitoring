@@ -23,5 +23,5 @@ repos:
       - id: terraform_fmt
       - id: terraform_checkov
         language: docker_image
-        entry: --tty bridgecrew/checkov:3.2.354 --quiet --download-external-modules=true --framework=terraform,terraform_plan,yaml,json,github_configuration,github_actions -d . --skip-check CKV_AWS_18,CKV_AWS_144,CKV2_AWS_62
+        entry: --tty bridgecrew/checkov:3.2.354 --config-file checkov.yaml
         pass_filenames: false
