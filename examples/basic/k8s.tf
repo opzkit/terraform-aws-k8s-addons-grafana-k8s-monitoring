@@ -30,6 +30,11 @@ module "k8s_monitoring" {
     tempo : "services/grafana/tempo",
     prometheus : "services/grafana/prometheus"
   }
+  logs_url         = "https://logs-prod-eu-west-0.grafana.net/loki/api/v1/push"
+  metrics_url      = "https://prometheus-prod-01-eu-west-0.grafana.net/api/prom/push"
+  cost_metrics_url = "https://prometheus-prod-01-eu-west-0.grafana.net/api/prom"
+  traces_url       = "https://tempo-eu-west-0.grafana.net/tempo"
+
 }
 
 module "state_store" {
