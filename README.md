@@ -15,12 +15,10 @@ Secret name: `prometheus`
 {
   "username": "122345",
   "password": "password",
-  "hostname": "https://prometheus-prod-01-eu-west-0.grafana.net",
-  "hostname_prom": "https://prometheus-prod-01-eu-west-0.grafana.net/api/prom"
 }
 ```
 
-`username`, `password` and `hostname` can be overridden with the variables `metrics_<key>_key`
+`username` and `password` can be overridden with the variables `metrics_<key>_key`
 
 For logs (loki):
 
@@ -29,11 +27,10 @@ Secret name: `loki`
 {
   "username": "122345",
   "password": "password",
-  "hostname": "https://logs-prod-eu-west-0.grafana.net"
 }
 ```
 
-`username`, `password` and `hostname` can be overridden with the variables `logs_<key>_key`
+`username` and `password` can be overridden with the variables `logs_<key>_key`
 
 For traces (tempo):
 
@@ -42,11 +39,10 @@ Secret name: `tempo`
 {
   "username": "122345",
   "password": "password",
-  "hostname": "https://tempo-eu-west-0.grafana.net:443"
 }
 ```
 
-`username`, `password` and `hostname` can be overridden with the variables `traces_<key>_key`
+`username` and `password` can be overridden with the variables `traces_<key>_key`
 
 The name of the secrets can be overridden with the `<type>_secret` variable.
 

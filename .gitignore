@@ -34,3 +34,5 @@ examples/**/.terraform.lock.hcl
 .terraform.lock.hcl
 grafana/charts
 ksm/charts
+
+.external_modules

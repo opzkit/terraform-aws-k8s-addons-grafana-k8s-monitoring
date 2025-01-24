@@ -1,74 +1,119 @@
 cluster:
-  name: "${cluster_name}"
-externalServices:
-  prometheus:
+  name: ${cluster_name}
+destinations:
+  - name: metricsService
+    url:  ${metrics_url}
+    type: prometheus
     secret:
       create: false
-      name: "${metrics_secret}"
-    hostKey: "${metrics_hostname_key}"
-    basicAuth:
-      usernameKey: "${metrics_username_key}"
-      passwordKey: "${metrics_password_key}"
-  loki:
+      name: ${metrics_secret}
+    auth:
+      type: basic
+      usernameKey: ${metrics_username_key}
+      passwordKey: ${metrics_password_key}
+  - name: logsService
+    type: loki
+    url:  ${logs_url}
     secret:
       create: false
-      name: "${logs_secret}"
-    hostKey: "${logs_hostname_key}"
-    basicAuth:
-      usernameKey: "${logs_username_key}"
-      passwordKey: "${logs_password_key}"
-  tempo:
+      name: ${logs_secret}
+    auth:
+      type: basic
+      usernameKey: ${logs_username_key}
+      passwordKey: ${logs_password_key}
+  - name: tracesService
+    type: otlp
+    url:  ${traces_url}
+    metrics:
+      enabled: false
+    logs:
+      enabled: false
+    traces:
+      enabled: true
     secret:
       create: false
-      name: "${traces_secret}"
-    hostKey: "${traces_hostname_key}"
-    basicAuth:
-      usernameKey: "${traces_username_key}"
-      passwordKey: "${traces_password_key}"
-metrics:
+      name: ${traces_secret}
+    auth:
+      type: basic
+      usernameKey: ${traces_username_key}
+      passwordKey: ${traces_password_key}
+clusterMetrics:
   enabled: true
-  alloy:
-    metricsTuning:
-      useIntegrationAllowList: true
-  cost:
+  kube-state-metrics:
+    deploy: true
+  node-exporter:
+    deploy: true
     enabled: true
+  opencost:
+    enabled: true
+    opencost:
+      exporter:
+        defaultClusterId: ${cluster_name}
+      prometheus:
+        external:
+          url: ${cost_metrics_url}
+        existingSecretName: ${metrics_secret}
+        username_key: ${metrics_username_key}
+        password_key: ${metrics_password_key}
+    metricsSource: metricsService
   kepler:
     enabled: true
-  node-exporter:
-    enabled: true
-logs:
+alloy-metrics:
   enabled: true
-  pod_logs:
-    enabled: true
-  cluster_events:
-    enabled: true
-traces:
+clusterEvents:
   enabled: true
-receivers:
-  grpc:
-    enabled: true
-  http:
-    enabled: true
-  zipkin:
-    enabled: true
-  grafanaCloudMetrics:
-    enabled: false
-opencost:
+alloy-singleton:
   enabled: true
-  opencost:
-    exporter:
-      defaultClusterId: "${cluster_name}"
-    prometheus:
-      external:
-        url: "${metrics_host}"
-kube-state-metrics:
+podLogs:
   enabled: true
-prometheus-node-exporter:
+alloy-logs:
   enabled: true
-prometheus-operator-crds:
+applicationObservability:
   enabled: true
-kepler:
+  receivers:
+    otlp:
+      includeDebugMetrics: true
+      grpc:
+        enabled: true
+      http:
+        enabled: true
+    zipkin:
+      enabled: true
+      includeDebugMetrics: true
+alloy-receiver:
   enabled: true
-alloy: {}
-alloy-events: {}
-alloy-logs: {}
+  alloy:
+    extraPorts:
+      - name: otlp-grpc
+        port: 4317
+        targetPort: 4317
+        protocol: TCP
+      - name: otlp-httpgrpc
+        port: 4318
+        targetPort: 4318
+        protocol: TCP
+      - name: zipkin
+        port: 9411
+        targetPort: 9411
+        protocol: TCP
+annotationAutodiscovery:
+  enabled: true
+prometheusOperatorObjects:
+  enabled: true
+  crds:
+    deploy: true
+integrations:
+  alloy:
+    instances:
+      - name: alloy
+        labelSelectors:
+          app.kubernetes.io/name:
+            - alloy-metrics
+            - alloy-singleton
+            - alloy-logs
+            - alloy-receiver
+        metrics:
+          tuning:
+            useDefaultAllowList: true
+            includeMetrics:
+              - alloy_build_info

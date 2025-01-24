@@ -1,7 +1,6 @@
-variable "logs_host_key" {
+variable "logs_url" {
   type        = string
-  default     = "hostname"
-  description = "Key in logs secret containing the URL to use to Loki"
+  description = "URL for Loki. NOTE this is a full data writing/pushing URL, not just the hostname!"
 }
 
 variable "logs_secret" {
@@ -22,10 +21,9 @@ variable "logs_password_key" {
   description = "Key in logs secret containing password for Loki"
 }
 
-variable "traces_host_key" {
+variable "traces_url" {
   type        = string
-  default     = "hostname"
-  description = "Key in traces secret containing the URL to Tempo"
+  description = "URL for Tempo. NOTE this is a full data writing/pushing URL, not just the hostname!"
 }
 
 variable "traces_secret" {
@@ -46,10 +44,14 @@ variable "traces_password_key" {
   description = "Key in traces secret containing password for Tempo"
 }
 
-variable "metrics_host_key" {
+variable "metrics_url" {
   type        = string
-  default     = "hostname"
-  description = "Key in traces secret containing the URL to use to Prometheus"
+  description = "URL for Prometheus. NOTE this is a full data writing/pushing URL, not just the hostname!"
+}
+
+variable "cost_metrics_url" {
+  type        = string
+  description = "URL for Prometheus for OpenCost. NOTE this is usually just the hostname!"
 }
 
 variable "metrics_secret" {
@@ -86,6 +88,7 @@ variable "external_secret_store_ref" {
   }
   description = "External secret store reference to use if external_secrets_keys are provided"
 }
+
 variable "external_secrets_keys" {
   type = object({
     loki : string,
@@ -107,4 +110,3 @@ variable "external_secrets_keys" {
     error_message = "Must supply values for prometheus"
   }
 }
-

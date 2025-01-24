@@ -22,7 +22,7 @@ targets:
     scmid: github
     dependson:
     - grafana_chart
-    dependsonchange: true
+    dependsonchange: false
     disablesourceinput: true
     spec:
       command: "rm -rf grafana/charts && kubectl kustomize . -o k8s-monitoring.yaml.tftpl --enable-helm && git diff --shortstat k8s-monitoring.yaml.tftpl"
