@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.2.3](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.2.2...v0.2.3) (2025-01-24)
+
+
+### Miscellaneous Chores
+
+* add release-please.yml ([bc54d32](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/bc54d324df3f0bc672cf7c311ecc3d24f8dce814))
+* add release-please.yml ([#45](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/45)) ([bc54d32](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/bc54d324df3f0bc672cf7c311ecc3d24f8dce814))
+* add semantic configuration ([#46](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/46)) ([c772908](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/c77290897ee9a7943abdf259d5cf58b25baa16ae))
+* always run kubectl kustomize ([#40](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/40)) ([fdc7611](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/fdc76115a7cae52b8af0c5eb0eb0e002b58eed18))
+* **deps:** update Grafana K8s Monitoring version ([#36](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/36)) ([f3cbf38](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/f3cbf38089f238c444eede563b19eafcd305ae25))
+
 ## [0.2.2](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.2.1...v0.2.2) (2024-12-28)
 
 
