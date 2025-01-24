@@ -23,7 +23,7 @@ destinations:
       passwordKey: ${logs_password_key}
   - name: tracesService
     type: otlp
-    url:  ${traces_url}
+    url:  ${traces_host}
     metrics:
       enabled: false
     logs:

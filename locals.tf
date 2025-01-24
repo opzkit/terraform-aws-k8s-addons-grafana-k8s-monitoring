@@ -14,7 +14,7 @@ locals {
     metrics_username_key = var.metrics_username_key
     metrics_password_key = var.metrics_password_key
     traces_secret        = var.traces_secret
-    traces_url           = var.traces_url
+    traces_host          = var.traces_host
     traces_username_key  = var.traces_username_key
     traces_password_key  = var.traces_password_key
   })

@@ -21,9 +21,9 @@ variable "logs_password_key" {
   description = "Key in logs secret containing password for Loki"
 }
 
-variable "traces_url" {
+variable "traces_host" {
   type        = string
-  description = "URL for Tempo. NOTE this is a full data writing/pushing URL, not just the hostname!"
+  description = "URL for OTLP (Tempo). NOTE this is usually just the hostname!"
 }
 
 variable "traces_secret" {
@@ -51,7 +51,7 @@ variable "metrics_url" {
 
 variable "cost_metrics_url" {
   type        = string
-  description = "URL for Prometheus for OpenCost. NOTE this is usually just the hostname!"
+  description = "URL for Prometheus. NOTE this is a full data writing/pushing URL, not just the hostname!"
 }
 
 variable "metrics_secret" {
