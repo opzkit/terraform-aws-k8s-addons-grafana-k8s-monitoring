@@ -68811,7 +68811,7 @@ data:
     \ }\n}\n\notelcol.processor.batch \"tracesservice\" {\n  timeout = \"2s\"\n  send_batch_size
     = 8192\n  send_batch_max_size = 0\n\n  output {\n    traces = [otelcol.exporter.otlp.tracesservice.input]\n
     \ }\n}\notelcol.exporter.otlp \"tracesservice\" {\n  client {\n    endpoint =
-    \"${traces_url}\"\n    auth = otelcol.auth.basic.tracesservice.handler\n    headers
+    \"${traces_host}\"\n    auth = otelcol.auth.basic.tracesservice.handler\n    headers
     = {\n      \"X-Scope-OrgID\" = nonsensitive(remote.kubernetes.secret.tracesservice.data[\"tenantId\"]),\n
     \   }\n    tls {\n      insecure = false\n      insecure_skip_verify = false\n
     \     ca_pem = nonsensitive(remote.kubernetes.secret.tracesservice.data[\"ca\"])\n
