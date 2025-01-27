@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.4](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.2.3...v0.2.4) (2025-01-27)
+
+
+### Bug Fixes
+
+* use host for OTLP, not URL ([#47](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/47)) ([a1cba68](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/a1cba68a64ffa85931e589c1fdaf9ec9d09cdd48))
+
+
+### Miscellaneous Chores
+
+* **deps:** bump actions/setup-python from 3 to 5 ([#48](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/48)) ([738c2ad](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/738c2ad085b1bb7721fd0446c567c69daf144a50))
+* **deps:** bump opzkit/k8s-network/aws from 0.0.10 to 0.0.11 in /examples/basic ([#49](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/49)) ([bba81f2](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/bba81f22d9049ea6a42a21ea2d468d842c5fa664))
+* **deps:** bump opzkit/k8s-network/aws in /examples/basic ([bba81f2](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/bba81f22d9049ea6a42a21ea2d468d842c5fa664))
+
 ## [0.2.3](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.2.2...v0.2.3) (2025-01-24)
 
 
