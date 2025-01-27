@@ -1,6 +1,6 @@
 locals {
   // x-release-please-start-version
-  version = "0.2.3"
+  version = "0.2.4"
   // x-release-please-end
   yaml = templatefile("${path.module}/k8s-monitoring.yaml.tftpl", {
     cluster_name         = var.cluster_name
