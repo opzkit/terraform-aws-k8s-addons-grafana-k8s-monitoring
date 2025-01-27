@@ -45,7 +45,7 @@ module "state_store" {
 
 module "k8s-network" {
   source              = "opzkit/k8s-network/aws"
-  version             = "0.0.10"
+  version             = "0.0.11"
   name                = "network"
   region              = local.region
   public_subnet_zones = ["a", "b", "c"]
