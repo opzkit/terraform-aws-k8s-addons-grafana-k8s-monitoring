@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.6](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.2.5...v0.2.6) (2025-01-31)
+
+
+### Bug Fixes
+
+* **locals:** escape dollars in template-file ([#55](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/55)) ([f60d796](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/f60d796a43c75a237e14399bdb350fff5f0d244a))
+
 ## [0.2.5](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.2.4...v0.2.5) (2025-01-31)
 
 
