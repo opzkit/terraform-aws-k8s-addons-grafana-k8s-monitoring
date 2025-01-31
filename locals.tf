@@ -2,7 +2,8 @@ locals {
   // x-release-please-start-version
   version = "0.2.5"
   // x-release-please-end
-  yaml = templatefile("${path.module}/k8s-monitoring.yaml.tftpl", {
+  replaced = replace(file("${path.module}/k8s-monitoring.yaml.tftpl"), "$${1}", "$$$${1}")
+  yaml = replace(templatestring(local.replaced, {
     cluster_name         = var.cluster_name
     logs_secret          = var.logs_secret
     logs_url             = var.logs_url
@@ -17,7 +18,7 @@ locals {
     traces_host          = var.traces_host
     traces_username_key  = var.traces_username_key
     traces_password_key  = var.traces_password_key
-  })
+  }), "$$", "$")
 
   secrets_yaml = templatefile("${path.module}/external-secrets.yaml.tftpl", {
     external_secrets_keys     = var.external_secrets_keys
