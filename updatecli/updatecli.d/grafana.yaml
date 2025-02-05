@@ -6,7 +6,7 @@ sources:
       name: 'k8s-monitoring'
 targets:
   grafana_chart:
-    name: bump chart version
+    name: bump chart version to {{ source "lastGrafanaHelmRelease" }}
     kind: yaml
     scmid: github
     sourceid: lastGrafanaHelmRelease
@@ -53,4 +53,4 @@ actions:
       draft: false
       labels:
       - "dependencies"
-      title: "chore(deps): update Grafana K8s Monitoring version"
+      title: 'chore(deps): update Grafana K8s Monitoring version to {{ source "lastGrafanaHelmRelease" }}'
