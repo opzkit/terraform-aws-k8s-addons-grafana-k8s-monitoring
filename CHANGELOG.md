@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.3.0](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.2.8...v0.3.0) (2025-02-11)
+
+
+### Features
+
+* **ci:** enhance updatecli workflow with GitHub token retrieval ([#63](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/63)) ([3948390](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/39483905d00e5132ffbea4ae79a734074c9c3ce7))
+
+
+### Bug Fixes
+
+* **ci:** add version info to commit messages ([#65](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/65)) ([67aed58](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/67aed589f6650af4a491de87718ede7d387b13d5))
+
+
+### Miscellaneous Chores
+
+* **deps:** update Grafana K8s Monitoring version to 2.0.9 ([#66](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/66)) ([f48074d](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/f48074d35a356be84cb8ceaa4dbccbb5d1a87d68))
+
 ## [0.2.8](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.2.7...v0.2.8) (2025-02-05)
 
 
