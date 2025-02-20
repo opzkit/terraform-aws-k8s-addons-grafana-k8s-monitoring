@@ -67142,8 +67142,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
-    app.kubernetes.io/version: 2.14.0
-    helm.sh/chart: kube-state-metrics-5.29.0
+    app.kubernetes.io/version: 2.15.0
+    helm.sh/chart: kube-state-metrics-5.30.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -67158,8 +67158,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: node-exporter
     app.kubernetes.io/part-of: node-exporter
-    app.kubernetes.io/version: 1.8.2
-    helm.sh/chart: node-exporter-4.43.1
+    app.kubernetes.io/version: 1.9.0
+    helm.sh/chart: node-exporter-4.44.0
     release: k8s-monitoring
   name: k8s-monitoring-node-exporter
   namespace: monitoring
@@ -67635,8 +67635,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
-    app.kubernetes.io/version: 2.14.0
-    helm.sh/chart: kube-state-metrics-5.29.0
+    app.kubernetes.io/version: 2.15.0
+    helm.sh/chart: kube-state-metrics-5.30.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
 rules:
@@ -68032,8 +68032,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
-    app.kubernetes.io/version: 2.14.0
-    helm.sh/chart: kube-state-metrics-5.29.0
+    app.kubernetes.io/version: 2.15.0
+    helm.sh/chart: kube-state-metrics-5.30.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
 roleRef:
@@ -70804,16 +70804,6 @@ data:
     }
 
     otelcol.processor.attributes "tracesservice" {
-      action {
-        key = "cluster"
-        action = "upsert"
-        value = "${cluster_name}"
-      }
-      action {
-        key = "k8s.cluster.name"
-        action = "upsert"
-        value = "${cluster_name}"
-      }
       output {
         metrics = [otelcol.processor.transform.tracesservice.input]
         logs = [otelcol.processor.transform.tracesservice.input]
@@ -70823,6 +70813,14 @@ data:
 
     otelcol.processor.transform "tracesservice" {
       error_mode = "ignore"
+
+      trace_statements {
+        context = "resource"
+        statements = [
+          `set(attributes["cluster"], "${cluster_name}")`,
+          `set(attributes["k8s.cluster.name"], "${cluster_name}")`,
+        ]
+      }
 
       output {
         traces = [otelcol.processor.batch.tracesservice.input]
@@ -70904,7 +70902,8 @@ data:
 
       // Resource Detection Processor
       otelcol.processor.resourcedetection "default" {
-        detectors = ["env", "system"]
+        detectors = ["env","system"]
+
         system {
           hostname_sources = ["os"]
         }
@@ -70922,6 +70921,14 @@ data:
           metadata = ["k8s.namespace.name","k8s.pod.name","k8s.deployment.name","k8s.statefulset.name","k8s.daemonset.name","k8s.cronjob.name","k8s.job.name","k8s.node.name","k8s.pod.uid","k8s.pod.start_time"]
         }
         pod_association {
+          source {
+            from = "resource_attribute"
+            name = "k8s.pod.ip"
+          }
+          source {
+            from = "resource_attribute"
+            name = "k8s.pod.uid"
+          }
           source {
             from = "connection"
           }
@@ -71209,7 +71216,7 @@ data:
 
     # HELP grafana_kubernetes_monitoring_build_info A metric to report the version of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_build_info gauge
-    grafana_kubernetes_monitoring_build_info{version="2.0.10", namespace="monitoring"} 1
+    grafana_kubernetes_monitoring_build_info{version="2.0.11", namespace="monitoring"} 1
     # HELP grafana_kubernetes_monitoring_feature_info A metric to report the enabled features of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_feature_info gauge
     grafana_kubernetes_monitoring_feature_info{feature="annotationAutodiscovery", version="1.0.0"} 1
@@ -71423,8 +71430,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
-    app.kubernetes.io/version: 2.14.0
-    helm.sh/chart: kube-state-metrics-5.29.0
+    app.kubernetes.io/version: 2.15.0
+    helm.sh/chart: kube-state-metrics-5.30.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -71450,8 +71457,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: node-exporter
     app.kubernetes.io/part-of: node-exporter
-    app.kubernetes.io/version: 1.8.2
-    helm.sh/chart: node-exporter-4.43.1
+    app.kubernetes.io/version: 1.9.0
+    helm.sh/chart: node-exporter-4.44.0
     release: k8s-monitoring
   name: k8s-monitoring-node-exporter
   namespace: monitoring
@@ -71629,8 +71636,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
-    app.kubernetes.io/version: 2.14.0
-    helm.sh/chart: kube-state-metrics-5.29.0
+    app.kubernetes.io/version: 2.15.0
+    helm.sh/chart: kube-state-metrics-5.30.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -71653,8 +71660,8 @@ spec:
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/name: kube-state-metrics
         app.kubernetes.io/part-of: kube-state-metrics
-        app.kubernetes.io/version: 2.14.0
-        helm.sh/chart: kube-state-metrics-5.29.0
+        app.kubernetes.io/version: 2.15.0
+        helm.sh/chart: kube-state-metrics-5.30.0
         release: k8s-monitoring
     spec:
       automountServiceAccountToken: true
@@ -71663,7 +71670,7 @@ spec:
         - --port=8080
         - --resources=certificatesigningrequests,configmaps,cronjobs,daemonsets,deployments,endpoints,horizontalpodautoscalers,ingresses,jobs,leases,limitranges,mutatingwebhookconfigurations,namespaces,networkpolicies,nodes,persistentvolumeclaims,persistentvolumes,poddisruptionbudgets,pods,replicasets,replicationcontrollers,resourcequotas,secrets,services,statefulsets,storageclasses,validatingwebhookconfigurations,volumeattachments
         - --metric-labels-allowlist=nodes=[agentpool,alpha.eksctl.io/cluster-name,alpha.eksctl.io/nodegroup-name,beta.kubernetes.io/instance-type,cloud.google.com/gke-nodepool,cluster-name,ec2.amazonaws.com/Name,ec2.amazonaws.com/aws-autoscaling-groupName,ec2.amazonaws.com/aws-autoscaling-group-name,ec2.amazonaws.com/name,eks.amazonaws.com/nodegroup,k8s.io/cloud-provider-aws,karpenter.sh/nodepool,kubernetes.azure.com/cluster,kubernetes.io/arch,kubernetes.io/hostname,kubernetes.io/os,node.kubernetes.io/instance-type,topology.kubernetes.io/region,topology.kubernetes.io/zone]
-        image: registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.14.0
+        image: registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.15.0
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
@@ -72305,8 +72312,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: node-exporter
     app.kubernetes.io/part-of: node-exporter
-    app.kubernetes.io/version: 1.8.2
-    helm.sh/chart: node-exporter-4.43.1
+    app.kubernetes.io/version: 1.9.0
+    helm.sh/chart: node-exporter-4.44.0
     release: k8s-monitoring
   name: k8s-monitoring-node-exporter
   namespace: monitoring
@@ -72327,8 +72334,8 @@ spec:
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/name: node-exporter
         app.kubernetes.io/part-of: node-exporter
-        app.kubernetes.io/version: 1.8.2
-        helm.sh/chart: node-exporter-4.43.1
+        app.kubernetes.io/version: 1.9.0
+        helm.sh/chart: node-exporter-4.44.0
         release: k8s-monitoring
     spec:
       affinity:
@@ -72351,7 +72358,7 @@ spec:
         env:
         - name: HOST_IP
           value: 0.0.0.0
-        image: quay.io/prometheus/node-exporter:v1.8.2
+        image: quay.io/prometheus/node-exporter:v1.9.0
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
