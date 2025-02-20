@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.2](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.3.1...v0.3.2) (2025-02-20)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump actions/create-github-app-token from 1.11.3 to 1.11.5 ([#69](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/69)) ([e30088a](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/e30088a51a571ec9f84ce1340c5821465159a956))
+* **deps:** bump azure/setup-helm from 4.2.0 to 4.3.0 ([#72](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/72)) ([83cedf3](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/83cedf35d56824e2edd4c978cca981848454e567))
+* **deps:** update Grafana K8s Monitoring version to 2.0.11 ([#71](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/71)) ([2743096](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/2743096bea5aa97f89bf0f8f5321e50055597095))
+
 ## [0.3.1](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.3.0...v0.3.1) (2025-02-14)
 
 
