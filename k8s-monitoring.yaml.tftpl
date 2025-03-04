@@ -68412,14 +68412,31 @@ data:
 
         rule {
           source_labels = ["__meta_kubernetes_pod_annotation_k8s_grafana_com_metrics_scheme"]
-          action = "replace"
+          regex = "(.+)"
           target_label = "__scheme__"
         }
 
         rule {
           source_labels = ["__meta_kubernetes_pod_annotation_k8s_grafana_com_metrics_scrapeInterval"]
-          action = "replace"
+          regex = "(.+)"
           target_label = "__scrape_interval__"
+        }
+        rule {
+          source_labels = ["__scrape_interval__"]
+          regex = ""
+          replacement = "60s"
+          target_label = "__scrape_interval__"
+        }
+        rule {
+          source_labels = ["__meta_kubernetes_pod_annotation_k8s_grafana_com_metrics_scrapeTimeout"]
+          regex = "(.+)"
+          target_label = "__scrape_timeout__"
+        }
+        rule {
+          source_labels = ["__scrape_timeout__"]
+          regex = ""
+          replacement = "10s"
+          target_label = "__scrape_timeout__"
         }
       }
 
@@ -68487,19 +68504,36 @@ data:
 
         rule {
           source_labels = ["__meta_kubernetes_service_annotation_k8s_grafana_com_metrics_scheme"]
-          action = "replace"
+          regex = "(.+)"
           target_label = "__scheme__"
         }
 
         rule {
           source_labels = ["__meta_kubernetes_service_annotation_k8s_grafana_com_metrics_scrapeInterval"]
-          action = "replace"
+          regex = "(.+)"
           target_label = "__scrape_interval__"
+        }
+        rule {
+          source_labels = ["__scrape_interval__"]
+          regex = ""
+          replacement = "60s"
+          target_label = "__scrape_interval__"
+        }
+        rule {
+          source_labels = ["__meta_kubernetes_service_annotation_k8s_grafana_com_metrics_scrapeTimeout"]
+          regex = "(.+)"
+          target_label = "__scrape_timeout__"
+        }
+        rule {
+          source_labels = ["__scrape_timeout__"]
+          regex = ""
+          replacement = "10s"
+          target_label = "__scrape_timeout__"
         }
       }
 
       discovery.relabel "annotation_autodiscovery_http" {
-        targets = concat(discovery.relabel.annotation_autodiscovery_pods.output, discovery.relabel.annotation_autodiscovery_services.output)
+        targets = array.concat(discovery.relabel.annotation_autodiscovery_pods.output, discovery.relabel.annotation_autodiscovery_services.output)
         rule {
           source_labels = ["__scheme__"]
           regex = "https"
@@ -68508,7 +68542,7 @@ data:
       }
 
       discovery.relabel "annotation_autodiscovery_https" {
-        targets = concat(discovery.relabel.annotation_autodiscovery_pods.output, discovery.relabel.annotation_autodiscovery_services.output)
+        targets = array.concat(discovery.relabel.annotation_autodiscovery_pods.output, discovery.relabel.annotation_autodiscovery_services.output)
         rule {
           source_labels = ["__scheme__"]
           regex = "https"
@@ -68518,7 +68552,6 @@ data:
 
       prometheus.scrape "annotation_autodiscovery_http" {
         targets = discovery.relabel.annotation_autodiscovery_http.output
-        scrape_interval = "60s"
         honor_labels = true
         bearer_token_file = "/var/run/secrets/kubernetes.io/serviceaccount/token"
         clustering {
@@ -68530,7 +68563,6 @@ data:
 
       prometheus.scrape "annotation_autodiscovery_https" {
         targets = discovery.relabel.annotation_autodiscovery_https.output
-        scrape_interval = "60s"
         honor_labels = true
         bearer_token_file = "/var/run/secrets/kubernetes.io/serviceaccount/token"
         tls_config {
@@ -71189,7 +71221,7 @@ data:
 
     # HELP grafana_kubernetes_monitoring_build_info A metric to report the version of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_build_info gauge
-    grafana_kubernetes_monitoring_build_info{version="2.0.15", namespace="monitoring"} 1
+    grafana_kubernetes_monitoring_build_info{version="2.0.16", namespace="monitoring"} 1
     # HELP grafana_kubernetes_monitoring_feature_info A metric to report the enabled features of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_feature_info gauge
     grafana_kubernetes_monitoring_feature_info{feature="annotationAutodiscovery", version="1.0.0"} 1
@@ -71197,7 +71229,7 @@ data:
     grafana_kubernetes_monitoring_feature_info{deployments="kube-state-metrics,node-exporter,windows-exporter,kepler", feature="clusterMetrics", sources="kubelet,kubeletResource,cadvisor,kube-state-metrics,node-exporter,windows-exporter,kepler", version="1.0.0"} 1
     grafana_kubernetes_monitoring_feature_info{feature="clusterEvents", version="1.0.0"} 1
     grafana_kubernetes_monitoring_feature_info{feature="podLogs", method="volumes", version="1.0.0"} 1
-    grafana_kubernetes_monitoring_feature_info{feature="prometheusOperatorObjects", version="1.0.0"} 1
+    grafana_kubernetes_monitoring_feature_info{feature="prometheusOperatorObjects", sources="ServiceMonitors,PodMonitors,Probes", version="1.0.0"} 1
     grafana_kubernetes_monitoring_feature_info{feature="integrations", sources="alloy", version="1.0.0"} 1
 kind: ConfigMap
 metadata:
