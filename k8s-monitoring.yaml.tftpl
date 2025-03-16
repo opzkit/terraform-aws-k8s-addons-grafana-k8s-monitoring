@@ -67074,8 +67074,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-logs-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-logs-0.12.5
   name: k8s-monitoring-alloy-logs
   namespace: monitoring
 ---
@@ -67089,8 +67089,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-metrics
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-metrics-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-metrics-0.12.5
   name: k8s-monitoring-alloy-metrics
   namespace: monitoring
 ---
@@ -67104,8 +67104,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-receiver
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-receiver-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-receiver-0.12.5
   name: k8s-monitoring-alloy-receiver
   namespace: monitoring
 ---
@@ -67119,8 +67119,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-singleton
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-singleton-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-singleton-0.12.5
   name: k8s-monitoring-alloy-singleton
   namespace: monitoring
 ---
@@ -67206,8 +67206,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-logs-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-logs-0.12.5
   name: k8s-monitoring-alloy-logs
 rules:
 - apiGroups:
@@ -67310,8 +67310,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-metrics
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-metrics-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-metrics-0.12.5
   name: k8s-monitoring-alloy-metrics
 rules:
 - apiGroups:
@@ -67414,8 +67414,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-receiver
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-receiver-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-receiver-0.12.5
   name: k8s-monitoring-alloy-receiver
 rules:
 - apiGroups:
@@ -67518,8 +67518,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-singleton
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-singleton-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-singleton-0.12.5
   name: k8s-monitoring-alloy-singleton
 rules:
 - apiGroups:
@@ -67939,8 +67939,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-logs-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-logs-0.12.5
   name: k8s-monitoring-alloy-logs
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -67960,8 +67960,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-metrics
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-metrics-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-metrics-0.12.5
   name: k8s-monitoring-alloy-metrics
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -67981,8 +67981,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-receiver
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-receiver-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-receiver-0.12.5
   name: k8s-monitoring-alloy-receiver
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -68002,8 +68002,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-singleton
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-singleton-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-singleton-0.12.5
   name: k8s-monitoring-alloy-singleton
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -68364,6 +68364,28 @@ data:
           regex = "true"
           action = "keep"
         }
+        // Only keep pods that are running, ready, and not init containers.
+        rule {
+          source_labels = [
+            "__meta_kubernetes_pod_phase",
+            "__meta_kubernetes_pod_ready",
+            "__meta_kubernetes_pod_container_init",
+          ]
+          regex = "Running;true;false"
+          action = "keep"
+        }
+        rule {
+          source_labels = ["__meta_kubernetes_pod_name"]
+          target_label = "pod"
+        }
+        rule {
+          source_labels = ["__meta_kubernetes_pod_container_name"]
+          target_label = "container"
+        }
+        rule {
+          source_labels = ["__meta_kubernetes_namespace"]
+          target_label = "namespace"
+        }
         rule {
           source_labels = ["__meta_kubernetes_pod_annotation_k8s_grafana_com_job"]
           target_label = "job"
@@ -68372,14 +68394,35 @@ data:
           source_labels = ["__meta_kubernetes_pod_annotation_k8s_grafana_com_instance"]
           target_label = "instance"
         }
+
+        // Rules to choose the right container
         rule {
-          source_labels = ["__meta_kubernetes_namespace"]
-          target_label = "namespace"
+          source_labels = ["container"]
+          target_label = "__tmp_container"
         }
+        rule {
+          source_labels = ["__meta_kubernetes_pod_annotation_k8s_grafana_com_metrics_container"]
+          regex = "(.+)"
+          target_label = "__tmp_container"
+        }
+        rule {
+          source_labels = ["container"]
+          action = "keepequal"
+          target_label = "__tmp_container"
+        }
+        rule {
+          action = "labeldrop"
+          regex = "__tmp_container"
+        }
+
+        // Set metrics path
         rule {
           source_labels = ["__meta_kubernetes_pod_annotation_k8s_grafana_com_metrics_path"]
+          regex = "(.+)"
           target_label = "__metrics_path__"
         }
+
+        // Set metrics scraping URL parameters
         rule {
           action = "labelmap"
           regex = "__meta_kubernetes_pod_annotation_k8s_grafana_com_metrics_param_(.+)"
@@ -68465,6 +68508,14 @@ data:
           action = "keep"
         }
         rule {
+          source_labels = ["__meta_kubernetes_service_name"]
+          target_label = "service"
+        }
+        rule {
+          source_labels = ["__meta_kubernetes_namespace"]
+          target_label = "namespace"
+        }
+        rule {
           source_labels = ["__meta_kubernetes_service_annotation_k8s_grafana_com_job"]
           target_label = "job"
         }
@@ -68472,14 +68523,14 @@ data:
           source_labels = ["__meta_kubernetes_service_annotation_k8s_grafana_com_instance"]
           target_label = "instance"
         }
-        rule {
-          source_labels = ["__meta_kubernetes_namespace"]
-          target_label = "namespace"
-        }
+
+        // Set metrics path
         rule {
           source_labels = ["__meta_kubernetes_service_annotation_k8s_grafana_com_metrics_path"]
           target_label = "__metrics_path__"
         }
+
+        // Set metrics scraping URL parameters
         rule {
           action = "labelmap"
           regex = "__meta_kubernetes_service_annotation_k8s_grafana_com_metrics_param_(.+)"
@@ -70217,7 +70268,7 @@ data:
 
     # HELP grafana_kubernetes_monitoring_build_info A metric to report the version of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_build_info gauge
-    grafana_kubernetes_monitoring_build_info{version="2.0.17", namespace="monitoring"} 1
+    grafana_kubernetes_monitoring_build_info{version="2.0.18", namespace="monitoring"} 1
     # HELP grafana_kubernetes_monitoring_feature_info A metric to report the enabled features of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_feature_info gauge
     grafana_kubernetes_monitoring_feature_info{feature="annotationAutodiscovery", version="1.0.0"} 1
@@ -70271,8 +70322,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-logs-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-logs-0.12.5
   name: k8s-monitoring-alloy-logs
   namespace: monitoring
 spec:
@@ -70296,8 +70347,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-metrics
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-metrics-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-metrics-0.12.5
   name: k8s-monitoring-alloy-metrics
   namespace: monitoring
 spec:
@@ -70321,8 +70372,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-metrics
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-metrics-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-metrics-0.12.5
   name: k8s-monitoring-alloy-metrics-cluster
   namespace: monitoring
 spec:
@@ -70347,8 +70398,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-receiver
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-receiver-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-receiver-0.12.5
   name: k8s-monitoring-alloy-receiver
   namespace: monitoring
 spec:
@@ -70384,8 +70435,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-singleton
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-singleton-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-singleton-0.12.5
   name: k8s-monitoring-alloy-singleton
   namespace: monitoring
 spec:
@@ -70530,8 +70581,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-singleton
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-singleton-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-singleton-0.12.5
   name: k8s-monitoring-alloy-singleton
   namespace: monitoring
 spec:
@@ -70565,7 +70616,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: spec.nodeName
-        image: docker.io/grafana/alloy:v1.7.2
+        image: docker.io/grafana/alloy:v1.7.4
         imagePullPolicy: IfNotPresent
         name: alloy
         ports:
@@ -70848,8 +70899,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-metrics
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-metrics-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-metrics-0.12.5
   name: k8s-monitoring-alloy-metrics
   namespace: monitoring
 spec:
@@ -70888,7 +70939,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: spec.nodeName
-        image: docker.io/grafana/alloy:v1.7.2
+        image: docker.io/grafana/alloy:v1.7.4
         imagePullPolicy: IfNotPresent
         name: alloy
         ports:
@@ -70959,8 +71010,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-logs-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-logs-0.12.5
   name: k8s-monitoring-alloy-logs
   namespace: monitoring
 spec:
@@ -70993,7 +71044,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: spec.nodeName
-        image: docker.io/grafana/alloy:v1.7.2
+        image: docker.io/grafana/alloy:v1.7.4
         imagePullPolicy: IfNotPresent
         name: alloy
         ports:
@@ -71079,8 +71130,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-receiver
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.2
-    helm.sh/chart: alloy-receiver-0.12.3
+    app.kubernetes.io/version: v1.7.4
+    helm.sh/chart: alloy-receiver-0.12.5
   name: k8s-monitoring-alloy-receiver
   namespace: monitoring
 spec:
@@ -71113,7 +71164,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: spec.nodeName
-        image: docker.io/grafana/alloy:v1.7.2
+        image: docker.io/grafana/alloy:v1.7.4
         imagePullPolicy: IfNotPresent
         name: alloy
         ports:
