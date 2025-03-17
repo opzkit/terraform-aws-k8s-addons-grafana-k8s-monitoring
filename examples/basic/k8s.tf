@@ -55,7 +55,7 @@ module "k8s-network" {
 module "k8s" {
   depends_on         = [module.state_store]
   source             = "opzkit/k8s/aws"
-  version            = "0.18.3"
+  version            = "0.18.4"
   name               = local.name
   region             = local.region
   dns_zone           = local.zone
