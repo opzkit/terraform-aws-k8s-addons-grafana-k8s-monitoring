@@ -13,9 +13,6 @@ targets:
     spec:
       file: 'grafana/kustomization.yaml'
       key: '$.helmCharts[0].version'
-    transformers:
-    - addprefix: "'"
-    - addsuffix: "'"
   kubectl:
     name: run kubectl when chart changed
     kind: shell
