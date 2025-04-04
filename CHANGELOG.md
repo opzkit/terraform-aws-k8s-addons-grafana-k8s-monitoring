@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.10](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.3.9...v0.3.10) (2025-04-04)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump actions/create-github-app-token from 1.12.0 to 2.0.2 ([#98](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/98)) ([77af00d](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/77af00d638c2a1dc1acc0fc8ffb940bb0edacfc7))
+
 ## [0.3.9](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.3.8...v0.3.9) (2025-04-01)
 
 
