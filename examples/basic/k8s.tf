@@ -38,7 +38,7 @@ module "k8s_monitoring" {
 }
 
 module "state_store" {
-  source           = "github.com/opzkit/terraform-aws-kops-state-store?ref=v0.5.1"
+  source           = "github.com/opzkit/terraform-aws-kops-state-store?ref=v0.6.0"
   state_store_name = "some-kops-storage-s3-bucket"
 }
 
