@@ -67543,8 +67543,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-logs-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-logs-1.0.1
   name: k8s-monitoring-alloy-logs
   namespace: monitoring
 ---
@@ -67558,8 +67558,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-metrics
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-metrics-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-metrics-1.0.1
   name: k8s-monitoring-alloy-metrics
   namespace: monitoring
 ---
@@ -67573,8 +67573,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-receiver
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-receiver-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-receiver-1.0.1
   name: k8s-monitoring-alloy-receiver
   namespace: monitoring
 ---
@@ -67588,8 +67588,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-singleton
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-singleton-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-singleton-1.0.1
   name: k8s-monitoring-alloy-singleton
   namespace: monitoring
 ---
@@ -67616,7 +67616,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.15.0
-    helm.sh/chart: kube-state-metrics-5.31.0
+    helm.sh/chart: kube-state-metrics-5.32.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -67631,8 +67631,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: node-exporter
     app.kubernetes.io/part-of: node-exporter
-    app.kubernetes.io/version: 1.9.0
-    helm.sh/chart: node-exporter-4.45.0
+    app.kubernetes.io/version: 1.9.1
+    helm.sh/chart: node-exporter-4.45.2
     release: k8s-monitoring
   name: k8s-monitoring-node-exporter
   namespace: monitoring
@@ -67675,8 +67675,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-logs-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-logs-1.0.1
   name: k8s-monitoring-alloy-logs
 rules:
 - apiGroups:
@@ -67732,6 +67732,7 @@ rules:
   - podmonitors
   - servicemonitors
   - probes
+  - scrapeconfigs
   verbs:
   - get
   - list
@@ -67779,8 +67780,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-metrics
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-metrics-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-metrics-1.0.1
   name: k8s-monitoring-alloy-metrics
 rules:
 - apiGroups:
@@ -67836,6 +67837,7 @@ rules:
   - podmonitors
   - servicemonitors
   - probes
+  - scrapeconfigs
   verbs:
   - get
   - list
@@ -67883,8 +67885,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-receiver
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-receiver-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-receiver-1.0.1
   name: k8s-monitoring-alloy-receiver
 rules:
 - apiGroups:
@@ -67940,6 +67942,7 @@ rules:
   - podmonitors
   - servicemonitors
   - probes
+  - scrapeconfigs
   verbs:
   - get
   - list
@@ -67987,8 +67990,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-singleton
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-singleton-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-singleton-1.0.1
   name: k8s-monitoring-alloy-singleton
 rules:
 - apiGroups:
@@ -68044,6 +68047,7 @@ rules:
   - podmonitors
   - servicemonitors
   - probes
+  - scrapeconfigs
   verbs:
   - get
   - list
@@ -68109,7 +68113,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.15.0
-    helm.sh/chart: kube-state-metrics-5.31.0
+    helm.sh/chart: kube-state-metrics-5.32.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
 rules:
@@ -68408,8 +68412,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-logs-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-logs-1.0.1
   name: k8s-monitoring-alloy-logs
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -68429,8 +68433,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-metrics
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-metrics-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-metrics-1.0.1
   name: k8s-monitoring-alloy-metrics
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -68450,8 +68454,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-receiver
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-receiver-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-receiver-1.0.1
   name: k8s-monitoring-alloy-receiver
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -68471,8 +68475,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-singleton
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-singleton-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-singleton-1.0.1
   name: k8s-monitoring-alloy-singleton
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -68506,7 +68510,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.15.0
-    helm.sh/chart: kube-state-metrics-5.31.0
+    helm.sh/chart: kube-state-metrics-5.32.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
 roleRef:
@@ -68541,39 +68545,6 @@ subjects:
 apiVersion: v1
 data:
   config.alloy: |-
-    // Destination: logsService (loki)
-    otelcol.exporter.loki "logsservice" {
-      forward_to = [loki.write.logsservice.receiver]
-    }
-
-    loki.write "logsservice" {
-      endpoint {
-        url = "${logs_url}"
-        tenant_id = convert.nonsensitive(remote.kubernetes.secret.logsservice.data["tenantId"])
-        basic_auth {
-          username = convert.nonsensitive(remote.kubernetes.secret.logsservice.data["${logs_username_key}"])
-          password = remote.kubernetes.secret.logsservice.data["${logs_password_key}"]
-        }
-        tls_config {
-          insecure_skip_verify = false
-          ca_pem = convert.nonsensitive(remote.kubernetes.secret.logsservice.data["ca"])
-          cert_pem = convert.nonsensitive(remote.kubernetes.secret.logsservice.data["cert"])
-          key_pem = remote.kubernetes.secret.logsservice.data["key"]
-        }
-        min_backoff_period = "500ms"
-        max_backoff_period = "5m"
-        max_backoff_retries = "10"
-      }
-      external_labels = {
-        "cluster" = "${cluster_name}",
-        "k8s_cluster_name" = "${cluster_name}",
-      }
-    }
-
-    remote.kubernetes.secret "logsservice" {
-      name      = "${logs_secret}"
-      namespace = "monitoring"
-    }
     // Feature: Pod Logs
     declare "pod_logs" {
       argument "logs_destinations" {
@@ -68747,14 +68718,10 @@ data:
         loki.write.logsservice.receiver,
       ]
     }
-kind: ConfigMap
-metadata:
-  name: k8s-monitoring-alloy-logs
-  namespace: monitoring
----
-apiVersion: v1
-data:
-  config.alloy: |-
+
+
+
+
     // Destination: metricsService (prometheus)
     otelcol.exporter.prometheus "metricsservice" {
       add_metric_suffixes = true
@@ -68816,6 +68783,116 @@ data:
       name      = "${metrics_secret}"
       namespace = "monitoring"
     }
+
+    // Destination: logsService (loki)
+    otelcol.exporter.loki "logsservice" {
+      forward_to = [loki.write.logsservice.receiver]
+    }
+
+    loki.write "logsservice" {
+      endpoint {
+        url = "${logs_url}"
+        tenant_id = convert.nonsensitive(remote.kubernetes.secret.logsservice.data["tenantId"])
+        basic_auth {
+          username = convert.nonsensitive(remote.kubernetes.secret.logsservice.data["${logs_username_key}"])
+          password = remote.kubernetes.secret.logsservice.data["${logs_password_key}"]
+        }
+        tls_config {
+          insecure_skip_verify = false
+          ca_pem = convert.nonsensitive(remote.kubernetes.secret.logsservice.data["ca"])
+          cert_pem = convert.nonsensitive(remote.kubernetes.secret.logsservice.data["cert"])
+          key_pem = remote.kubernetes.secret.logsservice.data["key"]
+        }
+        min_backoff_period = "500ms"
+        max_backoff_period = "5m"
+        max_backoff_retries = "10"
+      }
+      external_labels = {
+        "cluster" = "${cluster_name}",
+        "k8s_cluster_name" = "${cluster_name}",
+      }
+    }
+
+    remote.kubernetes.secret "logsservice" {
+      name      = "${logs_secret}"
+      namespace = "monitoring"
+    }
+
+    // Destination: tracesService (otlp)
+    otelcol.auth.basic "tracesservice" {
+      username = convert.nonsensitive(remote.kubernetes.secret.tracesservice.data["${traces_username_key}"])
+      password = remote.kubernetes.secret.tracesservice.data["${traces_password_key}"]
+    }
+
+    otelcol.processor.attributes "tracesservice" {
+      output {
+        metrics = [otelcol.processor.transform.tracesservice.input]
+        logs = [otelcol.processor.transform.tracesservice.input]
+        traces = [otelcol.processor.transform.tracesservice.input]
+      }
+    }
+
+    otelcol.processor.transform "tracesservice" {
+      error_mode = "ignore"
+
+      trace_statements {
+        context = "resource"
+        statements = [
+          `set(attributes["cluster"], "${cluster_name}")`,
+          `set(attributes["k8s.cluster.name"], "${cluster_name}")`,
+        ]
+      }
+
+      output {
+        traces = [otelcol.processor.batch.tracesservice.input]
+      }
+    }
+
+    otelcol.processor.batch "tracesservice" {
+      timeout = "2s"
+      send_batch_size = 8192
+      send_batch_max_size = 0
+
+      output {
+        traces = [otelcol.exporter.otlp.tracesservice.input]
+      }
+    }
+    otelcol.exporter.otlp "tracesservice" {
+      client {
+        endpoint = "${traces_host}"
+        auth = otelcol.auth.basic.tracesservice.handler
+        headers = {
+          "X-Scope-OrgID" = convert.nonsensitive(remote.kubernetes.secret.tracesservice.data["tenantId"]),
+        }
+        tls {
+          insecure = false
+          insecure_skip_verify = false
+          ca_pem = convert.nonsensitive(remote.kubernetes.secret.tracesservice.data["ca"])
+          cert_pem = convert.nonsensitive(remote.kubernetes.secret.tracesservice.data["cert"])
+          key_pem = remote.kubernetes.secret.tracesservice.data["key"]
+        }
+      }
+
+      retry_on_failure {
+        enabled = true
+        initial_interval = "5s"
+        max_interval = "30s"
+        max_elapsed_time = "5m"
+      }
+    }
+
+    remote.kubernetes.secret "tracesservice" {
+      name      = "${traces_secret}"
+      namespace = "monitoring"
+    }
+kind: ConfigMap
+metadata:
+  name: k8s-monitoring-alloy-logs
+  namespace: monitoring
+---
+apiVersion: v1
+data:
+  config.alloy: |-
     // Feature: Annotation Autodiscovery
     declare "annotation_autodiscovery" {
       argument "metrics_destinations" {
@@ -70019,14 +70096,10 @@ data:
         prometheus.remote_write.metricsservice.receiver,
       ]
     }
-kind: ConfigMap
-metadata:
-  name: k8s-monitoring-alloy-metrics
-  namespace: monitoring
----
-apiVersion: v1
-data:
-  config.alloy: |-
+
+
+
+
     // Destination: metricsService (prometheus)
     otelcol.exporter.prometheus "metricsservice" {
       add_metric_suffixes = true
@@ -70190,6 +70263,14 @@ data:
       name      = "${traces_secret}"
       namespace = "monitoring"
     }
+kind: ConfigMap
+metadata:
+  name: k8s-monitoring-alloy-metrics
+  namespace: monitoring
+---
+apiVersion: v1
+data:
+  config.alloy: |-
     // Feature: Application Observability
     declare "application_observability" {
       argument "metrics_destinations" {
@@ -70330,14 +70411,10 @@ data:
         otelcol.processor.attributes.tracesservice.input,
       ]
     }
-kind: ConfigMap
-metadata:
-  name: k8s-monitoring-alloy-receiver
-  namespace: monitoring
----
-apiVersion: v1
-data:
-  config.alloy: |-
+
+
+
+
     // Destination: metricsService (prometheus)
     otelcol.exporter.prometheus "metricsservice" {
       add_metric_suffixes = true
@@ -70433,6 +70510,82 @@ data:
       name      = "${logs_secret}"
       namespace = "monitoring"
     }
+
+    // Destination: tracesService (otlp)
+    otelcol.auth.basic "tracesservice" {
+      username = convert.nonsensitive(remote.kubernetes.secret.tracesservice.data["${traces_username_key}"])
+      password = remote.kubernetes.secret.tracesservice.data["${traces_password_key}"]
+    }
+
+    otelcol.processor.attributes "tracesservice" {
+      output {
+        metrics = [otelcol.processor.transform.tracesservice.input]
+        logs = [otelcol.processor.transform.tracesservice.input]
+        traces = [otelcol.processor.transform.tracesservice.input]
+      }
+    }
+
+    otelcol.processor.transform "tracesservice" {
+      error_mode = "ignore"
+
+      trace_statements {
+        context = "resource"
+        statements = [
+          `set(attributes["cluster"], "${cluster_name}")`,
+          `set(attributes["k8s.cluster.name"], "${cluster_name}")`,
+        ]
+      }
+
+      output {
+        traces = [otelcol.processor.batch.tracesservice.input]
+      }
+    }
+
+    otelcol.processor.batch "tracesservice" {
+      timeout = "2s"
+      send_batch_size = 8192
+      send_batch_max_size = 0
+
+      output {
+        traces = [otelcol.exporter.otlp.tracesservice.input]
+      }
+    }
+    otelcol.exporter.otlp "tracesservice" {
+      client {
+        endpoint = "${traces_host}"
+        auth = otelcol.auth.basic.tracesservice.handler
+        headers = {
+          "X-Scope-OrgID" = convert.nonsensitive(remote.kubernetes.secret.tracesservice.data["tenantId"]),
+        }
+        tls {
+          insecure = false
+          insecure_skip_verify = false
+          ca_pem = convert.nonsensitive(remote.kubernetes.secret.tracesservice.data["ca"])
+          cert_pem = convert.nonsensitive(remote.kubernetes.secret.tracesservice.data["cert"])
+          key_pem = remote.kubernetes.secret.tracesservice.data["key"]
+        }
+      }
+
+      retry_on_failure {
+        enabled = true
+        initial_interval = "5s"
+        max_interval = "30s"
+        max_elapsed_time = "5m"
+      }
+    }
+
+    remote.kubernetes.secret "tracesservice" {
+      name      = "${traces_secret}"
+      namespace = "monitoring"
+    }
+kind: ConfigMap
+metadata:
+  name: k8s-monitoring-alloy-receiver
+  namespace: monitoring
+---
+apiVersion: v1
+data:
+  config.alloy: |-
     // Feature: Cluster Events
     declare "cluster_events" {
       argument "logs_destinations" {
@@ -70502,6 +70655,11 @@ data:
         stage.label_keep {
           values = ["job","level","namespace","node","source"]
         }
+        stage.labels {
+          values = {
+            "service_name" = "job",
+          }
+        }
         forward_to = argument.logs_destinations.value
       }
     }
@@ -70552,11 +70710,178 @@ data:
         prometheus.remote_write.metricsservice.receiver,
       ]
     }
+
+
+
+
+    // Destination: metricsService (prometheus)
+    otelcol.exporter.prometheus "metricsservice" {
+      add_metric_suffixes = true
+      forward_to = [prometheus.remote_write.metricsservice.receiver]
+    }
+
+    prometheus.remote_write "metricsservice" {
+      endpoint {
+        url = "${metrics_url}"
+        headers = {
+          "X-Scope-OrgID" = convert.nonsensitive(remote.kubernetes.secret.metricsservice.data["tenantId"]),
+        }
+        basic_auth {
+          username = convert.nonsensitive(remote.kubernetes.secret.metricsservice.data["${metrics_username_key}"])
+          password = remote.kubernetes.secret.metricsservice.data["${metrics_password_key}"]
+        }
+        tls_config {
+          insecure_skip_verify = false
+          ca_pem = convert.nonsensitive(remote.kubernetes.secret.metricsservice.data["ca"])
+          cert_pem = convert.nonsensitive(remote.kubernetes.secret.metricsservice.data["cert"])
+          key_pem = remote.kubernetes.secret.metricsservice.data["key"]
+        }
+        send_native_histograms = false
+
+        queue_config {
+          capacity = 10000
+          min_shards = 1
+          max_shards = 50
+          max_samples_per_send = 2000
+          batch_send_deadline = "5s"
+          min_backoff = "30ms"
+          max_backoff = "5s"
+          retry_on_http_429 = true
+          sample_age_limit = "0s"
+        }
+
+        write_relabel_config {
+          source_labels = ["cluster"]
+          regex = ""
+          replacement = "${cluster_name}"
+          target_label = "cluster"
+        }
+        write_relabel_config {
+          source_labels = ["k8s_cluster_name"]
+          regex = ""
+          replacement = "${cluster_name}"
+          target_label = "k8s_cluster_name"
+        }
+      }
+
+      wal {
+        truncate_frequency = "2h"
+        min_keepalive_time = "5m"
+        max_keepalive_time = "8h"
+      }
+    }
+
+    remote.kubernetes.secret "metricsservice" {
+      name      = "${metrics_secret}"
+      namespace = "monitoring"
+    }
+
+    // Destination: logsService (loki)
+    otelcol.exporter.loki "logsservice" {
+      forward_to = [loki.write.logsservice.receiver]
+    }
+
+    loki.write "logsservice" {
+      endpoint {
+        url = "${logs_url}"
+        tenant_id = convert.nonsensitive(remote.kubernetes.secret.logsservice.data["tenantId"])
+        basic_auth {
+          username = convert.nonsensitive(remote.kubernetes.secret.logsservice.data["${logs_username_key}"])
+          password = remote.kubernetes.secret.logsservice.data["${logs_password_key}"]
+        }
+        tls_config {
+          insecure_skip_verify = false
+          ca_pem = convert.nonsensitive(remote.kubernetes.secret.logsservice.data["ca"])
+          cert_pem = convert.nonsensitive(remote.kubernetes.secret.logsservice.data["cert"])
+          key_pem = remote.kubernetes.secret.logsservice.data["key"]
+        }
+        min_backoff_period = "500ms"
+        max_backoff_period = "5m"
+        max_backoff_retries = "10"
+      }
+      external_labels = {
+        "cluster" = "${cluster_name}",
+        "k8s_cluster_name" = "${cluster_name}",
+      }
+    }
+
+    remote.kubernetes.secret "logsservice" {
+      name      = "${logs_secret}"
+      namespace = "monitoring"
+    }
+
+    // Destination: tracesService (otlp)
+    otelcol.auth.basic "tracesservice" {
+      username = convert.nonsensitive(remote.kubernetes.secret.tracesservice.data["${traces_username_key}"])
+      password = remote.kubernetes.secret.tracesservice.data["${traces_password_key}"]
+    }
+
+    otelcol.processor.attributes "tracesservice" {
+      output {
+        metrics = [otelcol.processor.transform.tracesservice.input]
+        logs = [otelcol.processor.transform.tracesservice.input]
+        traces = [otelcol.processor.transform.tracesservice.input]
+      }
+    }
+
+    otelcol.processor.transform "tracesservice" {
+      error_mode = "ignore"
+
+      trace_statements {
+        context = "resource"
+        statements = [
+          `set(attributes["cluster"], "${cluster_name}")`,
+          `set(attributes["k8s.cluster.name"], "${cluster_name}")`,
+        ]
+      }
+
+      output {
+        traces = [otelcol.processor.batch.tracesservice.input]
+      }
+    }
+
+    otelcol.processor.batch "tracesservice" {
+      timeout = "2s"
+      send_batch_size = 8192
+      send_batch_max_size = 0
+
+      output {
+        traces = [otelcol.exporter.otlp.tracesservice.input]
+      }
+    }
+    otelcol.exporter.otlp "tracesservice" {
+      client {
+        endpoint = "${traces_host}"
+        auth = otelcol.auth.basic.tracesservice.handler
+        headers = {
+          "X-Scope-OrgID" = convert.nonsensitive(remote.kubernetes.secret.tracesservice.data["tenantId"]),
+        }
+        tls {
+          insecure = false
+          insecure_skip_verify = false
+          ca_pem = convert.nonsensitive(remote.kubernetes.secret.tracesservice.data["ca"])
+          cert_pem = convert.nonsensitive(remote.kubernetes.secret.tracesservice.data["cert"])
+          key_pem = remote.kubernetes.secret.tracesservice.data["key"]
+        }
+      }
+
+      retry_on_failure {
+        enabled = true
+        initial_interval = "5s"
+        max_interval = "30s"
+        max_elapsed_time = "5m"
+      }
+    }
+
+    remote.kubernetes.secret "tracesservice" {
+      name      = "${traces_secret}"
+      namespace = "monitoring"
+    }
   self-reporting-metric.prom: |2
 
     # HELP grafana_kubernetes_monitoring_build_info A metric to report the version of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_build_info gauge
-    grafana_kubernetes_monitoring_build_info{version="2.0.23", namespace="monitoring"} 1
+    grafana_kubernetes_monitoring_build_info{version="2.0.24", namespace="monitoring"} 1
     # HELP grafana_kubernetes_monitoring_feature_info A metric to report the enabled features of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_feature_info gauge
     grafana_kubernetes_monitoring_feature_info{feature="annotationAutodiscovery", version="1.0.0"} 1
@@ -70610,8 +70935,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-logs-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-logs-1.0.1
   name: k8s-monitoring-alloy-logs
   namespace: monitoring
 spec:
@@ -70635,8 +70960,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-metrics
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-metrics-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-metrics-1.0.1
   name: k8s-monitoring-alloy-metrics
   namespace: monitoring
 spec:
@@ -70660,8 +70985,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-metrics
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-metrics-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-metrics-1.0.1
   name: k8s-monitoring-alloy-metrics-cluster
   namespace: monitoring
 spec:
@@ -70686,8 +71011,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-receiver
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-receiver-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-receiver-1.0.1
   name: k8s-monitoring-alloy-receiver
   namespace: monitoring
 spec:
@@ -70723,8 +71048,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-singleton
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-singleton-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-singleton-1.0.1
   name: k8s-monitoring-alloy-singleton
   namespace: monitoring
 spec:
@@ -70771,7 +71096,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.15.0
-    helm.sh/chart: kube-state-metrics-5.31.0
+    helm.sh/chart: kube-state-metrics-5.32.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -70797,8 +71122,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: node-exporter
     app.kubernetes.io/part-of: node-exporter
-    app.kubernetes.io/version: 1.9.0
-    helm.sh/chart: node-exporter-4.45.0
+    app.kubernetes.io/version: 1.9.1
+    helm.sh/chart: node-exporter-4.45.2
     release: k8s-monitoring
   name: k8s-monitoring-node-exporter
   namespace: monitoring
@@ -70869,8 +71194,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-singleton
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-singleton-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-singleton-1.0.1
   name: k8s-monitoring-alloy-singleton
   namespace: monitoring
 spec:
@@ -70904,7 +71229,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: spec.nodeName
-        image: docker.io/grafana/alloy:v1.7.4
+        image: docker.io/grafana/alloy:v1.8.1
         imagePullPolicy: IfNotPresent
         name: alloy
         ports:
@@ -70947,14 +71272,14 @@ spec:
         - mountPath: /etc/alloy
           name: config
       - args:
-        - --volume-dir=/etc/alloy
-        - --webhook-url=http://localhost:12345/-/reload
-        image: ghcr.io/jimmidyson/configmap-reload:v0.14.0
+        - --watched-dir=/etc/alloy
+        - --reload-url=http://localhost:12345/-/reload
+        image: quay.io/prometheus-operator/prometheus-config-reloader:v0.81.0
         name: config-reloader
         resources:
           requests:
-            cpu: 1m
-            memory: 5Mi
+            cpu: 10m
+            memory: 50Mi
         volumeMounts:
         - mountPath: /etc/alloy
           name: config
@@ -70977,7 +71302,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.15.0
-    helm.sh/chart: kube-state-metrics-5.31.0
+    helm.sh/chart: kube-state-metrics-5.32.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -71001,7 +71326,7 @@ spec:
         app.kubernetes.io/name: kube-state-metrics
         app.kubernetes.io/part-of: kube-state-metrics
         app.kubernetes.io/version: 2.15.0
-        helm.sh/chart: kube-state-metrics-5.31.0
+        helm.sh/chart: kube-state-metrics-5.32.0
         release: k8s-monitoring
     spec:
       automountServiceAccountToken: true
@@ -71048,6 +71373,7 @@ spec:
             drop:
             - ALL
           readOnlyRootFilesystem: true
+      dnsPolicy: ClusterFirst
       hostNetwork: false
       nodeSelector:
         kubernetes.io/os: linux
@@ -71187,8 +71513,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-metrics
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-metrics-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-metrics-1.0.1
   name: k8s-monitoring-alloy-metrics
   namespace: monitoring
 spec:
@@ -71227,7 +71553,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: spec.nodeName
-        image: docker.io/grafana/alloy:v1.7.4
+        image: docker.io/grafana/alloy:v1.8.1
         imagePullPolicy: IfNotPresent
         name: alloy
         ports:
@@ -71270,14 +71596,14 @@ spec:
         - mountPath: /etc/alloy
           name: config
       - args:
-        - --volume-dir=/etc/alloy
-        - --webhook-url=http://localhost:12345/-/reload
-        image: ghcr.io/jimmidyson/configmap-reload:v0.14.0
+        - --watched-dir=/etc/alloy
+        - --reload-url=http://localhost:12345/-/reload
+        image: quay.io/prometheus-operator/prometheus-config-reloader:v0.81.0
         name: config-reloader
         resources:
           requests:
-            cpu: 1m
-            memory: 5Mi
+            cpu: 10m
+            memory: 50Mi
         volumeMounts:
         - mountPath: /etc/alloy
           name: config
@@ -71298,8 +71624,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-logs-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-logs-1.0.1
   name: k8s-monitoring-alloy-logs
   namespace: monitoring
 spec:
@@ -71332,7 +71658,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: spec.nodeName
-        image: docker.io/grafana/alloy:v1.7.4
+        image: docker.io/grafana/alloy:v1.8.1
         imagePullPolicy: IfNotPresent
         name: alloy
         ports:
@@ -71381,14 +71707,14 @@ spec:
           name: dockercontainers
           readOnly: true
       - args:
-        - --volume-dir=/etc/alloy
-        - --webhook-url=http://localhost:12345/-/reload
-        image: ghcr.io/jimmidyson/configmap-reload:v0.14.0
+        - --watched-dir=/etc/alloy
+        - --reload-url=http://localhost:12345/-/reload
+        image: quay.io/prometheus-operator/prometheus-config-reloader:v0.81.0
         name: config-reloader
         resources:
           requests:
-            cpu: 1m
-            memory: 5Mi
+            cpu: 10m
+            memory: 50Mi
         volumeMounts:
         - mountPath: /etc/alloy
           name: config
@@ -71418,8 +71744,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-receiver
     app.kubernetes.io/part-of: alloy
-    app.kubernetes.io/version: v1.7.4
-    helm.sh/chart: alloy-receiver-0.12.5
+    app.kubernetes.io/version: v1.8.1
+    helm.sh/chart: alloy-receiver-1.0.1
   name: k8s-monitoring-alloy-receiver
   namespace: monitoring
 spec:
@@ -71452,7 +71778,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: spec.nodeName
-        image: docker.io/grafana/alloy:v1.7.4
+        image: docker.io/grafana/alloy:v1.8.1
         imagePullPolicy: IfNotPresent
         name: alloy
         ports:
@@ -71504,14 +71830,14 @@ spec:
         - mountPath: /etc/alloy
           name: config
       - args:
-        - --volume-dir=/etc/alloy
-        - --webhook-url=http://localhost:12345/-/reload
-        image: ghcr.io/jimmidyson/configmap-reload:v0.14.0
+        - --watched-dir=/etc/alloy
+        - --reload-url=http://localhost:12345/-/reload
+        image: quay.io/prometheus-operator/prometheus-config-reloader:v0.81.0
         name: config-reloader
         resources:
           requests:
-            cpu: 1m
-            memory: 5Mi
+            cpu: 10m
+            memory: 50Mi
         volumeMounts:
         - mountPath: /etc/alloy
           name: config
@@ -71655,8 +71981,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: node-exporter
     app.kubernetes.io/part-of: node-exporter
-    app.kubernetes.io/version: 1.9.0
-    helm.sh/chart: node-exporter-4.45.0
+    app.kubernetes.io/version: 1.9.1
+    helm.sh/chart: node-exporter-4.45.2
     release: k8s-monitoring
   name: k8s-monitoring-node-exporter
   namespace: monitoring
@@ -71677,8 +72003,8 @@ spec:
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/name: node-exporter
         app.kubernetes.io/part-of: node-exporter
-        app.kubernetes.io/version: 1.9.0
-        helm.sh/chart: node-exporter-4.45.0
+        app.kubernetes.io/version: 1.9.1
+        helm.sh/chart: node-exporter-4.45.2
         release: k8s-monitoring
     spec:
       affinity:
@@ -71701,7 +72027,7 @@ spec:
         env:
         - name: HOST_IP
           value: 0.0.0.0
-        image: quay.io/prometheus/node-exporter:v1.9.0
+        image: quay.io/prometheus/node-exporter:v1.9.1
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
