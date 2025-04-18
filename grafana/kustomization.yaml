@@ -8,7 +8,7 @@ helmCharts:
   - name: k8s-monitoring
     namespace: monitoring
     repo: https://grafana.github.io/helm-charts
-    version: 2.0.24
+    version: 2.0.25
     releaseName: k8s-monitoring
     includeCRDs: true
     valuesFile: operator-values.yaml
