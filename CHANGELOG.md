@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.5.0](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.4.0...v0.5.0) (2025-04-22)
+
+
+### Features
+
+* **config:** disable kustomize in renovate configuration ([#117](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/117)) ([7795203](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/77952037c9f0228e1351d2a8927b884a4106d37c))
+
+
+### Miscellaneous Chores
+
+* **deps:** update Grafana K8s Monitoring version to 2.0.25 ([#121](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/121)) ([fc42380](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/fc42380b4e2055da0cc55d79e2bd46dc53633c64))
+* **deps:** update Grafana K8s Monitoring version to 2.0.26 ([#122](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/122)) ([fcadc20](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/fcadc20baa7623a7df6e0135a38dde4d78005b03))
+
 ## [0.4.0](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.3.9...v0.4.0) (2025-04-16)
 
 
