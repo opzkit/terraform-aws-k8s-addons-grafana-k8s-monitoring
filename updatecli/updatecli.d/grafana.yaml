@@ -47,6 +47,7 @@ actions:
     spec:
       automerge: true
       mergemethod: squash
+      usetitleforautomerge: true
       draft: false
       labels:
       - "dependencies"
