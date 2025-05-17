@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.6.0](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.5.3...v0.6.0) (2025-05-16)
+
+
+### Features
+
+* **updatecli:** enable title usage for automerge in Grafana config ([#137](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/137)) ([cc31b21](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/cc31b21f7a9994739872467dc17ccb22ec81382c))
+
+
+### Bug Fixes
+
+* update apiVersion for external secrets to v1 ([#136](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/136)) ([bd0b29b](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/bd0b29bc511b1077988046db1fe34287ca842cf7))
+
+
+### Miscellaneous Chores
+
+* **deps:** update Grafana K8s Monitoring version to 2.0.30 ([#134](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/134)) ([39c40b8](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/39c40b8adfcba25efb4b747de6531636e54c3c85))
+* **deps:** update Grafana K8s Monitoring version to 2.1.0 ([#138](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/138)) ([2715f5c](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/2715f5c00c50f79734dcd2bd0ae2421274cd0606))
+
 ## [0.5.3](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.5.2...v0.5.3) (2025-05-14)
 
 
