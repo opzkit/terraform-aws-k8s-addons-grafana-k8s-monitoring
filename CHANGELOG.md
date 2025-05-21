@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.6.1...v0.7.0) (2025-05-21)
+
+
+### Features
+
+* **k8s:** add memory requests for alloy components ([#142](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/142)) ([0f7b31c](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/0f7b31c311e8301c8fd1ec3a95cd5a178f73a2b9))
+
 ## [0.6.1](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.6.0...v0.6.1) (2025-05-21)
 
 
