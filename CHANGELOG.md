@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.2](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.7.1...v0.7.2) (2025-05-22)
+
+
+### Bug Fixes
+
+* **grafana:** standardize resource requests in operator-values.yaml ([#146](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/146)) ([f07efa5](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/f07efa59859d6c862ecc7eaae9f5c6a450194137))
+
 ## [0.7.1](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.7.0...v0.7.1) (2025-05-22)
 
 
