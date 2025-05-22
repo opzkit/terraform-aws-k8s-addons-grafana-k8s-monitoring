@@ -61,22 +61,25 @@ clusterMetrics:
 alloy-metrics:
   enabled: true
   alloy:
-    requests:
-      memory: 400m
+    resources:
+      requests:
+        memory: 400m
 clusterEvents:
   enabled: true
 alloy-singleton:
   enabled: true
   alloy:
-    requests:
-      memory: 70m
+    resources:
+      requests:
+        memory: 70m
 podLogs:
   enabled: true
 alloy-logs:
   enabled: true
   alloy:
-    requests:
-      memory: 80m
+    resources:
+      requests:
+        memory: 80m
 applicationObservability:
   enabled: true
   receivers:
@@ -105,8 +108,9 @@ alloy-receiver:
         port: 9411
         targetPort: 9411
         protocol: TCP
-    requests:
-      memory: 70m
+    resources:
+      requests:
+        memory: 70m
 annotationAutodiscovery:
   enabled: true
 prometheusOperatorObjects:
