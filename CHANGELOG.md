@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.7.3...v0.8.0) (2025-05-28)
+
+
+### Features
+
+* add alloy operator configuration to Grafana ([#151](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/151)) ([d90eab9](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/d90eab9620d2424b657bc7fc68945aa1c30e5aa4))
+
 ## [0.7.3](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.7.2...v0.7.3) (2025-05-24)
 
 
