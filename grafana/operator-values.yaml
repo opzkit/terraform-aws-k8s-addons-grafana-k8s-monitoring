@@ -92,6 +92,15 @@ applicationObservability:
     zipkin:
       enabled: true
       includeDebugMetrics: true
+alloy-operator:
+  deploy: true
+  resources:
+    limits:
+      cpu: 650m
+      memory: 128Mi
+    requests:
+      cpu: 10m
+      memory: 64Mi
 alloy-receiver:
   enabled: true
   alloy:
