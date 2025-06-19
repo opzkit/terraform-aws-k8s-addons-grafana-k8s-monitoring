@@ -38,12 +38,12 @@ module "k8s_monitoring" {
 }
 
 module "state_store" {
-  source           = "github.com/opzkit/terraform-aws-kops-state-store?ref=v0.6.0"
+  source           = "github.com/opzkit/terraform-aws-kops-state-store?ref=v0.6.1"
   state_store_name = "some-kops-storage-s3-bucket"
 }
 
 module "k8s-network" {
-  source              = "github.com/opzkit/terraform-aws-k8s-network?ref=v0.1.1"
+  source              = "github.com/opzkit/terraform-aws-k8s-network?ref=v0.1.2"
   name                = "network"
   region              = local.region
   public_subnet_zones = ["a", "b", "c"]
@@ -52,7 +52,7 @@ module "k8s-network" {
 
 module "k8s" {
   depends_on         = [module.state_store]
-  source             = "github.com/opzkit/terraform-aws-k8s?ref=v0.19.1"
+  source             = "github.com/opzkit/terraform-aws-k8s?ref=v0.19.2"
   name               = local.name
   region             = local.region
   dns_zone           = local.zone
