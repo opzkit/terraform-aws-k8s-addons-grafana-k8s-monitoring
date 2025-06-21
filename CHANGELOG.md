@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.4](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.8.3...v0.8.4) (2025-06-21)
+
+
+### Miscellaneous Chores
+
+* **deps:** update azure/setup-kubectl digest to 776406b ([#164](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/164)) ([4163d70](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/4163d701089b0bd152e10f5e9070b09335d504e9))
+
 ## [0.8.3](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.8.2...v0.8.3) (2025-06-20)
 
 
