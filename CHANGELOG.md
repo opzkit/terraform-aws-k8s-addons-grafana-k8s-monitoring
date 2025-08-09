@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.12](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.8.11...v0.8.12) (2025-08-09)
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/create-github-app-token digest to 0f859bf ([#187](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/187)) ([c5d96e3](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/c5d96e341cf461bec7d4d0a4bdfa0eba603b104f))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.100.0 ([#185](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/185)) ([c3a317b](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/c3a317b663982ca1d6e11859c5821f54ee4ffa24))
+
 ## [0.8.11](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.8.10...v0.8.11) (2025-08-08)
 
 
