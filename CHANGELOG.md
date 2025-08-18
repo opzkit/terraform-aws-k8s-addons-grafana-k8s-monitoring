@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.13](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.8.12...v0.8.13) (2025-08-18)
+
+
+### Bug Fixes
+
+* add resource requests for monitoring jobs ([#200](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/200)) ([a6a80b6](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/a6a80b61ca4374da5897985d7230890169ed5e71))
+
 ## [0.8.12](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.8.11...v0.8.12) (2025-08-18)
 
 
