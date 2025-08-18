@@ -12,3 +12,37 @@ helmCharts:
     releaseName: k8s-monitoring
     includeCRDs: true
     valuesFile: operator-values.yaml
+patches:
+  - target:
+      kind: Job
+      namespace: monitoring
+      name: k8s-monitoring-add-finalizer
+    patch: |-
+      - op: add
+        path: /spec/template/spec/containers/0/resources
+        value: |-
+          requests:
+            cpu: 100m
+            memory: 128Mi
+  - target:
+      kind: Job
+      namespace: monitoring
+      name: k8s-monitoring-wait-alloy-operator
+    patch: |-
+      - op: add
+        path: /spec/template/spec/containers/0/resources
+        value: |-
+          requests:
+            cpu: 100m
+            memory: 128Mi
+  - target:
+      kind: Job
+      namespace: monitoring
+      name: k8s-monitoring-remove-alloy-and-finalizer
+    patch: |-
+      - op: add
+        path: /spec/template/spec/containers/0/resources
+        value: |-
+          requests:
+            cpu: 100m
+            memory: 128Mi
