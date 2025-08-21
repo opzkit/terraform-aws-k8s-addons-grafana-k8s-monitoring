@@ -101,6 +101,10 @@ alloy-operator:
     requests:
       cpu: 10m
       memory: 64Mi
+  waitForReadiness:
+    enabled: false
+  waitForAlloyRemoval:
+    enabled: false
 alloy-receiver:
   enabled: true
   alloy:
