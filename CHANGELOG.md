@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.16](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.8.15...v0.8.16) (2025-08-21)
+
+
+### Bug Fixes
+
+* remove hooks in ServiceAccount and Role ([#208](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/208)) ([8cf5703](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/8cf570331f0221335951375e8442268355cc35b3))
+
 ## [0.8.15](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.8.14...v0.8.15) (2025-08-20)
 
 
