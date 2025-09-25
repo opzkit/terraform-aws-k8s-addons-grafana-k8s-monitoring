@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.8.20](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.8.19...v0.8.20) (2025-09-25)
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/create-github-app-token digest to 6701853 ([#219](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/219)) ([ce58858](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/ce58858373531def76b60b4e25ba2be0920d3cd2))
+* **deps:** update Grafana K8s Monitoring version to 3.4.2 ([#217](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/217)) ([347cdce](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/347cdcee2dc4a522d36a9a6f61f33d6beb31cec4))
+* **deps:** update Grafana K8s Monitoring version to 3.5.0 ([#220](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/220)) ([3e9cf79](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/3e9cf79468017e4b32c2535e6ccf938792155ef9))
+* **deps:** update Grafana K8s Monitoring version to 3.5.1 ([#221](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/221)) ([620dcc7](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/620dcc705895fd4451c05892bb27a10591539362))
+* **deps:** update Grafana K8s Monitoring version to 3.5.2 ([#222](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/222)) ([887fc19](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/887fc19f12cbe817ba8b583ba217c8a9a92766db))
+
 ## [0.8.19](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.8.18...v0.8.19) (2025-09-10)
 
 
