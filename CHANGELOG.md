@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.8.27](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.8.26...v0.8.27) (2026-02-17)
+
+
+### Bug Fixes
+
+* use floor version constraints for provider versions ([#317](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/317)) ([6cb5fee](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/6cb5fee9edf5b4ca1789c1c3e19680c8bf7a68e0))
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/checkout digest to de0fac2 ([#314](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/314)) ([30c1b96](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/30c1b96724a7965da393723265f0a86917ec0f10))
+* **deps:** update Grafana K8s Monitoring version to 3.8.0 ([#315](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/315)) ([96dc45f](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/96dc45ffc282b4b91865f215216f970db1e0eb0a))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v42.95.1 ([#311](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/311)) ([271f802](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/271f80269a73aef23b587492d4636af9f5dc97f8))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43 ([#312](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/312)) ([4577038](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/4577038d8b7d640956d41a7147abace276fb4651))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.15.1 ([#316](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/316)) ([ea54594](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/ea54594b5d76a829e33cc1b7d938960b57783bb2))
+
 ## [0.8.26](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.8.25...v0.8.26) (2026-01-30)
 
 
