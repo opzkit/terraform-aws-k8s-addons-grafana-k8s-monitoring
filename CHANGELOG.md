@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.8.28](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.8.27...v0.8.28) (2026-02-25)
+
+
+### Miscellaneous Chores
+
+* **deps:** update Grafana K8s Monitoring version to 3.8.1 ([#321](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/321)) ([8347296](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/8347296fa15add612a8ca1248ecbdc78a24729bf))
+* **deps:** update hashicorp/setup-terraform action to v4 ([#320](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/320)) ([4b7d2b1](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/4b7d2b165f302cc19517ffa05ee2af9edd7c699c))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.31.1 ([#318](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/318)) ([8271b34](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/8271b3468dbb201d329167020e0ad4dbc060cc68))
+
 ## [0.8.27](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.8.26...v0.8.27) (2026-02-17)
 
 
