@@ -35,6 +35,12 @@ module "k8s_monitoring" {
   cost_metrics_url = "https://prometheus-prod-01-eu-west-0.grafana.net/api/prom"
   traces_host      = "tempo-eu-west-0.grafana.net"
 
+  # Drop high-cardinality metrics to reduce active series count
+  metric_drop_rules = [
+    "kube_replicaset_.*",
+    "kepler_.*",
+    "kube_pod_status_reason",
+  ]
 }
 
 module "state_store" {
@@ -52,15 +58,24 @@ module "k8s-network" {
 
 module "k8s" {
   depends_on         = [module.state_store]
-  source             = "github.com/opzkit/terraform-aws-k8s?ref=v0.19.2"
+  source             = "github.com/opzkit/terraform-aws-k8s?ref=v0.32.1"
   name               = local.name
   region             = local.region
   dns_zone           = local.zone
-  kubernetes_version = "1.21.5"
-  master_count       = 3
+  kubernetes_version = "1.34.5"
+  control_plane = {
+    types = ["t3.medium"]
+    image = "ami-01d0334e94e895e89"
+  }
+  node_groups = {
+    nodes = {
+      types = ["t3.medium"]
+      image = "ami-01d0334e94e895e89"
+    }
+  }
   vpc_id             = module.k8s-network.vpc.id
-  public_subnet_ids  = module.k8s-network.public_subnets
-  iam_role_mappings  = {}
+  public_subnets     = module.k8s-network.public_subnets
   bucket_state_store = module.state_store.bucket
+  iam_role_mappings  = {}
   extra_addons       = module.k8s_monitoring.addons
 }
