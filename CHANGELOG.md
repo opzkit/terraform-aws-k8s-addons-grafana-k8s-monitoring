@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.9.0](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.8.28...v0.9.0) (2026-03-06)
+
+
+### Features
+
+* add metric_drop_rules variable for filtering high-cardinality metrics ([#324](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/324)) ([67b39f1](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/67b39f1e25479d8abbd79037ece5dcfe041bfdc0))
+
+
+### Miscellaneous Chores
+
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.46.6 ([#322](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/322)) ([02854b9](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/02854b923bc1149ad61ee2c06077e59cd21df084))
+
 ## [0.8.28](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.8.27...v0.8.28) (2026-02-25)
 
 
