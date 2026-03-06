@@ -89,6 +89,12 @@ variable "external_secret_store_ref" {
   description = "External secret store reference to use if external_secrets_keys are provided"
 }
 
+variable "metric_drop_rules" {
+  type        = list(string)
+  default     = []
+  description = "List of metric name regex patterns to drop via write_relabel_config. Each entry becomes a drop rule matching __name__ against the regex. Example: [\"kube_replicaset_.*\", \"kepler_.*\"]"
+}
+
 variable "external_secrets_keys" {
   type = object({
     loki : string,
