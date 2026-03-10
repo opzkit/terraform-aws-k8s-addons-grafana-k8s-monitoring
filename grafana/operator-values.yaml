@@ -96,7 +96,6 @@ alloy-operator:
   deploy: true
   resources:
     limits:
-      cpu: 650m
       memory: 128Mi
     requests:
       cpu: 10m
