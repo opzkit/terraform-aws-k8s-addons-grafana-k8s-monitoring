@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.9.1](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.9.0...v0.9.1) (2026-03-10)
+
+
+### Bug Fixes
+
+* remove alloy-operator CPU limit ([#327](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/327)) ([39013f3](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/39013f38c11e71d468e0a5d7a253a900b3f3e64b))
+
+
+### Miscellaneous Chores
+
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.59.4 ([#325](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/325)) ([a4355ef](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/a4355eff4b2aab78cd82d0f5f030639eb3488a0b))
+
 ## [0.9.0](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.8.28...v0.9.0) (2026-03-06)
 
 
