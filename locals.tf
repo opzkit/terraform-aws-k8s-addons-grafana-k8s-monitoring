@@ -1,6 +1,6 @@
 locals {
   // x-release-please-start-version
-  version = "0.9.1"
+  version = "0.9.2"
   // x-release-please-end
   replaced = replace(file("${path.module}/k8s-monitoring.yaml.tftpl"), "$${1}", "$$$${1}")
   rendered = replace(templatestring(local.replaced, {
