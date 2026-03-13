@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.3](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.9.2...v0.9.3) (2026-03-13)
+
+
+### Miscellaneous Chores
+
+* **deps:** update Grafana K8s Monitoring version to 3.8.3 ([#330](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/330)) ([0bf2676](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/0bf2676bcdb9c06b2bc2f4364ec51dde86d5b78b))
+* **deps:** update Grafana K8s Monitoring version to 3.8.4 ([#332](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/332)) ([0ac3ae7](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/0ac3ae767f226481329c386e2cb70fd9fe00f0f9))
+
 ## [0.9.2](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.9.1...v0.9.2) (2026-03-11)
 
 
