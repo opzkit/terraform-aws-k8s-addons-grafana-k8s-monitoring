@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.9.4](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.9.3...v0.9.4) (2026-03-14)
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/create-github-app-token action to v3 ([#335](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/335)) ([6fce0b0](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/6fce0b00d64d5467eea5fffda4fdbce5e501c8d6))
+* **deps:** update actions/create-github-app-token digest to fee1f7d ([#333](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/333)) ([bfa602e](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/bfa602eb60ded3d63520b7cfe2928e7c29c08156))
+* **deps:** update terraform-linters/setup-tflint action to v6.2.2 ([#334](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/334)) ([62515a8](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/62515a8ab93c596d6f09e6224dcb31425721b8dc))
+
 ## [0.9.3](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.9.2...v0.9.3) (2026-03-13)
 
 
