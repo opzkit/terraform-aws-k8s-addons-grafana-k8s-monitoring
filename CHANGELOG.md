@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.0.0](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.9.3...v1.0.0) (2026-03-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** Grafana k8s-monitoring v4.0.0 has several breaking changes:
+    - destinations: changed from array to object format (keyed by name)
+    - alloy-*: separate alloy instances replaced by collectors object with presets
+    - telemetryServices: kube-state-metrics, node-exporter, opencost, kepler
+      moved from clusterMetrics to telemetryServices section
+    - costMetrics/hostMetrics: split out as separate features
+
+### Miscellaneous Chores
+
+* **deps:** update actions/create-github-app-token action to v3 ([#335](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/335)) ([6fce0b0](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/6fce0b00d64d5467eea5fffda4fdbce5e501c8d6))
+* **deps:** update actions/create-github-app-token digest to fee1f7d ([#333](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/333)) ([bfa602e](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/bfa602eb60ded3d63520b7cfe2928e7c29c08156))
+* **deps:** update azure/setup-helm action to v5 ([#338](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/338)) ([2b75940](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/2b759409e7f9f10416b005c6747ddceb9effbef5))
+* **deps:** update azure/setup-kubectl action to v5 ([#339](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/339)) ([bca51fd](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/bca51fd6d75a6afb0109996b8ccb5f364b8a4e54))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.86.0 ([#337](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/337)) ([9e9710b](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/9e9710b38ae68c7a2c0ddd53949a55d838724312))
+* **deps:** update terraform-linters/setup-tflint action to v6.2.2 ([#334](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/334)) ([62515a8](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/62515a8ab93c596d6f09e6224dcb31425721b8dc))
+* **deps:** upgrade k8s-monitoring Helm chart from 3.8.4 to 4.0.0 ([#341](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/341)) ([28401cf](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/28401cfed11dd20cc7c5d1b13fbaa2530df79dba))
+
 ## [0.9.3](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.9.2...v0.9.3) (2026-03-13)
 
 
