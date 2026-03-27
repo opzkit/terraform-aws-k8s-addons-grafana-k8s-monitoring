@@ -13,50 +13,6 @@ patches:
             cpu: "100m"
             memory: "200m"
     target:
-      kind: StatefulSet
-      name: k8s-monitoring-alloy-metrics
-
-  - patch: |-
-      - op: add
-        path: "/spec/template/spec/containers/0/resources"
-        value:
-          requests:
-            cpu: "100m"
-            memory: "200m"
-    target:
-      kind: Deployment
-      name: k8s-monitoring-alloy-singleton
-
-  - patch: |-
-      - op: add
-        path: "/spec/template/spec/containers/0/resources"
-        value:
-          requests:
-            cpu: "100m"
-            memory: "200m"
-    target:
-      kind: DaemonSet
-      name: k8s-monitoring-alloy-logs
-
-  - patch: |-
-      - op: add
-        path: "/spec/template/spec/containers/0/resources"
-        value:
-          requests:
-            cpu: "100m"
-            memory: "200m"
-    target:
-      kind: DaemonSet
-      name: k8s-monitoring-alloy-receiver
-
-  - patch: |-
-      - op: add
-        path: "/spec/template/spec/containers/0/resources"
-        value:
-          requests:
-            cpu: "100m"
-            memory: "200m"
-    target:
       kind: DaemonSet
       name: k8s-monitoring-kepler
 
