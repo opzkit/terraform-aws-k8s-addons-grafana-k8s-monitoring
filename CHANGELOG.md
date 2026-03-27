@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.0.0...v1.1.0) (2026-03-27)
+
+
+### Features
+
+* add Prometheus Operator CRDs for ServiceMonitor and PodMonitor ([#342](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/342)) ([7153255](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/71532558bffa36271a82991cc4cc44026ebf645a))
+
 ## [1.0.0](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v0.9.3...v1.0.0) (2026-03-27)
 
 
