@@ -63,8 +63,6 @@ annotationAutodiscovery:
   enabled: true
 prometheusOperatorObjects:
   enabled: true
-  crds:
-    deploy: true
 integrations:
   alloy:
     instances:
