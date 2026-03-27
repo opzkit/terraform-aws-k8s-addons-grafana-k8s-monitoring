@@ -1,9 +1,9 @@
 cluster:
   name: ${cluster_name}
 destinations:
-  - name: metricsService
-    url:  ${metrics_url}
+  metricsService:
     type: prometheus
+    url: ${metrics_url}
     secret:
       create: false
       name: ${metrics_secret}
@@ -11,9 +11,9 @@ destinations:
       type: basic
       usernameKey: ${metrics_username_key}
       passwordKey: ${metrics_password_key}
-  - name: logsService
+  logsService:
     type: loki
-    url:  ${logs_url}
+    url: ${logs_url}
     secret:
       create: false
       name: ${logs_secret}
@@ -21,9 +21,9 @@ destinations:
       type: basic
       usernameKey: ${logs_username_key}
       passwordKey: ${logs_password_key}
-  - name: tracesService
+  tracesService:
     type: otlp
-    url:  ${traces_host}
+    url: ${traces_host}
     metrics:
       enabled: false
     logs:
@@ -39,47 +39,14 @@ destinations:
       passwordKey: ${traces_password_key}
 clusterMetrics:
   enabled: true
-  kube-state-metrics:
-    deploy: true
-  node-exporter:
-    deploy: true
-    enabled: true
-  opencost:
-    enabled: true
-    opencost:
-      exporter:
-        defaultClusterId: ${cluster_name}
-      prometheus:
-        external:
-          url: ${cost_metrics_url}
-        existingSecretName: ${metrics_secret}
-        username_key: ${metrics_username_key}
-        password_key: ${metrics_password_key}
-    metricsSource: metricsService
-  kepler:
-    enabled: true
-alloy-metrics:
+costMetrics:
   enabled: true
-  alloy:
-    resources:
-      requests:
-        memory: 400m
+hostMetrics:
+  enabled: true
 clusterEvents:
   enabled: true
-alloy-singleton:
-  enabled: true
-  alloy:
-    resources:
-      requests:
-        memory: 70m
 podLogs:
   enabled: true
-alloy-logs:
-  enabled: true
-  alloy:
-    resources:
-      requests:
-        memory: 80m
 applicationObservability:
   enabled: true
   receivers:
@@ -92,37 +59,6 @@ applicationObservability:
     zipkin:
       enabled: true
       includeDebugMetrics: true
-alloy-operator:
-  deploy: true
-  resources:
-    limits:
-      memory: 128Mi
-    requests:
-      cpu: 10m
-      memory: 64Mi
-  waitForReadiness:
-    enabled: false
-  waitForAlloyRemoval:
-    enabled: false
-alloy-receiver:
-  enabled: true
-  alloy:
-    extraPorts:
-      - name: otlp-grpc
-        port: 4317
-        targetPort: 4317
-        protocol: TCP
-      - name: otlp-httpgrpc
-        port: 4318
-        targetPort: 4318
-        protocol: TCP
-      - name: zipkin
-        port: 9411
-        targetPort: 9411
-        protocol: TCP
-    resources:
-      requests:
-        memory: 70m
 annotationAutodiscovery:
   enabled: true
 prometheusOperatorObjects:
@@ -135,12 +71,55 @@ integrations:
       - name: alloy
         labelSelectors:
           app.kubernetes.io/name:
-            - alloy-metrics
-            - alloy-singleton
-            - alloy-logs
-            - alloy-receiver
+            - alloy
         metrics:
           tuning:
             useDefaultAllowList: true
             includeMetrics:
               - alloy_build_info
+collectors:
+  alloy:
+    presets:
+      - statefulset
+    alloy:
+      clustering:
+        enabled: true
+      extraPorts:
+        - name: otlp-grpc
+          port: 4317
+          targetPort: 4317
+          protocol: TCP
+        - name: otlp-httpgrpc
+          port: 4318
+          targetPort: 4318
+          protocol: TCP
+        - name: zipkin
+          port: 9411
+          targetPort: 9411
+          protocol: TCP
+      resources:
+        requests:
+          memory: 400m
+telemetryServices:
+  kube-state-metrics:
+    deploy: true
+  node-exporter:
+    deploy: true
+  opencost:
+    deploy: true
+    metricsSource: metricsService
+    opencost:
+      exporter:
+        defaultClusterId: ${cluster_name}
+      prometheus:
+        external:
+          url: ${cost_metrics_url}
+        existingSecretName: ${metrics_secret}
+        username_key: ${metrics_username_key}
+        password_key: ${metrics_password_key}
+  kepler:
+    deploy: true
+alloy-operator:
+  deploy: true
+  waitForAlloyRemoval:
+    enabled: false
