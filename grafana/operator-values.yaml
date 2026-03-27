@@ -63,8 +63,6 @@ annotationAutodiscovery:
   enabled: true
 prometheusOperatorObjects:
   enabled: true
-  crds:
-    deploy: true
 integrations:
   alloy:
     instances:
@@ -121,5 +119,11 @@ telemetryServices:
     deploy: true
 alloy-operator:
   deploy: true
+  resources:
+    requests:
+      cpu: 10m
+      memory: 64Mi
+    limits:
+      memory: 128Mi
   waitForAlloyRemoval:
     enabled: false

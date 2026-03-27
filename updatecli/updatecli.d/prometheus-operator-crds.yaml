@@ -1,0 +1,67 @@
+sources:
+  lastPrometheusOperatorRelease:
+    kind: githubrelease
+    spec:
+      owner: "prometheus-operator"
+      repository: "prometheus-operator"
+      token: '{{ requiredEnv "UPDATECLI_GITHUB_TOKEN" }}'
+      versionfilter:
+        kind: semver
+targets:
+  servicemonitors_crd:
+    name: bump ServiceMonitor CRD to {{ source "lastPrometheusOperatorRelease" }}
+    kind: file
+    scmid: github
+    sourceid: lastPrometheusOperatorRelease
+    spec:
+      file: 'grafana/kustomization.yaml'
+      matchpattern: 'prometheus-operator/(v[\d\.]+)/jsonnet/prometheus-operator/servicemonitors-crd.json'
+      replacepattern: 'prometheus-operator/{{ source "lastPrometheusOperatorRelease" }}/jsonnet/prometheus-operator/servicemonitors-crd.json'
+  podmonitors_crd:
+    name: bump PodMonitor CRD to {{ source "lastPrometheusOperatorRelease" }}
+    kind: file
+    scmid: github
+    sourceid: lastPrometheusOperatorRelease
+    spec:
+      file: 'grafana/kustomization.yaml'
+      matchpattern: 'prometheus-operator/(v[\d\.]+)/jsonnet/prometheus-operator/podmonitors-crd.json'
+      replacepattern: 'prometheus-operator/{{ source "lastPrometheusOperatorRelease" }}/jsonnet/prometheus-operator/podmonitors-crd.json'
+  kubectl:
+    name: run kubectl when CRDs changed
+    kind: shell
+    scmid: github
+    dependson:
+    - servicemonitors_crd
+    - podmonitors_crd
+    dependsonchange: false
+    disablesourceinput: true
+    spec:
+      command: "rm -rf grafana/charts && kubectl kustomize . -o k8s-monitoring.yaml.tftpl --enable-helm && git diff --shortstat k8s-monitoring.yaml.tftpl"
+      environments:
+      - name: PATH
+
+scms:
+  github:
+    kind: "github"
+    spec:
+      user: "argoyle"
+      email: "joakim@unbound.se"
+      owner: "opzkit"
+      repository: "terraform-aws-k8s-addons-grafana-k8s-monitoring"
+      token: '{{ requiredEnv "UPDATECLI_GITHUB_TOKEN" }}'
+      username: 'UpdateCLI'
+      branch: "main"
+      commitusingapi: true
+
+actions:
+  addon:
+    kind: "github/pullrequest"
+    scmid: "github"
+    spec:
+      automerge: true
+      mergemethod: squash
+      usetitleforautomerge: true
+      draft: false
+      labels:
+      - "dependencies"
+      title: 'chore(deps): update Prometheus Operator CRDs to {{ source "lastPrometheusOperatorRelease" }}'

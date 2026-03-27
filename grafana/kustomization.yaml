@@ -4,6 +4,8 @@ namespace: grafana-k8s-monitoring
 resources:
   - namespace.yaml
   - config.yaml
+  - https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v0.90.1/jsonnet/prometheus-operator/servicemonitors-crd.json
+  - https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v0.90.1/jsonnet/prometheus-operator/podmonitors-crd.json
 helmCharts:
   - name: k8s-monitoring
     namespace: monitoring
