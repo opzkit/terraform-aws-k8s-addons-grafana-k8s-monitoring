@@ -2865,8 +2865,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.6.2
-    helm.sh/chart: alloy-operator-0.5.2
+    app.kubernetes.io/version: 1.7.0
+    helm.sh/chart: alloy-operator-0.5.3
   name: k8s-monitoring-alloy-operator
   namespace: monitoring
 ---
@@ -2908,8 +2908,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: node-exporter
     app.kubernetes.io/part-of: node-exporter
-    app.kubernetes.io/version: 1.10.2
-    helm.sh/chart: node-exporter-4.52.1
+    app.kubernetes.io/version: 1.11.0
+    helm.sh/chart: node-exporter-4.53.0
     release: k8s-monitoring
   name: k8s-monitoring-node-exporter
   namespace: monitoring
@@ -2935,8 +2935,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.6.2
-    helm.sh/chart: alloy-operator-0.5.2
+    app.kubernetes.io/version: 1.7.0
+    helm.sh/chart: alloy-operator-0.5.3
   name: k8s-monitoring-alloy-operator-leader-election-role
   namespace: monitoring
 rules:
@@ -3030,8 +3030,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.6.2
-    helm.sh/chart: alloy-operator-0.5.2
+    app.kubernetes.io/version: 1.7.0
+    helm.sh/chart: alloy-operator-0.5.3
   name: k8s-monitoring-alloy-operator-alloy-manager
 rules:
 - apiGroups:
@@ -3369,8 +3369,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.6.2
-    helm.sh/chart: alloy-operator-0.5.2
+    app.kubernetes.io/version: 1.7.0
+    helm.sh/chart: alloy-operator-0.5.3
   name: k8s-monitoring-alloy-operator-leader-election-rolebinding
   namespace: monitoring
 roleRef:
@@ -3389,8 +3389,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.6.2
-    helm.sh/chart: alloy-operator-0.5.2
+    app.kubernetes.io/version: 1.7.0
+    helm.sh/chart: alloy-operator-0.5.3
   name: k8s-monitoring-alloy-operator
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -3408,8 +3408,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.6.2
-    helm.sh/chart: alloy-operator-0.5.2
+    app.kubernetes.io/version: 1.7.0
+    helm.sh/chart: alloy-operator-0.5.3
   name: k8s-monitoring-alloy-operator-alloy-manager
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -4693,7 +4693,7 @@ data:
   self-reporting-metric.prom: |
     # HELP grafana_kubernetes_monitoring_build_info A metric to report the version of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_build_info gauge
-    grafana_kubernetes_monitoring_build_info{version="4.0.0", namespace="monitoring"} 1
+    grafana_kubernetes_monitoring_build_info{version="4.0.1", namespace="monitoring"} 1
     # HELP grafana_kubernetes_monitoring_feature_info A metric to report the enabled features of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_feature_info gauge
     grafana_kubernetes_monitoring_feature_info{feature="annotationAutodiscovery", version="1.0.0"} 1
@@ -4728,8 +4728,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.6.2
-    helm.sh/chart: alloy-operator-0.5.2
+    app.kubernetes.io/version: 1.7.0
+    helm.sh/chart: alloy-operator-0.5.3
   name: k8s-monitoring-alloy-operator
   namespace: monitoring
 spec:
@@ -4805,8 +4805,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: node-exporter
     app.kubernetes.io/part-of: node-exporter
-    app.kubernetes.io/version: 1.10.2
-    helm.sh/chart: node-exporter-4.52.1
+    app.kubernetes.io/version: 1.11.0
+    helm.sh/chart: node-exporter-4.53.0
     release: k8s-monitoring
   name: k8s-monitoring-node-exporter
   namespace: monitoring
@@ -4850,8 +4850,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.6.2
-    helm.sh/chart: alloy-operator-0.5.2
+    app.kubernetes.io/version: 1.7.0
+    helm.sh/chart: alloy-operator-0.5.3
   name: k8s-monitoring-alloy-operator
   namespace: monitoring
 spec:
@@ -4866,8 +4866,8 @@ spec:
         app.kubernetes.io/instance: k8s-monitoring
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/name: alloy-operator
-        app.kubernetes.io/version: 1.6.2
-        helm.sh/chart: alloy-operator-0.5.2
+        app.kubernetes.io/version: 1.7.0
+        helm.sh/chart: alloy-operator-0.5.3
     spec:
       containers:
       - args:
@@ -4875,7 +4875,7 @@ spec:
         - --metrics-bind-address=:8082
         - --leader-elect
         - --leader-election-id=k8s-monitoring-alloy-operator
-        image: ghcr.io/grafana/alloy-operator:1.6.2
+        image: ghcr.io/grafana/alloy-operator:1.7.0
         imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
@@ -5131,10 +5131,6 @@ spec:
             port: 9003
           initialDelaySeconds: 10
           periodSeconds: 5
-        volumeMounts:
-        - mountPath: /var/configs
-          name: configs
-          readOnly: false
       initContainers: null
       nodeSelector:
         kubernetes.io/os: linux
@@ -5144,9 +5140,6 @@ spec:
         key: kubernetes.io/arch
         operator: Equal
         value: arm64
-      volumes:
-      - emptyDir: {}
-        name: configs
 ---
 apiVersion: apps/v1
 kind: DaemonSet
@@ -5296,8 +5289,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: node-exporter
     app.kubernetes.io/part-of: node-exporter
-    app.kubernetes.io/version: 1.10.2
-    helm.sh/chart: node-exporter-4.52.1
+    app.kubernetes.io/version: 1.11.0
+    helm.sh/chart: node-exporter-4.53.0
     release: k8s-monitoring
   name: k8s-monitoring-node-exporter
   namespace: monitoring
@@ -5318,8 +5311,8 @@ spec:
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/name: node-exporter
         app.kubernetes.io/part-of: node-exporter
-        app.kubernetes.io/version: 1.10.2
-        helm.sh/chart: node-exporter-4.52.1
+        app.kubernetes.io/version: 1.11.0
+        helm.sh/chart: node-exporter-4.53.0
         release: k8s-monitoring
     spec:
       affinity:
@@ -5343,7 +5336,7 @@ spec:
         env:
         - name: HOST_IP
           value: 0.0.0.0
-        image: quay.io/prometheus/node-exporter:v1.10.2
+        image: quay.io/prometheus/node-exporter:v1.11.0
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
