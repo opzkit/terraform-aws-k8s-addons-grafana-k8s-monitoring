@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.3](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.2...v1.1.3) (2026-04-29)
+
+
+### Miscellaneous Chores
+
+* **deps:** update googleapis/release-please-action action to v5 ([#359](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/359)) ([528b8d5](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/528b8d569fa4bc6cfd69911ca2c4dc0b2963d79d))
+* **deps:** update Grafana K8s Monitoring version to 4.0.3 ([#358](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/358)) ([4339c7c](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/4339c7c984d485f48e5dd60e690bc8ddada436ef))
+* **deps:** update Grafana K8s Monitoring version to 4.0.4 ([#361](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/361)) ([e627ab3](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/e627ab34a0c274bedf0539f9cf314869dd519668))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.126.0 ([#356](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/356)) ([965dfe1](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/965dfe1988dff584bb55031c1cb6a89365bcd0e8))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.140.0 ([#360](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/360)) ([9a787f9](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/9a787f96fadec49e099cf58b447c85f9bce3cfa5))
+
 ## [1.1.2](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.1...v1.1.2) (2026-04-17)
 
 
