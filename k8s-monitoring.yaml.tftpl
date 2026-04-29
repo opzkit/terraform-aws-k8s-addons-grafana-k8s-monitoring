@@ -2865,8 +2865,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.7.0
-    helm.sh/chart: alloy-operator-0.5.4
+    app.kubernetes.io/version: 1.8.0
+    helm.sh/chart: alloy-operator-0.5.6
   name: k8s-monitoring-alloy-operator
   namespace: monitoring
 ---
@@ -2893,7 +2893,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.18.0
-    helm.sh/chart: kube-state-metrics-7.2.2
+    helm.sh/chart: kube-state-metrics-7.3.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -2935,8 +2935,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.7.0
-    helm.sh/chart: alloy-operator-0.5.4
+    app.kubernetes.io/version: 1.8.0
+    helm.sh/chart: alloy-operator-0.5.6
   name: k8s-monitoring-alloy-operator-leader-election-role
   namespace: monitoring
 rules:
@@ -2985,7 +2985,13 @@ rules:
   - serviceaccounts
   - services
   verbs:
-  - '*'
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
 - apiGroups:
   - apps
   resources:
@@ -2993,26 +2999,50 @@ rules:
   - deployments
   - statefulsets
   verbs:
-  - '*'
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
 - apiGroups:
   - autoscaling
   resources:
   - horizontalpodautoscalers
   verbs:
-  - '*'
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
 - apiGroups:
   - networking.k8s.io
   resources:
   - ingresses
   - networkpolicies
   verbs:
-  - '*'
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
 - apiGroups:
   - policy
   resources:
   - poddisruptionbudgets
   verbs:
-  - '*'
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
 - apiGroups:
   - rbac.authorization.k8s.io
   resources:
@@ -3021,7 +3051,15 @@ rules:
   - roles
   - rolebindings
   verbs:
-  - '*'
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
+  - bind
+  - escalate
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -3030,8 +3068,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.7.0
-    helm.sh/chart: alloy-operator-0.5.4
+    app.kubernetes.io/version: 1.8.0
+    helm.sh/chart: alloy-operator-0.5.6
   name: k8s-monitoring-alloy-operator-alloy-manager
 rules:
 - apiGroups:
@@ -3076,7 +3114,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.18.0
-    helm.sh/chart: kube-state-metrics-7.2.2
+    helm.sh/chart: kube-state-metrics-7.3.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
 rules:
@@ -3369,8 +3407,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.7.0
-    helm.sh/chart: alloy-operator-0.5.4
+    app.kubernetes.io/version: 1.8.0
+    helm.sh/chart: alloy-operator-0.5.6
   name: k8s-monitoring-alloy-operator-leader-election-rolebinding
   namespace: monitoring
 roleRef:
@@ -3389,8 +3427,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.7.0
-    helm.sh/chart: alloy-operator-0.5.4
+    app.kubernetes.io/version: 1.8.0
+    helm.sh/chart: alloy-operator-0.5.6
   name: k8s-monitoring-alloy-operator
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -3408,8 +3446,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.7.0
-    helm.sh/chart: alloy-operator-0.5.4
+    app.kubernetes.io/version: 1.8.0
+    helm.sh/chart: alloy-operator-0.5.6
   name: k8s-monitoring-alloy-operator-alloy-manager
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -3443,7 +3481,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.18.0
-    helm.sh/chart: kube-state-metrics-7.2.2
+    helm.sh/chart: kube-state-metrics-7.3.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
 roleRef:
@@ -4570,25 +4608,16 @@ data:
           retry_on_http_429 = true
           sample_age_limit = "0s"
         }
-
-        write_relabel_config {
-          source_labels = ["cluster"]
-          regex = ""
-          replacement = "${cluster_name}"
-          target_label = "cluster"
-        }
-        write_relabel_config {
-          source_labels = ["k8s_cluster_name"]
-          regex = ""
-          replacement = "${cluster_name}"
-          target_label = "k8s_cluster_name"
-        }
       }
 
       wal {
         truncate_frequency = "2h"
         min_keepalive_time = "5m"
         max_keepalive_time = "8h"
+      }
+      external_labels = {
+        "cluster" = "${cluster_name}",
+        "k8s_cluster_name" = "${cluster_name}",
       }
     }
 
@@ -4694,7 +4723,7 @@ data:
   self-reporting-metric.prom: |
     # HELP grafana_kubernetes_monitoring_build_info A metric to report the version of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_build_info gauge
-    grafana_kubernetes_monitoring_build_info{version="4.0.3", namespace="monitoring"} 1
+    grafana_kubernetes_monitoring_build_info{version="4.0.4", namespace="monitoring"} 1
     # HELP grafana_kubernetes_monitoring_feature_info A metric to report the enabled features of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_feature_info gauge
     grafana_kubernetes_monitoring_feature_info{feature="annotationAutodiscovery", version="1.0.0"} 1
@@ -4729,8 +4758,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.7.0
-    helm.sh/chart: alloy-operator-0.5.4
+    app.kubernetes.io/version: 1.8.0
+    helm.sh/chart: alloy-operator-0.5.6
   name: k8s-monitoring-alloy-operator
   namespace: monitoring
 spec:
@@ -4780,7 +4809,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.18.0
-    helm.sh/chart: kube-state-metrics-7.2.2
+    helm.sh/chart: kube-state-metrics-7.3.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -4851,8 +4880,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.7.0
-    helm.sh/chart: alloy-operator-0.5.4
+    app.kubernetes.io/version: 1.8.0
+    helm.sh/chart: alloy-operator-0.5.6
   name: k8s-monitoring-alloy-operator
   namespace: monitoring
 spec:
@@ -4867,8 +4896,8 @@ spec:
         app.kubernetes.io/instance: k8s-monitoring
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/name: alloy-operator
-        app.kubernetes.io/version: 1.7.0
-        helm.sh/chart: alloy-operator-0.5.4
+        app.kubernetes.io/version: 1.8.0
+        helm.sh/chart: alloy-operator-0.5.6
     spec:
       containers:
       - args:
@@ -4876,7 +4905,7 @@ spec:
         - --metrics-bind-address=:8082
         - --leader-elect
         - --leader-election-id=k8s-monitoring-alloy-operator
-        image: ghcr.io/grafana/alloy-operator:1.7.0
+        image: ghcr.io/grafana/alloy-operator:1.8.0
         imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
@@ -4926,7 +4955,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.18.0
-    helm.sh/chart: kube-state-metrics-7.2.2
+    helm.sh/chart: kube-state-metrics-7.3.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -4950,7 +4979,7 @@ spec:
         app.kubernetes.io/name: kube-state-metrics
         app.kubernetes.io/part-of: kube-state-metrics
         app.kubernetes.io/version: 2.18.0
-        helm.sh/chart: kube-state-metrics-7.2.2
+        helm.sh/chart: kube-state-metrics-7.3.0
         release: k8s-monitoring
     spec:
       automountServiceAccountToken: true
