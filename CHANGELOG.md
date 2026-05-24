@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.7](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.6...v1.1.7) (2026-05-24)
+
+
+### Bug Fixes
+
+* anchor metric_drop_rules injection on stable endpoint/wal boundary ([#376](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/376)) ([bf82bd7](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/bf82bd75f3101534320adab48248feca543240b7))
+
+
+### Miscellaneous Chores
+
+* **deps:** update Grafana K8s Monitoring version to 4.1.3 ([#373](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/373)) ([92185e1](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/92185e1962b460d20efe1d1310e3a0ed2bee1e16))
+* **deps:** update hashicorp/setup-terraform action to v4.0.1 ([#375](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/375)) ([f3ec780](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/f3ec780b4f90c3a0a1d6f1117ab0dacb852b31fd))
+
 ## [1.1.6](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.5...v1.1.6) (2026-05-13)
 
 
