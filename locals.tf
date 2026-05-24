@@ -21,18 +21,23 @@ locals {
   }), "$$", "$")
 
   # Generate write_relabel_config blocks for each metric drop rule.
-  # These are injected into all prometheus.remote_write endpoints to
-  # prevent matching metrics from being sent to the remote backend.
+  # Injected inside the prometheus.remote_write "metricsservice" endpoint
+  # block so matching metrics are dropped before remote write.
   metric_drop_configs = join("", [
     for pattern in var.metric_drop_rules :
     "        write_relabel_config {\n          source_labels = [\"__name__\"]\n          regex = \"${pattern}\"\n          action = \"drop\"\n        }\n"
   ])
 
-  # Inject drop rules after the last write_relabel_config in each
-  # prometheus.remote_write block (the k8s_cluster_name relabel rule).
-  relabel_anchor      = "target_label = \"k8s_cluster_name\"\n        }"
-  relabel_replacement = "target_label = \"k8s_cluster_name\"\n        }\n${local.metric_drop_configs}"
-  yaml                = length(var.metric_drop_rules) > 0 ? replace(local.rendered, local.relabel_anchor, local.relabel_replacement) : local.rendered
+  # Anchor on the endpoint-close / wal-open boundary, which is stable across
+  # k8s-monitoring chart 4.x. Fail fast if the anchor disappears in a future
+  # chart bump so the silent no-op from chart 4.0.4 cannot recur.
+  relabel_anchor      = "      }\n\n      wal {"
+  relabel_replacement = "${local.metric_drop_configs}      }\n\n      wal {"
+  yaml = (
+    length(var.metric_drop_rules) == 0 ? local.rendered :
+    strcontains(local.rendered, local.relabel_anchor) ? replace(local.rendered, local.relabel_anchor, local.relabel_replacement) :
+    file("ERROR: metric_drop_rules anchor not found in rendered k8s-monitoring template - upstream chart layout changed, update relabel_anchor in locals.tf")
+  )
 
   secrets_yaml = templatefile("${path.module}/external-secrets.yaml.tftpl", {
     external_secrets_keys     = var.external_secrets_keys
