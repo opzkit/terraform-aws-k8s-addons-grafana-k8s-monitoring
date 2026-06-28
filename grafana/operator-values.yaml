@@ -39,16 +39,22 @@ destinations:
       passwordKey: ${traces_password_key}
 clusterMetrics:
   enabled: true
+  collector: alloy
 costMetrics:
   enabled: true
+  collector: alloy
 hostMetrics:
   enabled: true
+  collector: alloy
 clusterEvents:
   enabled: true
-podLogs:
+  collector: alloy
+podLogsViaLoki:
   enabled: true
+  collector: alloy-logs
 applicationObservability:
   enabled: true
+  collector: alloy
   receivers:
     otlp:
       includeDebugMetrics: true
@@ -61,8 +67,10 @@ applicationObservability:
       includeDebugMetrics: true
 annotationAutodiscovery:
   enabled: true
+  collector: alloy
 prometheusOperatorObjects:
   enabled: true
+  collector: alloy
 integrations:
   alloy:
     instances:
@@ -76,6 +84,10 @@ integrations:
             includeMetrics:
               - alloy_build_info
 collectors:
+  alloy-logs:
+    presets:
+      - daemonset
+      - filesystem-log-reader
   alloy:
     presets:
       - statefulset
