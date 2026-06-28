@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.12](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.11...v1.1.12) (2026-06-28)
+
+
+### Bug Fixes
+
+* **grafana:** set memory request on alloy-logs collector ([#405](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/405)) ([5673905](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/56739050484088b2297a20428a43483f72df3738))
+
 ## [1.1.11](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.10...v1.1.11) (2026-06-28)
 
 
