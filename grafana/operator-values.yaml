@@ -88,6 +88,10 @@ collectors:
     presets:
       - daemonset
       - filesystem-log-reader
+    alloy:
+      resources:
+        requests:
+          memory: 256Mi
   alloy:
     presets:
       - statefulset
