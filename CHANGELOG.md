@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.13](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.12...v1.1.13) (2026-07-01)
+
+
+### Miscellaneous Chores
+
+* **deps:** update Grafana K8s Monitoring version to 4.1.6 ([#408](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/408)) ([615ce1f](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/615ce1f591b8659a47cf717d52f11824747bfe39))
+* **deps:** update Grafana K8s Monitoring version to 4.1.7 ([#411](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/411)) ([94df587](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/94df58730deb397da58e35dc38790850358f4bae))
+* **deps:** update Prometheus Operator CRDs to v0.92.1 ([#413](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/413)) ([758f861](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/758f86144b2d74b96ad27473d1056c5469b4c06c))
+
 ## [1.1.12](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.11...v1.1.12) (2026-06-28)
 
 
