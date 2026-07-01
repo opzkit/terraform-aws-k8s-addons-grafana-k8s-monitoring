@@ -2877,7 +2877,7 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
     app.kubernetes.io/version: 1.10.0
-    helm.sh/chart: alloy-operator-0.5.10
+    helm.sh/chart: alloy-operator-0.5.11
   name: k8s-monitoring-alloy-operator
   namespace: monitoring
 ---
@@ -2934,8 +2934,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.120.3
-    helm.sh/chart: opencost-2.5.23
+    app.kubernetes.io/version: 1.120.4
+    helm.sh/chart: opencost-2.5.25
   name: k8s-monitoring-opencost
   namespace: monitoring
 ---
@@ -2947,7 +2947,7 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
     app.kubernetes.io/version: 1.10.0
-    helm.sh/chart: alloy-operator-0.5.10
+    helm.sh/chart: alloy-operator-0.5.11
   name: k8s-monitoring-alloy-operator-leader-election-role
   namespace: monitoring
 rules:
@@ -3080,7 +3080,7 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
     app.kubernetes.io/version: 1.10.0
-    helm.sh/chart: alloy-operator-0.5.10
+    helm.sh/chart: alloy-operator-0.5.11
   name: k8s-monitoring-alloy-operator-alloy-manager
 rules:
 - apiGroups:
@@ -3334,8 +3334,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.120.3
-    helm.sh/chart: opencost-2.5.23
+    app.kubernetes.io/version: 1.120.4
+    helm.sh/chart: opencost-2.5.25
   name: k8s-monitoring-opencost
 rules:
 - apiGroups:
@@ -3419,7 +3419,7 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
     app.kubernetes.io/version: 1.10.0
-    helm.sh/chart: alloy-operator-0.5.10
+    helm.sh/chart: alloy-operator-0.5.11
   name: k8s-monitoring-alloy-operator-leader-election-rolebinding
   namespace: monitoring
 roleRef:
@@ -3439,7 +3439,7 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
     app.kubernetes.io/version: 1.10.0
-    helm.sh/chart: alloy-operator-0.5.10
+    helm.sh/chart: alloy-operator-0.5.11
   name: k8s-monitoring-alloy-operator
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -3458,7 +3458,7 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
     app.kubernetes.io/version: 1.10.0
-    helm.sh/chart: alloy-operator-0.5.10
+    helm.sh/chart: alloy-operator-0.5.11
   name: k8s-monitoring-alloy-operator-alloy-manager
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -3512,8 +3512,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.120.3
-    helm.sh/chart: opencost-2.5.23
+    app.kubernetes.io/version: 1.120.4
+    helm.sh/chart: opencost-2.5.25
   name: k8s-monitoring-opencost
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -4589,6 +4589,7 @@ data:
     otelcol.exporter.prometheus "metricsservice" {
       add_metric_suffixes = true
       resource_to_telemetry_conversion = false
+      keep_identifying_resource_attributes = false
       forward_to = [prometheus.remote_write.metricsservice.receiver]
     } // otelcol.exporter.prometheus "metricsservice"
 
@@ -4983,7 +4984,7 @@ data:
   self-reporting-metric.prom: |+
     # HELP grafana_kubernetes_monitoring_build_info A metric to report the version of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_build_info gauge
-    grafana_kubernetes_monitoring_build_info{version="4.1.6", namespace="monitoring"} 1
+    grafana_kubernetes_monitoring_build_info{version="4.1.7", namespace="monitoring"} 1
     # HELP grafana_kubernetes_monitoring_feature_info A metric to report the enabled features of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_feature_info gauge
     grafana_kubernetes_monitoring_feature_info{feature="annotationAutodiscovery", version="1.0.0"} 1
@@ -5024,7 +5025,7 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
     app.kubernetes.io/version: 1.10.0
-    helm.sh/chart: alloy-operator-0.5.10
+    helm.sh/chart: alloy-operator-0.5.11
   name: k8s-monitoring-alloy-operator
   namespace: monitoring
 spec:
@@ -5124,8 +5125,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.120.3
-    helm.sh/chart: opencost-2.5.23
+    app.kubernetes.io/version: 1.120.4
+    helm.sh/chart: opencost-2.5.25
   name: k8s-monitoring-opencost
   namespace: monitoring
 spec:
@@ -5146,7 +5147,7 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
     app.kubernetes.io/version: 1.10.0
-    helm.sh/chart: alloy-operator-0.5.10
+    helm.sh/chart: alloy-operator-0.5.11
   name: k8s-monitoring-alloy-operator
   namespace: monitoring
 spec:
@@ -5162,7 +5163,7 @@ spec:
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/name: alloy-operator
         app.kubernetes.io/version: 1.10.0
-        helm.sh/chart: alloy-operator-0.5.10
+        helm.sh/chart: alloy-operator-0.5.11
     spec:
       containers:
       - args:
@@ -5316,8 +5317,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.120.3
-    helm.sh/chart: opencost-2.5.23
+    app.kubernetes.io/version: 1.120.4
+    helm.sh/chart: opencost-2.5.25
   name: k8s-monitoring-opencost
   namespace: monitoring
 spec:
@@ -5393,7 +5394,7 @@ spec:
           value: cluster
         - name: MCP_SERVER_ENABLED
           value: "false"
-        image: ghcr.io/opencost/opencost:1.120.3@sha256:9f282400e59a4fc886e5fa3bca3c777b9dcae866b781641ca1d1271525d15f72
+        image: ghcr.io/opencost/opencost:1.120.4@sha256:5467eaac8d301be69cc4a3f69f063ad5da7d57130d1126a4eb75b0d8f79839e1
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
