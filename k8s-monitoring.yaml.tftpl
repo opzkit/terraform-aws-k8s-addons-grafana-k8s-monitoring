@@ -4782,7 +4782,6 @@ data:
           replacement = "$1"
           target_label = "tmp_container_runtime"
         }
-
         // explicitly set service_name. if not set, loki will automatically try to populate a default.
         // see https://grafana.com/docs/loki/latest/get-started/labels/#default-labels-for-all-users
         //
@@ -4984,7 +4983,7 @@ data:
   self-reporting-metric.prom: |+
     # HELP grafana_kubernetes_monitoring_build_info A metric to report the version of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_build_info gauge
-    grafana_kubernetes_monitoring_build_info{version="4.2.2", namespace="monitoring"} 1
+    grafana_kubernetes_monitoring_build_info{version="4.3.0", namespace="monitoring"} 1
     # HELP grafana_kubernetes_monitoring_feature_info A metric to report the enabled features of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_feature_info gauge
     grafana_kubernetes_monitoring_feature_info{feature="annotationAutodiscovery", version="1.0.0"} 1
