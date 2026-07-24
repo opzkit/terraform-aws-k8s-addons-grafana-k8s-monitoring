@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.1.13](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.12...v1.1.13) (2026-07-24)
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/checkout digest to 3d3c42e ([#421](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/421)) ([35c3fb2](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/35c3fb2446abefaf52d6bb006936d3ffc19e0a69))
+* **deps:** update actions/setup-python action to v7 ([#422](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/422)) ([3b61cd0](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/3b61cd0191ff8ebb40f2693a7f3b53f78eaf7cea))
+* **deps:** update dependency helm to v4.2.3 ([#417](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/417)) ([97c8077](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/97c807709d60eb5a0ddad3a3fc844c8c2374cc85))
+* **deps:** update Grafana K8s Monitoring version to 4.1.6 ([#408](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/408)) ([615ce1f](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/615ce1f591b8659a47cf717d52f11824747bfe39))
+* **deps:** update Grafana K8s Monitoring version to 4.1.7 ([#411](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/411)) ([94df587](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/94df58730deb397da58e35dc38790850358f4bae))
+* **deps:** update Grafana K8s Monitoring version to 4.2.0 ([#415](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/415)) ([38f1019](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/38f10191dc29e51a6d302f41a9a569e0ac33810e))
+* **deps:** update Grafana K8s Monitoring version to 4.2.1 ([#416](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/416)) ([d10f9b2](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/d10f9b2bece84f56887aaffb8c0b567aecebcbad))
+* **deps:** update Grafana K8s Monitoring version to 4.2.2 ([#419](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/419)) ([01b18f6](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/01b18f65945cffa7dba19e4753f09ac7d20e4cb2))
+* **deps:** update Grafana K8s Monitoring version to 4.3.0 ([#420](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/420)) ([ac78344](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/ac7834460aef2081421a53d3cd6d633274edf3e5))
+* **deps:** update Grafana K8s Monitoring version to 4.3.1 ([#423](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/423)) ([a9f4b2c](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/a9f4b2c3e919cb85f7902a652a29e502332163b9))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.257.0 ([#418](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/418)) ([b929b71](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/b929b71cbe1375fea0a9542c0e4ab127904d6b89))
+* **deps:** update Prometheus Operator CRDs to v0.92.1 ([#413](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/413)) ([758f861](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/758f86144b2d74b96ad27473d1056c5469b4c06c))
+* **deps:** update terraform-linters/setup-tflint action to v6.3.0 ([#414](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/414)) ([080b610](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/080b610826df6d86c0028652921197f6211d0381))
+
 ## [1.1.12](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.11...v1.1.12) (2026-06-28)
 
 
