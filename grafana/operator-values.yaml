@@ -72,6 +72,7 @@ prometheusOperatorObjects:
   enabled: true
   collector: alloy
 integrations:
+  collector: alloy
   alloy:
     instances:
       - name: alloy
