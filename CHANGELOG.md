@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.1.14](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.13...v1.1.14) (2026-08-12)
+
+
+### Bug Fixes
+
+* assign alloy collector to integrations feature ([#435](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/435)) ([221e795](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/221e795205e2d5719bb7b79088ba0ad3a99765d0))
+
+
+### Miscellaneous Chores
+
+* **deps:** update Grafana K8s Monitoring version to 4.3.2 ([#428](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/428)) ([9c998d1](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/9c998d177cba9a8857985adf8f715c133c31d475))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.108.1 ([#426](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/426)) ([9ded809](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/9ded8099069e083ae0d14cb3abf1cca9ad4d304a))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.279.0 ([#424](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/424)) ([8a318e4](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/8a318e4bbd6dbfb15bba7284a809517c44ffdb02))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.288.0 ([#429](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/429)) ([e723953](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/e723953c6c4113c0576abb433c60421a0f5057a4))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v44 ([#430](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/430)) ([27dc29f](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/27dc29f7b54d1fe8535f42617f6f932cb47d08d1))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v44.14.3 ([#431](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/431)) ([26e97d3](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/26e97d3c0db70931a8b31e49448478c0581e8f98))
+* **deps:** update Prometheus Operator CRDs to v0.93.0 ([#427](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/427)) ([2dbbf74](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/2dbbf74d2825062a4b27295d9e56c11e068ed0f9))
+* **deps:** update Prometheus Operator CRDs to v0.93.1 ([#433](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/433)) ([9986a49](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/9986a496c4bbd3a018f367c41cfc815212b4061c))
+
 ## [1.1.13](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.12...v1.1.13) (2026-07-24)
 
 
