@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.15](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.14...v1.1.15) (2026-08-26)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency helm to v4.2.4 ([#440](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/440)) ([f6fa154](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/f6fa15458026c131c97b3dafd15d04c73ee1d4f5))
+* **deps:** update Grafana K8s Monitoring version to 4.4.0 ([#443](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/443)) ([4c3121b](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/4c3121b2a02e06f0cc6d87610fccea4d6e1a0ff8))
+* **deps:** update Grafana K8s Monitoring version to 4.5.0 ([#446](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/446)) ([d7e296b](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/d7e296b6cb70227a70cb6b5a2af7f43061aa9d37))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.109.0 ([#445](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/445)) ([d24185d](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/d24185d15527a26f4b39966df095dc164171247f))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v44.29.4 ([#442](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/442)) ([bc3e8a4](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/bc3e8a45a702e21db2d44fb6d84d3d1646b1d056))
+* **deps:** update Prometheus Operator CRDs to v0.93.1 ([#438](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/438)) ([442f1f6](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/442f1f6ef5fbd367a490c32f3089b4baca13fc9a))
+
 ## [1.1.14](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.13...v1.1.14) (2026-08-12)
 
 
