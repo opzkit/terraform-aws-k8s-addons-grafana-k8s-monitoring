@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.16](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.15...v1.1.16) (2026-09-02)
+
+
+### Bug Fixes
+
+* **metric-drop-rules:** repair broken anchor and unconditional file() error ([#449](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/449)) ([d14cb95](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/d14cb9522f6cda5b84090ae69c627eeb3fdc37a8))
+
+
+### Miscellaneous Chores
+
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v44.48.2 ([#447](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/447)) ([f27cc7d](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/f27cc7de669c77158c5f53f9396bfa78fbd0ade8))
+
 ## [1.1.15](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.14...v1.1.15) (2026-08-26)
 
 
