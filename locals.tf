@@ -20,23 +20,23 @@ locals {
     traces_password_key  = var.traces_password_key
   }), "$$", "$")
 
-  # Generate write_relabel_config blocks for each metric drop rule.
-  # Injected inside the prometheus.remote_write "metricsservice" endpoint
-  # block so matching metrics are dropped before remote write.
-  metric_drop_configs = join("", [
+  # The Alloy config lives inside a YAML double-quoted scalar, so newlines and
+  # quotes in the rendered template are the literal two-character sequences \n
+  # and \" - generated blocks must be escaped the same way.
+  metric_drop_configs = replace(replace(replace(join("", [
     for pattern in var.metric_drop_rules :
-    "        write_relabel_config {\n          source_labels = [\"__name__\"]\n          regex = \"${pattern}\"\n          action = \"drop\"\n        }\n"
-  ])
+    "    write_relabel_config {\n      source_labels = [\"__name__\"]\n      regex = \"${pattern}\"\n      action = \"drop\"\n    }\n"
+  ]), "\\", "\\\\"), "\"", "\\\""), "\n", "\\n")
 
   # Anchor on the endpoint-close / wal-open boundary, which is stable across
-  # k8s-monitoring chart 4.x. Fail fast if the anchor disappears in a future
-  # chart bump so the silent no-op from chart 4.0.4 cannot recur.
-  relabel_anchor      = "      }\n\n      wal {"
-  relabel_replacement = "${local.metric_drop_configs}      }\n\n      wal {"
+  # k8s-monitoring chart 4.x. The output precondition fails the plan if the
+  # anchor disappears in a future chart bump, so the silent no-op from chart
+  # 4.0.4 cannot recur.
+  relabel_anchor = "}\\n\\n  wal {"
+  anchor_found   = strcontains(local.rendered, local.relabel_anchor)
   yaml = (
-    length(var.metric_drop_rules) == 0 ? local.rendered :
-    strcontains(local.rendered, local.relabel_anchor) ? replace(local.rendered, local.relabel_anchor, local.relabel_replacement) :
-    file("ERROR: metric_drop_rules anchor not found in rendered k8s-monitoring template - upstream chart layout changed, update relabel_anchor in locals.tf")
+    length(var.metric_drop_rules) == 0 || !local.anchor_found ? local.rendered :
+    replace(local.rendered, local.relabel_anchor, "${local.metric_drop_configs}${local.relabel_anchor}")
   )
 
   secrets_yaml = templatefile("${path.module}/external-secrets.yaml.tftpl", {
