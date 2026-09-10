@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.17](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.16...v1.1.17) (2026-09-10)
+
+
+### Miscellaneous Chores
+
+* **deps:** update Grafana K8s Monitoring version to 4.5.1 ([#453](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/453)) ([cebff9a](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/cebff9a8430ed2db629372718109239888012e32))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.109.1 ([#450](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/450)) ([4c4027b](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/4c4027bb7eef74dc2f7aab079c634a03b30193df))
+* **deps:** update Prometheus Operator CRDs to v0.94.0 ([#454](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/454)) ([dbbd9f7](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/dbbd9f7026087531b59186232aafa6ef15fb34fb))
+* **deps:** update terraform-linters/setup-tflint action to v6.3.1 ([#451](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/451)) ([5203d5c](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/5203d5ce9e6f2f16b03f39824695f3170be1a95d))
+
 ## [1.1.16](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.15...v1.1.16) (2026-09-02)
 
 
