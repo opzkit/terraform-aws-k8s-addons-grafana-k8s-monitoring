@@ -4016,17 +4016,23 @@ data:
     destinations where collected metrics should be forwarded to\"\n  }\n\n  // Prometheus
     Operator PodMonitor objects\n  prometheus.operator.podmonitors \"pod_monitors\"
     {\n    clustering {\n      enabled = true\n    }\n    scrape {\n      default_scrape_interval
-    = \"60s\"\n      default_scrape_timeout = \"10s\"\n      scrape_native_histograms
-    = false\n    }\n    forward_to = argument.metrics_destinations.value\n  } // prometheus.operator.podmonitors
+    = \"60s\"\n      default_scrape_timeout = \"10s\"\n      scrape_classic_histograms
+    = false\n      scrape_native_histograms = false\n      convert_classic_histograms_to_nhcb
+    = false\n      native_histogram_bucket_limit = 0\n      native_histogram_min_bucket_factor
+    = 0\n    }\n    forward_to = argument.metrics_destinations.value\n  } // prometheus.operator.podmonitors
     \"pod_monitors\"\n\n  // Prometheus Operator Probe objects\n  prometheus.operator.probes
     \"probes\" {\n    clustering {\n      enabled = true\n    }\n    scrape {\n      default_scrape_interval
-    = \"60s\"\n      default_scrape_timeout = \"10s\"\n      scrape_native_histograms
-    = false\n    }\n    forward_to = argument.metrics_destinations.value\n  } // prometheus.operator.probes
+    = \"60s\"\n      default_scrape_timeout = \"10s\"\n      scrape_classic_histograms
+    = false\n      scrape_native_histograms = false\n      convert_classic_histograms_to_nhcb
+    = false\n      native_histogram_bucket_limit = 0\n      native_histogram_min_bucket_factor
+    = 0\n    }\n    forward_to = argument.metrics_destinations.value\n  } // prometheus.operator.probes
     \"probes\"\n\n  // Prometheus Operator ServiceMonitor objects\n  prometheus.operator.servicemonitors
     \"service_monitors\" {\n    kubernetes_role = \"endpointslice\"\n    clustering
     {\n      enabled = true\n    }\n    scrape {\n      default_scrape_interval =
-    \"60s\"\n      default_scrape_timeout = \"10s\"\n      scrape_native_histograms
-    = false\n    }\n    forward_to = argument.metrics_destinations.value\n  } // prometheus.operator.servicemonitors
+    \"60s\"\n      default_scrape_timeout = \"10s\"\n      scrape_classic_histograms
+    = false\n      scrape_native_histograms = false\n      convert_classic_histograms_to_nhcb
+    = false\n      native_histogram_bucket_limit = 0\n      native_histogram_min_bucket_factor
+    = 0\n    }\n    forward_to = argument.metrics_destinations.value\n  } // prometheus.operator.servicemonitors
     \"service_monitors\"\n} // declare \"prometheus_operator_objects\"\nprometheus_operator_objects
     \"feature\" {\n  metrics_destinations = [\n    prometheus.remote_write.metricsservice.receiver,\n
     \ ]\n}\n// Self Reporting\nprometheus.exporter.unix \"kubernetes_monitoring_telemetry\"
@@ -4370,7 +4376,7 @@ data:
   self-reporting-metric.prom: |+
     # HELP grafana_kubernetes_monitoring_build_info A metric to report the version of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_build_info gauge
-    grafana_kubernetes_monitoring_build_info{version="4.5.1", namespace="monitoring"} 1
+    grafana_kubernetes_monitoring_build_info{version="4.5.2", namespace="monitoring"} 1
     # HELP grafana_kubernetes_monitoring_feature_info A metric to report the enabled features of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_feature_info gauge
     grafana_kubernetes_monitoring_feature_info{feature="annotationAutodiscovery", version="1.0.0"} 1
