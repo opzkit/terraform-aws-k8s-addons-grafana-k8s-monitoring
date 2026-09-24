@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.18](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.17...v1.1.18) (2026-09-24)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency helm to v4.3.0 ([#457](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/457)) ([fc04c0b](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/fc04c0b11cdc491d711eeca4b7a6ad33bcd35bca))
+* **deps:** update Grafana K8s Monitoring version to 4.5.2 ([#455](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/455)) ([888ce34](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/888ce34b4ff91fc5ed4481c44d8a08a9de3bd027))
+* **deps:** update pre-commit hook alessandrojcm/commitlint-pre-commit-hook to v9.27.0 ([#460](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/460)) ([4fcecba](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/4fcecbac9dd67ef6f3af446d6954777b98772250))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v44.79.5 ([#458](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/458)) ([5926794](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/5926794eacae177d162397ce0979da0488a9d4d7))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v44.97.4 ([#459](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/459)) ([7b2af2b](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/7b2af2bc6cbf516cce69133ceb7750e062993123))
+* **deps:** update Prometheus Operator CRDs to v0.94.1 ([#461](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/461)) ([852c225](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/852c22506d4890474113f62cf8354573a18adce2))
+
 ## [1.1.17](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.16...v1.1.17) (2026-09-10)
 
 
