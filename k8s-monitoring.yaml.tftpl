@@ -2914,8 +2914,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.12.1
-    helm.sh/chart: alloy-operator-0.7.1
+    app.kubernetes.io/version: 1.13.0
+    helm.sh/chart: alloy-operator-0.8.0
   name: k8s-monitoring-alloy-operator
   namespace: monitoring
 ---
@@ -2942,7 +2942,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.20.0
-    helm.sh/chart: kube-state-metrics-8.4.2
+    helm.sh/chart: kube-state-metrics-8.6.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -2958,7 +2958,7 @@ metadata:
     app.kubernetes.io/name: node-exporter
     app.kubernetes.io/part-of: node-exporter
     app.kubernetes.io/version: 1.12.1
-    helm.sh/chart: node-exporter-4.56.3
+    helm.sh/chart: node-exporter-4.59.0
     release: k8s-monitoring
   name: k8s-monitoring-node-exporter
   namespace: monitoring
@@ -2972,8 +2972,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.121.1
-    helm.sh/chart: opencost-2.5.30
+    app.kubernetes.io/version: 1.121.2
+    helm.sh/chart: opencost-2.5.31
   name: k8s-monitoring-opencost
   namespace: monitoring
 ---
@@ -2984,8 +2984,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.12.1
-    helm.sh/chart: alloy-operator-0.7.1
+    app.kubernetes.io/version: 1.13.0
+    helm.sh/chart: alloy-operator-0.8.0
   name: k8s-monitoring-alloy-operator-leader-election-role
   namespace: monitoring
 rules:
@@ -3117,8 +3117,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.12.1
-    helm.sh/chart: alloy-operator-0.7.1
+    app.kubernetes.io/version: 1.13.0
+    helm.sh/chart: alloy-operator-0.8.0
   name: k8s-monitoring-alloy-operator-alloy-manager
 rules:
 - apiGroups:
@@ -3163,7 +3163,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.20.0
-    helm.sh/chart: kube-state-metrics-8.4.2
+    helm.sh/chart: kube-state-metrics-8.6.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
 rules:
@@ -3372,8 +3372,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.121.1
-    helm.sh/chart: opencost-2.5.30
+    app.kubernetes.io/version: 1.121.2
+    helm.sh/chart: opencost-2.5.31
   name: k8s-monitoring-opencost
 rules:
 - apiGroups:
@@ -3456,8 +3456,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.12.1
-    helm.sh/chart: alloy-operator-0.7.1
+    app.kubernetes.io/version: 1.13.0
+    helm.sh/chart: alloy-operator-0.8.0
   name: k8s-monitoring-alloy-operator-leader-election-rolebinding
   namespace: monitoring
 roleRef:
@@ -3476,8 +3476,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.12.1
-    helm.sh/chart: alloy-operator-0.7.1
+    app.kubernetes.io/version: 1.13.0
+    helm.sh/chart: alloy-operator-0.8.0
   name: k8s-monitoring-alloy-operator
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -3495,8 +3495,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.12.1
-    helm.sh/chart: alloy-operator-0.7.1
+    app.kubernetes.io/version: 1.13.0
+    helm.sh/chart: alloy-operator-0.8.0
   name: k8s-monitoring-alloy-operator-alloy-manager
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -3530,7 +3530,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.20.0
-    helm.sh/chart: kube-state-metrics-8.4.2
+    helm.sh/chart: kube-state-metrics-8.6.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
 roleRef:
@@ -3550,8 +3550,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.121.1
-    helm.sh/chart: opencost-2.5.30
+    app.kubernetes.io/version: 1.121.2
+    helm.sh/chart: opencost-2.5.31
   name: k8s-monitoring-opencost
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -3761,7 +3761,7 @@ data:
     \     insecure_skip_verify = true\n      server_name = \"kubernetes\"\n    }\n\n
     \   clustering {\n      enabled = true\n    }\n\n    forward_to = [prometheus.relabel.kubelet.receiver]\n
     \ } // prometheus.scrape \"kubelet\"\n\n  prometheus.relabel \"kubelet\" {\n    max_cache_size
-    = 100000\n    rule {\n      source_labels = [\"__name__\"]\n      regex = \"up|scrape_samples_scraped|go_goroutines|kubelet_certificate_manager_client_expiration_renew_errors|kubelet_certificate_manager_client_ttl_seconds|kubelet_certificate_manager_server_ttl_seconds|kubelet_cgroup_manager_duration_seconds_bucket|kubelet_cgroup_manager_duration_seconds_count|kubelet_node_config_error|kubelet_node_name|kubelet_pleg_relist_duration_seconds_bucket|kubelet_pleg_relist_duration_seconds_count|kubelet_pleg_relist_interval_seconds_bucket|kubelet_pod_start_duration_seconds_bucket|kubelet_pod_start_duration_seconds_count|kubelet_pod_worker_duration_seconds_bucket|kubelet_pod_worker_duration_seconds_count|kubelet_running_container_count|kubelet_running_containers|kubelet_running_pod_count|kubelet_running_pods|kubelet_runtime_operations_errors_total|kubelet_runtime_operations_total|kubelet_server_expiration_renew_errors|kubelet_volume_stats_available_bytes|kubelet_volume_stats_capacity_bytes|kubelet_volume_stats_inodes|kubelet_volume_stats_inodes_free|kubelet_volume_stats_inodes_used|kubelet_volume_stats_used_bytes|kubernetes_build_info|namespace_workload_pod|process_cpu_seconds_total|process_resident_memory_bytes|rest_client_requests_total|storage_operation_duration_seconds_count|storage_operation_errors_total|volume_manager_total_volumes\"\n
+    = 100000\n    rule {\n      source_labels = [\"__name__\"]\n      regex = \"up|scrape_samples_scraped|go_goroutines|kubelet_certificate_manager_client_expiration_renew_errors|kubelet_certificate_manager_client_ttl_seconds|kubelet_certificate_manager_server_ttl_seconds|kubelet_cgroup_manager_duration_seconds_bucket|kubelet_cgroup_manager_duration_seconds_count|kubelet_evictions|kubelet_node_config_error|kubelet_node_name|kubelet_pleg_relist_duration_seconds_bucket|kubelet_pleg_relist_duration_seconds_count|kubelet_pleg_relist_interval_seconds_bucket|kubelet_pod_start_duration_seconds_bucket|kubelet_pod_start_duration_seconds_count|kubelet_pod_worker_duration_seconds_bucket|kubelet_pod_worker_duration_seconds_count|kubelet_running_container_count|kubelet_running_containers|kubelet_running_pod_count|kubelet_running_pods|kubelet_runtime_operations_errors_total|kubelet_runtime_operations_total|kubelet_server_expiration_renew_errors|kubelet_volume_stats_available_bytes|kubelet_volume_stats_capacity_bytes|kubelet_volume_stats_inodes|kubelet_volume_stats_inodes_free|kubelet_volume_stats_inodes_used|kubelet_volume_stats_used_bytes|kubernetes_build_info|namespace_workload_pod|process_cpu_seconds_total|process_resident_memory_bytes|rest_client_requests_total|storage_operation_duration_seconds_count|storage_operation_errors_total|volume_manager_total_volumes\"\n
     \     action = \"keep\"\n    }\n\n    forward_to = argument.metrics_destinations.value\n
     \ } // prometheus.relabel \"kubelet\"\n\n  // Kubelet Resources\n  discovery.relabel
     \"kubelet_resources\" {\n    targets = discovery.relabel.nodes.output\n    rule
@@ -3837,7 +3837,7 @@ data:
     {\n      enabled = true\n    }\n    forward_to = [prometheus.relabel.kube_state_metrics.receiver]\n
     \ } // prometheus.scrape \"kube_state_metrics\"\n\n  prometheus.relabel \"kube_state_metrics\"
     {\n    max_cache_size = 100000\n    rule {\n      source_labels = [\"__name__\"]\n
-    \     regex = \"up|scrape_samples_scraped|kube_configmap_info|kube_configmap_metadata_resource_version|kube_cronjob.*|kube_daemonset.*|kube_deployment_metadata_generation|kube_deployment_spec_replicas|kube_deployment_status_condition|kube_deployment_status_observed_generation|kube_deployment_status_replicas_available|kube_deployment_status_replicas_updated|kube_horizontalpodautoscaler_spec_max_replicas|kube_horizontalpodautoscaler_spec_min_replicas|kube_horizontalpodautoscaler_status_current_replicas|kube_horizontalpodautoscaler_status_desired_replicas|kube_job.*|kube_namespace_status_phase|kube_node.*|kube_persistentvolume_status_phase|kube_persistentvolumeclaim_access_mode|kube_persistentvolumeclaim_info|kube_persistentvolumeclaim_labels|kube_persistentvolumeclaim_resource_requests_storage_bytes|kube_persistentvolumeclaim_status_phase|kube_pod_completion_time|kube_pod_container_info|kube_pod_container_resource_limits|kube_pod_container_resource_requests|kube_pod_container_status_last_terminated_reason|kube_pod_container_status_last_terminated_timestamp|kube_pod_container_status_restarts_total|kube_pod_container_status_waiting_reason|kube_pod_info|kube_pod_owner|kube_pod_restart_policy|kube_pod_spec_volumes_persistentvolumeclaims_info|kube_pod_start_time|kube_pod_status_phase|kube_pod_status_reason|kube_pod_init_.*|kube_replicaset.*|kube_resourcequota|kube_secret_metadata_resource_version|kube_statefulset.*\"\n
+    \     regex = \"up|scrape_samples_scraped|kube_configmap_info|kube_configmap_metadata_resource_version|kube_cronjob.*|kube_daemonset.*|kube_deployment_metadata_generation|kube_deployment_spec_replicas|kube_deployment_status_condition|kube_deployment_status_observed_generation|kube_deployment_status_replicas_available|kube_deployment_status_replicas_updated|kube_horizontalpodautoscaler_spec_max_replicas|kube_horizontalpodautoscaler_spec_min_replicas|kube_horizontalpodautoscaler_status_current_replicas|kube_horizontalpodautoscaler_status_desired_replicas|kube_job.*|kube_namespace_status_phase|kube_node.*|kube_persistentvolume_status_phase|kube_persistentvolumeclaim_access_mode|kube_persistentvolumeclaim_info|kube_persistentvolumeclaim_labels|kube_persistentvolumeclaim_resource_requests_storage_bytes|kube_persistentvolumeclaim_status_phase|kube_pod_completion_time|kube_pod_container_info|kube_pod_container_resource_limits|kube_pod_container_resource_requests|kube_pod_container_status_last_terminated_reason|kube_pod_container_status_last_terminated_timestamp|kube_pod_container_status_restarts_total|kube_pod_container_status_waiting_reason|kube_pod_info|kube_pod_owner|kube_pod_restart_policy|kube_pod_spec_volumes_persistentvolumeclaims_info|kube_pod_start_time|kube_pod_status_phase|kube_pod_status_ready|kube_pod_status_reason|kube_pod_init_.*|kube_poddisruptionbudget_status_current_healthy|kube_poddisruptionbudget_status_desired_healthy|kube_replicaset.*|kube_resourcequota|kube_secret_metadata_resource_version|kube_statefulset.*\"\n
     \     action = \"keep\"\n    }\n    forward_to = argument.metrics_destinations.value\n
     \ } // prometheus.relabel \"kube_state_metrics\"\n} // declare \"cluster_metrics\"\ncluster_metrics
     \"feature\" {\n  metrics_destinations = [\n    prometheus.remote_write.metricsservice.receiver,\n
@@ -4376,7 +4376,7 @@ data:
   self-reporting-metric.prom: |+
     # HELP grafana_kubernetes_monitoring_build_info A metric to report the version of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_build_info gauge
-    grafana_kubernetes_monitoring_build_info{version="4.5.2", namespace="monitoring"} 1
+    grafana_kubernetes_monitoring_build_info{version="4.5.3", namespace="monitoring"} 1
     # HELP grafana_kubernetes_monitoring_feature_info A metric to report the enabled features of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_feature_info gauge
     grafana_kubernetes_monitoring_feature_info{feature="annotationAutodiscovery", version="1.0.0"} 1
@@ -4415,8 +4415,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.12.1
-    helm.sh/chart: alloy-operator-0.7.1
+    app.kubernetes.io/version: 1.13.0
+    helm.sh/chart: alloy-operator-0.8.0
   name: k8s-monitoring-alloy-operator
   namespace: monitoring
 spec:
@@ -4466,7 +4466,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.20.0
-    helm.sh/chart: kube-state-metrics-8.4.2
+    helm.sh/chart: kube-state-metrics-8.6.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -4484,8 +4484,6 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  annotations:
-    prometheus.io/scrape: "false"
   labels:
     app.kubernetes.io/component: metrics
     app.kubernetes.io/instance: k8s-monitoring
@@ -4493,7 +4491,7 @@ metadata:
     app.kubernetes.io/name: node-exporter
     app.kubernetes.io/part-of: node-exporter
     app.kubernetes.io/version: 1.12.1
-    helm.sh/chart: node-exporter-4.56.3
+    helm.sh/chart: node-exporter-4.59.0
     release: k8s-monitoring
   name: k8s-monitoring-node-exporter
   namespace: monitoring
@@ -4516,8 +4514,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.121.1
-    helm.sh/chart: opencost-2.5.30
+    app.kubernetes.io/version: 1.121.2
+    helm.sh/chart: opencost-2.5.31
   name: k8s-monitoring-opencost
   namespace: monitoring
 spec:
@@ -4537,8 +4535,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.12.1
-    helm.sh/chart: alloy-operator-0.7.1
+    app.kubernetes.io/version: 1.13.0
+    helm.sh/chart: alloy-operator-0.8.0
   name: k8s-monitoring-alloy-operator
   namespace: monitoring
 spec:
@@ -4553,8 +4551,8 @@ spec:
         app.kubernetes.io/instance: k8s-monitoring
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/name: alloy-operator
-        app.kubernetes.io/version: 1.12.1
-        helm.sh/chart: alloy-operator-0.7.1
+        app.kubernetes.io/version: 1.13.0
+        helm.sh/chart: alloy-operator-0.8.0
     spec:
       containers:
       - args:
@@ -4562,7 +4560,7 @@ spec:
         - --metrics-bind-address=:8082
         - --leader-elect
         - --leader-election-id=k8s-monitoring-alloy-operator
-        image: ghcr.io/grafana/alloy-operator:1.12.1
+        image: ghcr.io/grafana/alloy-operator:1.13.0
         imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
@@ -4612,7 +4610,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.20.0
-    helm.sh/chart: kube-state-metrics-8.4.2
+    helm.sh/chart: kube-state-metrics-8.6.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -4636,7 +4634,6 @@ spec:
         app.kubernetes.io/name: kube-state-metrics
         app.kubernetes.io/part-of: kube-state-metrics
         app.kubernetes.io/version: 2.20.0
-        helm.sh/chart: kube-state-metrics-8.4.2
         release: k8s-monitoring
     spec:
       automountServiceAccountToken: true
@@ -4706,8 +4703,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.121.1
-    helm.sh/chart: opencost-2.5.30
+    app.kubernetes.io/version: 1.121.2
+    helm.sh/chart: opencost-2.5.31
   name: k8s-monitoring-opencost
   namespace: monitoring
 spec:
@@ -4783,7 +4780,7 @@ spec:
           value: cluster
         - name: MCP_SERVER_ENABLED
           value: "false"
-        image: ghcr.io/opencost/opencost:1.121.1@sha256:50052694785db32174332670920faf7b7f55d32a91ba3caec1e9207a58338ff5
+        image: ghcr.io/opencost/opencost:1.121.2@sha256:de278443452756ea230a35bad1cad3002efae830a1b42b12fdd7ca37796f6e95
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
@@ -4986,7 +4983,7 @@ metadata:
     app.kubernetes.io/name: node-exporter
     app.kubernetes.io/part-of: node-exporter
     app.kubernetes.io/version: 1.12.1
-    helm.sh/chart: node-exporter-4.56.3
+    helm.sh/chart: node-exporter-4.59.0
     release: k8s-monitoring
   name: k8s-monitoring-node-exporter
   namespace: monitoring
@@ -5008,7 +5005,6 @@ spec:
         app.kubernetes.io/name: node-exporter
         app.kubernetes.io/part-of: node-exporter
         app.kubernetes.io/version: 1.12.1
-        helm.sh/chart: node-exporter-4.56.3
         release: k8s-monitoring
     spec:
       affinity:
