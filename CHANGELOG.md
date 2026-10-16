@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.19](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.18...v1.1.19) (2026-10-16)
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/create-github-app-token digest to 64ab729 ([#469](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/469)) ([a868d6b](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/a868d6b7fc516c36e7ae146a4030b31c722a7266))
+* **deps:** update azure/setup-kubectl digest to bda439f ([#467](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/467)) ([a4ee586](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/a4ee58697954ba42b004254d1147d2930bf797a3))
+
 ## [1.1.18](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.17...v1.1.18) (2026-10-08)
 
 
