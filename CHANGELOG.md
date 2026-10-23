@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.19](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.18...v1.1.19) (2026-10-23)
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/create-github-app-token digest to 64ab729 ([#469](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/469)) ([a868d6b](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/a868d6b7fc516c36e7ae146a4030b31c722a7266))
+* **deps:** update azure/setup-kubectl digest to bda439f ([#467](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/467)) ([a4ee586](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/a4ee58697954ba42b004254d1147d2930bf797a3))
+* **deps:** update dependency helm to v4.3.1 ([#470](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/470)) ([9b7e8aa](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/9b7e8aa7f2a6492a097e5ee0559a7113ab8b35dc))
+* **deps:** update Grafana K8s Monitoring version to 4.5.4 ([#472](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/472)) ([c32be84](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/c32be84ff2837d1e48c5779ad09749c44e956e10))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v44.164.6 ([#471](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/471)) ([fe50857](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/fe508574bfdc2d732693491ddb6c76a737c2abba))
+* **deps:** update Prometheus Operator CRDs to v0.94.2 ([#473](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/473)) ([fcca39d](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/fcca39d9710aeb2359be5b669f7046979b988989))
+
 ## [1.1.18](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.17...v1.1.18) (2026-10-08)
 
 
