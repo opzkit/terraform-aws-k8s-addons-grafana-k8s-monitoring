@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.21](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.20...v1.1.21) (2026-10-26)
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/setup-python action to v7.1.0 ([#477](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/477)) ([ffb88a1](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/ffb88a114cc3af5475ab50beb46b72037730f968))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v44.178.3 ([#479](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/issues/479)) ([5a19009](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/commit/5a19009ce604efc3837e1aa67b202c20478b3265))
+
 ## [1.1.20](https://github.com/opzkit/terraform-aws-k8s-addons-grafana-k8s-monitoring/compare/v1.1.19...v1.1.20) (2026-10-24)
 
 
