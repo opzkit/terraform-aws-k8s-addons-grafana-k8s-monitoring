@@ -2914,8 +2914,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.14.3
-    helm.sh/chart: alloy-operator-0.9.3
+    app.kubernetes.io/version: 1.14.4
+    helm.sh/chart: alloy-operator-0.9.4
   name: k8s-monitoring-alloy-operator
   namespace: monitoring
 ---
@@ -2942,7 +2942,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.20.0
-    helm.sh/chart: kube-state-metrics-8.6.0
+    helm.sh/chart: kube-state-metrics-8.8.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -2958,7 +2958,7 @@ metadata:
     app.kubernetes.io/name: node-exporter
     app.kubernetes.io/part-of: node-exporter
     app.kubernetes.io/version: 1.12.1
-    helm.sh/chart: node-exporter-4.60.0
+    helm.sh/chart: node-exporter-4.60.1
     release: k8s-monitoring
   name: k8s-monitoring-node-exporter
   namespace: monitoring
@@ -2972,8 +2972,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.121.2
-    helm.sh/chart: opencost-2.5.31
+    app.kubernetes.io/version: 1.121.3
+    helm.sh/chart: opencost-2.5.33
   name: k8s-monitoring-opencost
   namespace: monitoring
 ---
@@ -2984,8 +2984,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.14.3
-    helm.sh/chart: alloy-operator-0.9.3
+    app.kubernetes.io/version: 1.14.4
+    helm.sh/chart: alloy-operator-0.9.4
   name: k8s-monitoring-alloy-operator-leader-election-role
   namespace: monitoring
 rules:
@@ -3117,8 +3117,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.14.3
-    helm.sh/chart: alloy-operator-0.9.3
+    app.kubernetes.io/version: 1.14.4
+    helm.sh/chart: alloy-operator-0.9.4
   name: k8s-monitoring-alloy-operator-alloy-manager
 rules:
 - apiGroups:
@@ -3163,7 +3163,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.20.0
-    helm.sh/chart: kube-state-metrics-8.6.0
+    helm.sh/chart: kube-state-metrics-8.8.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
 rules:
@@ -3372,8 +3372,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.121.2
-    helm.sh/chart: opencost-2.5.31
+    app.kubernetes.io/version: 1.121.3
+    helm.sh/chart: opencost-2.5.33
   name: k8s-monitoring-opencost
 rules:
 - apiGroups:
@@ -3456,8 +3456,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.14.3
-    helm.sh/chart: alloy-operator-0.9.3
+    app.kubernetes.io/version: 1.14.4
+    helm.sh/chart: alloy-operator-0.9.4
   name: k8s-monitoring-alloy-operator-leader-election-rolebinding
   namespace: monitoring
 roleRef:
@@ -3476,8 +3476,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.14.3
-    helm.sh/chart: alloy-operator-0.9.3
+    app.kubernetes.io/version: 1.14.4
+    helm.sh/chart: alloy-operator-0.9.4
   name: k8s-monitoring-alloy-operator
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -3495,8 +3495,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.14.3
-    helm.sh/chart: alloy-operator-0.9.3
+    app.kubernetes.io/version: 1.14.4
+    helm.sh/chart: alloy-operator-0.9.4
   name: k8s-monitoring-alloy-operator-alloy-manager
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -3530,7 +3530,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.20.0
-    helm.sh/chart: kube-state-metrics-8.6.0
+    helm.sh/chart: kube-state-metrics-8.8.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
 roleRef:
@@ -3550,8 +3550,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.121.2
-    helm.sh/chart: opencost-2.5.31
+    app.kubernetes.io/version: 1.121.3
+    helm.sh/chart: opencost-2.5.33
   name: k8s-monitoring-opencost
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -3959,32 +3959,35 @@ data:
     \   argument \"max_cache_size\" {\n      comment = \"The maximum number of elements
     to hold in the relabeling cache (default: 100000).  This should be at least 2x-5x
     your largest scrape target or samples appended rate.\"\n      optional = true\n
-    \   }\n\n    argument \"clustering\" {\n      comment = \"Whether or not clustering
-    should be enabled (default: false)\"\n      optional = true\n    }\n\n    prometheus.scrape
-    \"alloy\" {\n      job_name = coalesce(argument.job_label.value, \"integrations/alloy\")\n
-    \     forward_to = [prometheus.relabel.alloy.receiver]\n      targets = argument.targets.value\n
-    \     scrape_interval = coalesce(argument.scrape_interval.value, \"60s\")\n      scrape_timeout
-    = coalesce(argument.scrape_timeout.value, \"10s\")\n      scrape_protocols = argument.scrape_protocols.value\n
-    \     scrape_classic_histograms = argument.scrape_classic_histograms.value\n      scrape_native_histograms
-    = argument.scrape_native_histograms.value\n\n      clustering {\n        enabled
-    = coalesce(argument.clustering.value, false)\n      }\n    } // prometheus.scrape
-    \"alloy\"\n\n    // alloy metric relabelings (post-scrape)\n    prometheus.relabel
-    \"alloy\" {\n      forward_to = argument.forward_to.value\n      max_cache_size
-    = coalesce(argument.max_cache_size.value, 100000)\n\n      // drop metrics that
-    match the drop_metrics regex\n      rule {\n        source_labels = [\"__name__\"]\n
-    \       regex = coalesce(argument.drop_metrics.value, \"\")\n        action =
-    \"drop\"\n      }\n\n      // keep only metrics that match the keep_metrics regex\n
-    \     rule {\n        source_labels = [\"__name__\"]\n        regex = coalesce(argument.keep_metrics.value,
-    \".*\")\n        action = \"keep\"\n      }\n\n      // remove the component_id
-    label from any metric that starts with log_bytes or log_lines, these are custom
-    metrics that are generated\n      // as part of the log annotation modules in
-    this repo\n      rule {\n        action = \"replace\"\n        source_labels =
-    [\"__name__\"]\n        regex = \"^log_(bytes|lines).+\"\n        replacement
-    = \"\"\n        target_label = \"component_id\"\n      }\n\n      // set the namespace
-    label to that of the exported_namespace\n      rule {\n        action = \"replace\"\n
-    \       source_labels = [\"__name__\", \"exported_namespace\"]\n        separator
-    = \"@\"\n        regex = \"^log_(bytes|lines).+@(.+)\"\n        replacement =
-    \"$2\"\n        target_label = \"namespace\"\n      }\n\n      // set the pod
+    \     default = 100000\n    }\n\n    argument \"cache_ttl\" {\n      comment =
+    \"When set, switches the relabeling cache to TTL mode, expiring entries after
+    this duration of inactivity. Requires max_cache_size to be 0.\"\n      optional
+    = true\n      default = \"0s\"\n    }\n\n    argument \"clustering\" {\n      comment
+    = \"Whether or not clustering should be enabled (default: false)\"\n      optional
+    = true\n    }\n\n    prometheus.scrape \"alloy\" {\n      job_name = coalesce(argument.job_label.value,
+    \"integrations/alloy\")\n      forward_to = [prometheus.relabel.alloy.receiver]\n
+    \     targets = argument.targets.value\n      scrape_interval = coalesce(argument.scrape_interval.value,
+    \"60s\")\n      scrape_timeout = coalesce(argument.scrape_timeout.value, \"10s\")\n
+    \     scrape_protocols = argument.scrape_protocols.value\n      scrape_classic_histograms
+    = argument.scrape_classic_histograms.value\n      scrape_native_histograms = argument.scrape_native_histograms.value\n\n
+    \     clustering {\n        enabled = coalesce(argument.clustering.value, false)\n
+    \     }\n    } // prometheus.scrape \"alloy\"\n\n    // alloy metric relabelings
+    (post-scrape)\n    prometheus.relabel \"alloy\" {\n      forward_to = argument.forward_to.value\n
+    \     max_cache_size = argument.max_cache_size.value\n      cache_ttl = argument.cache_ttl.value\n\n
+    \     // drop metrics that match the drop_metrics regex\n      rule {\n        source_labels
+    = [\"__name__\"]\n        regex = coalesce(argument.drop_metrics.value, \"\")\n
+    \       action = \"drop\"\n      }\n\n      // keep only metrics that match the
+    keep_metrics regex\n      rule {\n        source_labels = [\"__name__\"]\n        regex
+    = coalesce(argument.keep_metrics.value, \".*\")\n        action = \"keep\"\n      }\n\n
+    \     // remove the component_id label from any metric that starts with log_bytes
+    or log_lines, these are custom metrics that are generated\n      // as part of
+    the log annotation modules in this repo\n      rule {\n        action = \"replace\"\n
+    \       source_labels = [\"__name__\"]\n        regex = \"^log_(bytes|lines).+\"\n
+    \       replacement = \"\"\n        target_label = \"component_id\"\n      }\n\n
+    \     // set the namespace label to that of the exported_namespace\n      rule
+    {\n        action = \"replace\"\n        source_labels = [\"__name__\", \"exported_namespace\"]\n
+    \       separator = \"@\"\n        regex = \"^log_(bytes|lines).+@(.+)\"\n        replacement
+    = \"$2\"\n        target_label = \"namespace\"\n      }\n\n      // set the pod
     label to that of the exported_pod\n      rule {\n        action = \"replace\"\n
     \       source_labels = [\"__name__\", \"exported_pod\"]\n        separator =
     \"@\"\n        regex = \"^log_(bytes|lines).+@(.+)\"\n        replacement = \"$2\"\n
@@ -4380,7 +4383,7 @@ data:
   self-reporting-metric.prom: |+
     # HELP grafana_kubernetes_monitoring_build_info A metric to report the version of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_build_info gauge
-    grafana_kubernetes_monitoring_build_info{version="4.5.5", namespace="monitoring"} 1
+    grafana_kubernetes_monitoring_build_info{version="4.6.0", namespace="monitoring"} 1
     # HELP grafana_kubernetes_monitoring_feature_info A metric to report the enabled features of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_feature_info gauge
     grafana_kubernetes_monitoring_feature_info{feature="annotationAutodiscovery", version="1.0.0"} 1
@@ -4391,6 +4394,11 @@ data:
     grafana_kubernetes_monitoring_feature_info{feature="integrations", sources="alloy", version="1.0.0"} 1
     grafana_kubernetes_monitoring_feature_info{feature="podLogsViaLoki", version="1.0.0"} 1
     grafana_kubernetes_monitoring_feature_info{feature="prometheusOperatorObjects", sources="ServiceMonitors,PodMonitors,Probes", version="1.0.0"} 1
+    # HELP grafana_kubernetes_monitoring_destination_info_count A metric to report the number of enabled destinations grouped by type and configuration
+    # TYPE grafana_kubernetes_monitoring_destination_info_count gauge
+    grafana_kubernetes_monitoring_destination_info_count{logs="false", metrics="false", service_graph_metrics_enabled="false", tail_sampling_enabled="false", traces="true", type="otlp"} 1
+    grafana_kubernetes_monitoring_destination_info_count{rules_enabled="false", type="prometheus"} 1
+    grafana_kubernetes_monitoring_destination_info_count{type="loki"} 1
     # HELP grafana_kubernetes_monitoring_collector_info A metric to report the collectors of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_collector_info gauge
     grafana_kubernetes_monitoring_collector_info{kind="statefulset", name="alloy", presets="statefulset", replicas="1", type="alloy"} 1
@@ -4419,8 +4427,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.14.3
-    helm.sh/chart: alloy-operator-0.9.3
+    app.kubernetes.io/version: 1.14.4
+    helm.sh/chart: alloy-operator-0.9.4
   name: k8s-monitoring-alloy-operator
   namespace: monitoring
 spec:
@@ -4470,7 +4478,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.20.0
-    helm.sh/chart: kube-state-metrics-8.6.0
+    helm.sh/chart: kube-state-metrics-8.8.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -4495,7 +4503,7 @@ metadata:
     app.kubernetes.io/name: node-exporter
     app.kubernetes.io/part-of: node-exporter
     app.kubernetes.io/version: 1.12.1
-    helm.sh/chart: node-exporter-4.60.0
+    helm.sh/chart: node-exporter-4.60.1
     release: k8s-monitoring
   name: k8s-monitoring-node-exporter
   namespace: monitoring
@@ -4518,8 +4526,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.121.2
-    helm.sh/chart: opencost-2.5.31
+    app.kubernetes.io/version: 1.121.3
+    helm.sh/chart: opencost-2.5.33
   name: k8s-monitoring-opencost
   namespace: monitoring
 spec:
@@ -4539,8 +4547,8 @@ metadata:
     app.kubernetes.io/instance: k8s-monitoring
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: alloy-operator
-    app.kubernetes.io/version: 1.14.3
-    helm.sh/chart: alloy-operator-0.9.3
+    app.kubernetes.io/version: 1.14.4
+    helm.sh/chart: alloy-operator-0.9.4
   name: k8s-monitoring-alloy-operator
   namespace: monitoring
 spec:
@@ -4555,8 +4563,8 @@ spec:
         app.kubernetes.io/instance: k8s-monitoring
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/name: alloy-operator
-        app.kubernetes.io/version: 1.14.3
-        helm.sh/chart: alloy-operator-0.9.3
+        app.kubernetes.io/version: 1.14.4
+        helm.sh/chart: alloy-operator-0.9.4
     spec:
       containers:
       - args:
@@ -4564,7 +4572,7 @@ spec:
         - --metrics-bind-address=:8082
         - --leader-elect
         - --leader-election-id=k8s-monitoring-alloy-operator
-        image: ghcr.io/grafana/alloy-operator:1.14.3
+        image: ghcr.io/grafana/alloy-operator:1.14.4
         imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
@@ -4614,7 +4622,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.20.0
-    helm.sh/chart: kube-state-metrics-8.6.0
+    helm.sh/chart: kube-state-metrics-8.8.0
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -4707,8 +4715,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.121.2
-    helm.sh/chart: opencost-2.5.31
+    app.kubernetes.io/version: 1.121.3
+    helm.sh/chart: opencost-2.5.33
   name: k8s-monitoring-opencost
   namespace: monitoring
 spec:
@@ -4784,7 +4792,7 @@ spec:
           value: cluster
         - name: MCP_SERVER_ENABLED
           value: "false"
-        image: ghcr.io/opencost/opencost:1.121.2@sha256:de278443452756ea230a35bad1cad3002efae830a1b42b12fdd7ca37796f6e95
+        image: ghcr.io/opencost/opencost:1.121.3@sha256:4cdd173253e5abba048dfe2cfa968707a5b59d774157d5356940d0d923a6c281
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
@@ -4987,7 +4995,7 @@ metadata:
     app.kubernetes.io/name: node-exporter
     app.kubernetes.io/part-of: node-exporter
     app.kubernetes.io/version: 1.12.1
-    helm.sh/chart: node-exporter-4.60.0
+    helm.sh/chart: node-exporter-4.60.1
     release: k8s-monitoring
   name: k8s-monitoring-node-exporter
   namespace: monitoring
@@ -5066,6 +5074,7 @@ spec:
             cpu: 100m
             memory: 200m
         securityContext:
+          allowPrivilegeEscalation: false
           readOnlyRootFilesystem: true
         volumeMounts:
         - mountPath: /host/proc
@@ -5146,20 +5155,7 @@ spec:
       allowPrivilegeEscalation: false
       capabilities:
         add:
-        - CHOWN
-        - DAC_OVERRIDE
-        - FOWNER
-        - FSETID
-        - KILL
-        - SETGID
-        - SETUID
-        - SETPCAP
         - NET_BIND_SERVICE
-        - NET_RAW
-        - SYS_CHROOT
-        - MKNOD
-        - AUDIT_WRITE
-        - SETFCAP
         drop:
         - ALL
       seccompProfile:
@@ -5201,20 +5197,7 @@ spec:
       allowPrivilegeEscalation: false
       capabilities:
         add:
-        - CHOWN
-        - DAC_OVERRIDE
-        - FOWNER
-        - FSETID
-        - KILL
-        - SETGID
-        - SETUID
-        - SETPCAP
         - NET_BIND_SERVICE
-        - NET_RAW
-        - SYS_CHROOT
-        - MKNOD
-        - AUDIT_WRITE
-        - SETFCAP
         drop:
         - ALL
       seccompProfile:
