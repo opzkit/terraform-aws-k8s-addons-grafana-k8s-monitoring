@@ -2969,7 +2969,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.20.0
-    helm.sh/chart: kube-state-metrics-8.8.0
+    helm.sh/chart: kube-state-metrics-9.0.1
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -2985,7 +2985,7 @@ metadata:
     app.kubernetes.io/name: node-exporter
     app.kubernetes.io/part-of: node-exporter
     app.kubernetes.io/version: 1.12.1
-    helm.sh/chart: node-exporter-4.60.1
+    helm.sh/chart: node-exporter-5.1.0
     release: k8s-monitoring
   name: k8s-monitoring-node-exporter
   namespace: monitoring
@@ -2999,8 +2999,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.121.3
-    helm.sh/chart: opencost-2.5.33
+    app.kubernetes.io/version: 1.121.4
+    helm.sh/chart: opencost-2.5.34
   name: k8s-monitoring-opencost
   namespace: monitoring
 ---
@@ -3190,7 +3190,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.20.0
-    helm.sh/chart: kube-state-metrics-8.8.0
+    helm.sh/chart: kube-state-metrics-9.0.1
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
 rules:
@@ -3399,8 +3399,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.121.3
-    helm.sh/chart: opencost-2.5.33
+    app.kubernetes.io/version: 1.121.4
+    helm.sh/chart: opencost-2.5.34
   name: k8s-monitoring-opencost
 rules:
 - apiGroups:
@@ -3557,7 +3557,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.20.0
-    helm.sh/chart: kube-state-metrics-8.8.0
+    helm.sh/chart: kube-state-metrics-9.0.1
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
 roleRef:
@@ -3577,8 +3577,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.121.3
-    helm.sh/chart: opencost-2.5.33
+    app.kubernetes.io/version: 1.121.4
+    helm.sh/chart: opencost-2.5.34
   name: k8s-monitoring-opencost
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -3852,7 +3852,9 @@ data:
     \   selectors {\n      role = \"endpoints\"\n      label = \"release=k8s-monitoring,app.kubernetes.io/name=kube-state-metrics\"\n
     \   }\n    namespaces {\n      names = [\"monitoring\"]\n    }\n  } // discovery.kubernetes
     \"kube_state_metrics\"\n\n  discovery.relabel \"kube_state_metrics\" {\n    targets
-    = discovery.kubernetes.kube_state_metrics.targets\n\n    rule {\n      action
+    = discovery.kubernetes.kube_state_metrics.targets\n\n    // only keep targets
+    with a matching port name\n    rule {\n      source_labels = [\"__meta_kubernetes_pod_container_port_name\"]\n
+    \     regex = \"http\"\n      action = \"keep\"\n    }\n\n    rule {\n      action
     = \"replace\"\n      replacement = \"kubernetes\"\n      target_label = \"source\"\n
     \   }\n\n  } // discovery.relabel \"kube_state_metrics\"\n\n  prometheus.scrape
     \"kube_state_metrics\" {\n    targets = discovery.relabel.kube_state_metrics.output\n
@@ -4410,7 +4412,7 @@ data:
   self-reporting-metric.prom: |+
     # HELP grafana_kubernetes_monitoring_build_info A metric to report the version of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_build_info gauge
-    grafana_kubernetes_monitoring_build_info{version="4.6.0", namespace="monitoring"} 1
+    grafana_kubernetes_monitoring_build_info{version="4.6.1", namespace="monitoring"} 1
     # HELP grafana_kubernetes_monitoring_feature_info A metric to report the enabled features of the Kubernetes Monitoring Helm chart
     # TYPE grafana_kubernetes_monitoring_feature_info gauge
     grafana_kubernetes_monitoring_feature_info{feature="annotationAutodiscovery", version="1.0.0"} 1
@@ -4505,7 +4507,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.20.0
-    helm.sh/chart: kube-state-metrics-8.8.0
+    helm.sh/chart: kube-state-metrics-9.0.1
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -4530,7 +4532,7 @@ metadata:
     app.kubernetes.io/name: node-exporter
     app.kubernetes.io/part-of: node-exporter
     app.kubernetes.io/version: 1.12.1
-    helm.sh/chart: node-exporter-4.60.1
+    helm.sh/chart: node-exporter-5.1.0
     release: k8s-monitoring
   name: k8s-monitoring-node-exporter
   namespace: monitoring
@@ -4553,8 +4555,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.121.3
-    helm.sh/chart: opencost-2.5.33
+    app.kubernetes.io/version: 1.121.4
+    helm.sh/chart: opencost-2.5.34
   name: k8s-monitoring-opencost
   namespace: monitoring
 spec:
@@ -4649,7 +4651,7 @@ metadata:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/part-of: kube-state-metrics
     app.kubernetes.io/version: 2.20.0
-    helm.sh/chart: kube-state-metrics-8.8.0
+    helm.sh/chart: kube-state-metrics-9.0.1
     release: k8s-monitoring
   name: k8s-monitoring-kube-state-metrics
   namespace: monitoring
@@ -4742,8 +4744,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: opencost
     app.kubernetes.io/part-of: opencost
-    app.kubernetes.io/version: 1.121.3
-    helm.sh/chart: opencost-2.5.33
+    app.kubernetes.io/version: 1.121.4
+    helm.sh/chart: opencost-2.5.34
   name: k8s-monitoring-opencost
   namespace: monitoring
 spec:
@@ -4819,7 +4821,7 @@ spec:
           value: cluster
         - name: MCP_SERVER_ENABLED
           value: "false"
-        image: ghcr.io/opencost/opencost:1.121.3@sha256:4cdd173253e5abba048dfe2cfa968707a5b59d774157d5356940d0d923a6c281
+        image: ghcr.io/opencost/opencost:1.121.4@sha256:daa04ae48f17b830de941c3602563c5a01fabb13522ede1ba057f09e96613aaa
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
@@ -5022,7 +5024,7 @@ metadata:
     app.kubernetes.io/name: node-exporter
     app.kubernetes.io/part-of: node-exporter
     app.kubernetes.io/version: 1.12.1
-    helm.sh/chart: node-exporter-4.60.1
+    helm.sh/chart: node-exporter-5.1.0
     release: k8s-monitoring
   name: k8s-monitoring-node-exporter
   namespace: monitoring
@@ -5079,7 +5081,7 @@ spec:
           initialDelaySeconds: 0
           periodSeconds: 10
           successThreshold: 1
-          timeoutSeconds: 1
+          timeoutSeconds: 5
         name: node-exporter
         ports:
         - containerPort: 9100
@@ -5095,14 +5097,19 @@ spec:
           initialDelaySeconds: 0
           periodSeconds: 10
           successThreshold: 1
-          timeoutSeconds: 1
+          timeoutSeconds: 5
         resources:
           requests:
             cpu: 100m
             memory: 200m
         securityContext:
           allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
           readOnlyRootFilesystem: true
+          seccompProfile:
+            type: RuntimeDefault
         volumeMounts:
         - mountPath: /host/proc
           name: proc
